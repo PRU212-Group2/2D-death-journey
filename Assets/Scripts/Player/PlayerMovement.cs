@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // if player is dead then deactivate controls
         if (!isAlive) return;
+        Standing();
         Run();
         FlipSprite();
         Die();
@@ -91,21 +92,24 @@ public class PlayerMovement : MonoBehaviour
         // if the player doesn't touch the ground then do nothing
         if (!isAlive) return;
         
+        // Play animations
+        myAnimator.SetBool(isUsingRifle ? isRifleJumping : isPistolJumping, true);
+        
         // Check if the player is standing on the ground
-        if (IsGroundTouching())
+        if (IsGroundTouching() && value.isPressed)
         {
-            myAnimator.SetBool(isUsingRifle ? isRifleJumping : isPistolJumping, true);
-            if (value.isPressed)
-            {
-                myRigidBody.linearVelocity += new Vector2(0f, jumpSpeed);
-            }
-        }
-        else
-        {
-            myAnimator.SetBool(isUsingRifle ? isRifleJumping : isPistolJumping, false);
+            // Jump physics
+            myRigidBody.linearVelocity += new Vector2(0f, jumpSpeed);
         }
     }
 
+    // Check if the player is standing on the ground
+    void Standing()
+    {
+        if (IsGroundTouching())
+            myAnimator.SetBool(isUsingRifle ? isRifleJumping : isPistolJumping, false);
+    }
+    
     bool IsGroundTouching()
     {
         return myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
