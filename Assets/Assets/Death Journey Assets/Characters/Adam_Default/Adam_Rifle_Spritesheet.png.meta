@@ -257,7 +257,7 @@ TextureImporter:
         x: 1034
         y: 835
         width: 73
-        height: 82
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,10 +474,10 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 440
+        x: 419
         y: 242
-        width: 84
-        height: 115
+        width: 105
+        height: 117
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,9 +518,9 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 833
+        x: 806
         y: 242
-        width: 78
+        width: 105
         height: 113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -540,9 +540,9 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1012
+        x: 1007
         y: 242
-        width: 99
+        width: 104
         height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -562,9 +562,9 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 1207
-        y: 242
-        width: 101
+        x: 1199
+        y: 241
+        width: 109
         height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -584,9 +584,9 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1423
+        x: 1406
         y: 242
-        width: 87
+        width: 104
         height: 115
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -606,9 +606,9 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 444
+        x: 410
         y: 44
-        width: 53
+        width: 87
         height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -628,10 +628,10 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 645
+        x: 617
         y: 45
-        width: 46
-        height: 114
+        width: 74
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,10 +650,10 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 847
+        x: 824
         y: 44
-        width: 58
-        height: 105
+        width: 81
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 1033
         y: 46
-        width: 65
-        height: 92
+        width: 82
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,10 +694,10 @@ TextureImporter:
       name: Adam_Rifle_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 1249
+        x: 1237
         y: 44
-        width: 69
-        height: 79
+        width: 81
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,7 +719,7 @@ TextureImporter:
         x: 1438
         y: 44
         width: 81
-        height: 81
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
