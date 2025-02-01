@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 97ffb0adff828c2479724019f448f7a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8852391497550165475
+    second: Adam_Rifle_Spritesheet_0
+  - first:
+      213: 4958319332275950945
+    second: Adam_Rifle_Spritesheet_1
+  - first:
+      213: -4960318193398676463
+    second: Adam_Rifle_Spritesheet_2
+  - first:
+      213: -6709487292602480546
+    second: Adam_Rifle_Spritesheet_3
+  - first:
+      213: -1734980411076821868
+    second: Adam_Rifle_Spritesheet_4
+  - first:
+      213: 8543117571085875226
+    second: Adam_Rifle_Spritesheet_5
+  - first:
+      213: -5673688805494709583
+    second: Adam_Rifle_Spritesheet_6
+  - first:
+      213: -3814636897287839109
+    second: Adam_Rifle_Spritesheet_7
+  - first:
+      213: -5916306099766279881
+    second: Adam_Rifle_Spritesheet_8
+  - first:
+      213: -8718618313086419319
+    second: Adam_Rifle_Spritesheet_9
+  - first:
+      213: 8193172030749029994
+    second: Adam_Rifle_Spritesheet_10
+  - first:
+      213: 3709157927524677400
+    second: Adam_Rifle_Spritesheet_11
+  - first:
+      213: 2513751770403184987
+    second: Adam_Rifle_Spritesheet_12
+  - first:
+      213: -2235872448288782209
+    second: Adam_Rifle_Spritesheet_13
+  - first:
+      213: -4291148726571847624
+    second: Adam_Rifle_Spritesheet_14
+  - first:
+      213: 20133716831463264
+    second: Adam_Rifle_Spritesheet_15
+  - first:
+      213: 5884409276517088931
+    second: Adam_Rifle_Spritesheet_16
+  - first:
+      213: -7347879257167648509
+    second: Adam_Rifle_Spritesheet_17
+  - first:
+      213: 3655146086416589909
+    second: Adam_Rifle_Spritesheet_18
+  - first:
+      213: 8412526804499970817
+    second: Adam_Rifle_Spritesheet_19
+  - first:
+      213: -5739330073247969166
+    second: Adam_Rifle_Spritesheet_20
+  - first:
+      213: -3969862791258849138
+    second: Adam_Rifle_Spritesheet_21
+  - first:
+      213: -5310019288520624780
+    second: Adam_Rifle_Spritesheet_22
+  - first:
+      213: 8013010722398197051
+    second: Adam_Rifle_Spritesheet_23
+  - first:
+      213: 8658195747508306734
+    second: Adam_Rifle_Spritesheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 835
+        width: 71
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a85dfb5dcf52580800000000000000
+      internalID: -8852391497550165475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 835
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1659243992d7fc440800000000000000
+      internalID: 4958319332275950945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 835
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114809d42e8692bb0800000000000000
+      internalID: -4960318193398676463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 835
+        width: 73
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e588e631bdc13e2a0800000000000000
+      internalID: -6709487292602480546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 637
+        width: 68
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c3189228c1ce7e0800000000000000
+      internalID: -1734980411076821868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 637
+        width: 66
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18b8f2ea204f8670800000000000000
+      internalID: 8543117571085875226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 637
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2a06687120341b0800000000000000
+      internalID: -5673688805494709583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 440
+        width: 65
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b726f06e3ffaf0bc0800000000000000
+      internalID: -3814636897287839109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 440
+        width: 68
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73144fcb2fe05eda0800000000000000
+      internalID: -5916306099766279881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 440
+        width: 69
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98eb44466de310780800000000000000
+      internalID: -8718618313086419319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 440
+        width: 63
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66367c7d8ef3b170800000000000000
+      internalID: 8193172030749029994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 440
+        width: 69
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817beedab73997330800000000000000
+      internalID: 3709157927524677400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 440
+        width: 65
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b512460bae3a2e220800000000000000
+      internalID: 2513751770403184987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 242
+        width: 84
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f780aacbad598f0e0800000000000000
+      internalID: -2235872448288782209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 242
+        width: 103
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830b05af7f6c274c0800000000000000
+      internalID: -4291148726571847624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 242
+        width: 78
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0676fbf3287874000800000000000000
+      internalID: 20133716831463264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 242
+        width: 99
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae70df5f0f99a150800000000000000
+      internalID: 5884409276517088931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 242
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309af001fb6170a90800000000000000
+      internalID: -7347879257167648509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 242
+        width: 87
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5542503ffffa9b230800000000000000
+      internalID: 3655146086416589909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 44
+        width: 53
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b3ca5ae8c4fb470800000000000000
+      internalID: 8412526804499970817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 45
+        width: 46
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2709657e4bdc950b0800000000000000
+      internalID: -5739330073247969166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 44
+        width: 58
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80c9f713d638e8c0800000000000000
+      internalID: -3969862791258849138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 46
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475714d37950f46b0800000000000000
+      internalID: -5310019288520624780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 44
+        width: 69
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35d0f91ccee33f60800000000000000
+      internalID: 8013010722398197051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Rifle_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 44
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23c706c827182870800000000000000
+      internalID: 8658195747508306734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9c5dde1565d641347afc28de7a68a06c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Adam_Rifle_Spritesheet_0: -8852391497550165475
+      Adam_Rifle_Spritesheet_1: 4958319332275950945
+      Adam_Rifle_Spritesheet_10: 8193172030749029994
+      Adam_Rifle_Spritesheet_11: 3709157927524677400
+      Adam_Rifle_Spritesheet_12: 2513751770403184987
+      Adam_Rifle_Spritesheet_13: -2235872448288782209
+      Adam_Rifle_Spritesheet_14: -4291148726571847624
+      Adam_Rifle_Spritesheet_15: 20133716831463264
+      Adam_Rifle_Spritesheet_16: 5884409276517088931
+      Adam_Rifle_Spritesheet_17: -7347879257167648509
+      Adam_Rifle_Spritesheet_18: 3655146086416589909
+      Adam_Rifle_Spritesheet_19: 8412526804499970817
+      Adam_Rifle_Spritesheet_2: -4960318193398676463
+      Adam_Rifle_Spritesheet_20: -5739330073247969166
+      Adam_Rifle_Spritesheet_21: -3969862791258849138
+      Adam_Rifle_Spritesheet_22: -5310019288520624780
+      Adam_Rifle_Spritesheet_23: 8013010722398197051
+      Adam_Rifle_Spritesheet_24: 8658195747508306734
+      Adam_Rifle_Spritesheet_3: -6709487292602480546
+      Adam_Rifle_Spritesheet_4: -1734980411076821868
+      Adam_Rifle_Spritesheet_5: 8543117571085875226
+      Adam_Rifle_Spritesheet_6: -5673688805494709583
+      Adam_Rifle_Spritesheet_7: -3814636897287839109
+      Adam_Rifle_Spritesheet_8: -5916306099766279881
+      Adam_Rifle_Spritesheet_9: -8718618313086419319
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

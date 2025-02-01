@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: 2bc20b909222538499c3849c176e0b98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1890775160002818438
+    second: Adam_Pistol_Spritesheet_0
+  - first:
+      213: -5007432474109105380
+    second: Adam_Pistol_Spritesheet_1
+  - first:
+      213: -3040470931808017120
+    second: Adam_Pistol_Spritesheet_2
+  - first:
+      213: 3695851696381357882
+    second: Adam_Pistol_Spritesheet_3
+  - first:
+      213: -2932267620006926428
+    second: Adam_Pistol_Spritesheet_4
+  - first:
+      213: 5513751236406995604
+    second: Adam_Pistol_Spritesheet_5
+  - first:
+      213: 1849081605774132270
+    second: Adam_Pistol_Spritesheet_6
+  - first:
+      213: 447735260975073623
+    second: Adam_Pistol_Spritesheet_7
+  - first:
+      213: -6205303365951230004
+    second: Adam_Pistol_Spritesheet_8
+  - first:
+      213: -8963852840009294941
+    second: Adam_Pistol_Spritesheet_9
+  - first:
+      213: -6976034269940535355
+    second: Adam_Pistol_Spritesheet_10
+  - first:
+      213: -5675991024575714485
+    second: Adam_Pistol_Spritesheet_11
+  - first:
+      213: -5241447027358874454
+    second: Adam_Pistol_Spritesheet_12
+  - first:
+      213: 4882333286034385449
+    second: Adam_Pistol_Spritesheet_13
+  - first:
+      213: 5704704898650178292
+    second: Adam_Pistol_Spritesheet_14
+  - first:
+      213: -1542162179534457161
+    second: Adam_Pistol_Spritesheet_15
+  - first:
+      213: 8826191336061131437
+    second: Adam_Pistol_Spritesheet_16
+  - first:
+      213: 6937141350386212360
+    second: Adam_Pistol_Spritesheet_17
+  - first:
+      213: -4113652337895569187
+    second: Adam_Pistol_Spritesheet_18
+  - first:
+      213: 4870808816804978195
+    second: Adam_Pistol_Spritesheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 836
+        width: 64
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e46ed720e92c5e0800000000000000
+      internalID: -1890775160002818438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 836
+        width: 69
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ba8fff1b6028ab0800000000000000
+      internalID: -5007432474109105380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 836
+        width: 67
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025aeafebc31ec5d0800000000000000
+      internalID: -3040470931808017120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 638
+        width: 83
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fe551598d4a4330800000000000000
+      internalID: 3695851696381357882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 638
+        width: 76
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a76b1ba22e7e47d0800000000000000
+      internalID: -2932267620006926428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 638
+        width: 75
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ae8e15987c48c40800000000000000
+      internalID: 5513751236406995604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 638
+        width: 82
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2440e07ce149a910800000000000000
+      internalID: 1849081605774132270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 441
+        width: 64
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75906dff8dca63600800000000000000
+      internalID: 447735260975073623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 441
+        width: 72
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfe0fc377552e9a0800000000000000
+      internalID: -6205303365951230004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 454
+        width: 60
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab9e54a55ff99380800000000000000
+      internalID: -8963852840009294941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 475
+        width: 65
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf2e37cac5203f90800000000000000
+      internalID: -6976034269940535355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 447
+        width: 63
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bebdf5c34da31b0800000000000000
+      internalID: -5675991024575714485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 441
+        width: 66
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa44f31f2b3a247b0800000000000000
+      internalID: -5241447027358874454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 243
+        width: 78
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2897861ee2b2f40800000000000000
+      internalID: 5704704898650178292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 45
+        width: 67
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b67ece1ba3299ae0800000000000000
+      internalID: -1542162179534457161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 45
+        width: 97
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daadd89c14eec7a70800000000000000
+      internalID: 8826191336061131437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 45
+        width: 63
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e917abd4da54060800000000000000
+      internalID: 6937141350386212360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 46
+        width: 91
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd887466efe59e6c0800000000000000
+      internalID: -4113652337895569187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 45
+        width: 84
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e508eefc6989340800000000000000
+      internalID: 4870808816804978195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adam_Pistol_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 45
+        width: 69
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b5e35e9c92c154ab4cd63ebd668f26
+      internalID: -383279982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8954ef226b862d24bb78093b102309fd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Adam_Pistol_Spritesheet_0: -1890775160002818438
+      Adam_Pistol_Spritesheet_1: -5007432474109105380
+      Adam_Pistol_Spritesheet_10: -6976034269940535355
+      Adam_Pistol_Spritesheet_11: -5675991024575714485
+      Adam_Pistol_Spritesheet_12: -5241447027358874454
+      Adam_Pistol_Spritesheet_13: 4882333286034385449
+      Adam_Pistol_Spritesheet_14: 5704704898650178292
+      Adam_Pistol_Spritesheet_15: -1542162179534457161
+      Adam_Pistol_Spritesheet_16: 8826191336061131437
+      Adam_Pistol_Spritesheet_17: 6937141350386212360
+      Adam_Pistol_Spritesheet_18: -4113652337895569187
+      Adam_Pistol_Spritesheet_19: 4870808816804978195
+      Adam_Pistol_Spritesheet_2: -3040470931808017120
+      Adam_Pistol_Spritesheet_20: -383279982
+      Adam_Pistol_Spritesheet_3: 3695851696381357882
+      Adam_Pistol_Spritesheet_4: -2932267620006926428
+      Adam_Pistol_Spritesheet_5: 5513751236406995604
+      Adam_Pistol_Spritesheet_6: 1849081605774132270
+      Adam_Pistol_Spritesheet_7: 447735260975073623
+      Adam_Pistol_Spritesheet_8: -6205303365951230004
+      Adam_Pistol_Spritesheet_9: -8963852840009294941
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
