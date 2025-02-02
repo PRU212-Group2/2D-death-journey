@@ -15,9 +15,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float crouchHeight = 0.955f;
+    [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.118f);
 
+    float originalBodyHeight;
+    Vector2 originalBodyCenter;
     bool isAlive = true;
-    private bool isUsingRifle;
+    bool isUsingRifle;
+    bool allowRunning = true;
     
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
@@ -33,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
+        
+        // Store the original height and center values
+        originalBodyHeight = myBodyCollider.size.y;
+        originalBodyCenter = myBodyCollider.offset;
+        
+        // Set pistol or animation mode based on the weapon
         SetAnimationMode();
     }
     
@@ -41,20 +52,18 @@ public class PlayerMovement : MonoBehaviour
         // if player is dead then deactivate controls
         if (!isAlive) return;
         Standing();
-        Run();
+        if (allowRunning) Run();
         FlipSprite();
         Die();
     }
 
     void SetAnimationMode()
     {
+        isUsingRifle = myActiveWeapon.IsRifle();
+        
+        // Choose to play pistol or rifle animation
         if (!isUsingRifle) myAnimator.SetBool(isRifleEquipped, false);
         else myAnimator.SetBool(isRifleEquipped, true);
-    }
-    
-    public void SetRifleMode(bool isRifle)
-    {
-        isUsingRifle = isRifle;
     }
     
     void OnShoot(InputValue value)
@@ -69,6 +78,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!isAlive) return;
         myAnimator.SetBool(isUsingRifle ? isRifleCrouching : isPistolCrouching, value.isPressed);
+        
+        // Adjust collider heights when crouching
+        if (value.isPressed)
+        {
+            myBodyCollider.size = new Vector2(myBodyCollider.size.x, crouchHeight);
+            myBodyCollider.offset = crouchCenter;
+            allowRunning = false;
+        }
+        else
+        {
+            // Reset heights when standup
+            myBodyCollider.size = new Vector2(myBodyCollider.size.x, originalBodyHeight);
+            myBodyCollider.offset = originalBodyCenter;
+            allowRunning = true;
+        }
     }
 
     // Flip character based on the move direction

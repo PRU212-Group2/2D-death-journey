@@ -6,19 +6,11 @@ public class ActiveWeapon : MonoBehaviour
     
     WeaponSO currentWeaponSO;
     Weapon currentWeapon;
-    PlayerMovement player;
-    Animator animator;
 
     float timeSinceLastShot = 0f;
     int currentAmmo;
     bool shootState;
 
-    void Awake()
-    {
-        player = GetComponentInParent<PlayerMovement>();
-        animator = GetComponentInParent<Animator>();
-    }
-    
     void Update()
     {
         HandleShoot();
@@ -29,9 +21,13 @@ public class ActiveWeapon : MonoBehaviour
         // Equip starting weapon and starting ammo at the beginning of the game
         SwitchWeapon(startingWeapon);
         AdjustAmmo(currentWeaponSO.MagazineSize);
-        player.SetRifleMode(startingWeapon.isRifle);
     }
 
+    public bool IsRifle()
+    {
+        return currentWeaponSO.isRifle;
+    }
+    
     public void AdjustAmmo(int amount)
     {
         currentAmmo += amount;

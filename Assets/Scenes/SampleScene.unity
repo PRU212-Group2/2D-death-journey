@@ -623,7 +623,11 @@ PrefabInstance:
     - target: {fileID: 6055218333410799960, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 0e83f92c1fccec546be1f66f6caf0f6c, type: 2}
+      objectReference: {fileID: 11400000, guid: cf5271e09469bde4e85d159246b0e880, type: 2}
+    - target: {fileID: 7860184952376751425, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
+      propertyPath: crouchHeight
+      value: 0.955
+      objectReference: {fileID: 0}
     - target: {fileID: 7894656572474115649, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.67
