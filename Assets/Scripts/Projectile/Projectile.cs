@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     
     Rigidbody2D myRigidBody;
     PlayerMovement player;
+    WeaponSO weaponSO;
     float xSpeed;
     int damage;
     
@@ -37,6 +38,7 @@ public class Projectile : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
+        PlayHitVFX();
         HitEnemy(other);
     }
 
@@ -46,15 +48,14 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(damage);
-            
+            enemyHealth.TakeDamage(weaponSO.Damage);
         }
-
         Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        PlayHitVFX();
         HitWall();
     }
 
@@ -62,5 +63,16 @@ public class Projectile : MonoBehaviour
     {
         // Destroy the projectile
         Destroy(gameObject);
+    }
+
+    public void SetWeaponSO(WeaponSO weaponSO)
+    {
+        this.weaponSO = weaponSO;
+    }
+
+    void PlayHitVFX()
+    {
+        GameObject hitVFX = Instantiate(weaponSO.HitVFXPrefab, transform.position, Quaternion.identity);
+        Destroy(hitVFX, hitVFX.GetComponent<ParticleSystem>().main.duration);
     }
 }

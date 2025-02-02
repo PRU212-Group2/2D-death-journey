@@ -14,6 +14,6 @@ public class Weapon : MonoBehaviour
 
         // Create projectile at the position of the muzzle point
         Projectile shotProjectile = Instantiate(projectile, muzzlePoint.position, muzzlePoint.rotation);
-        shotProjectile.SetDamage(weaponSO.Damage);
+        shotProjectile.SetWeaponSO(weaponSO);
     }
 }
