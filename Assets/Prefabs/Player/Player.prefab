@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4114084672176135240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450620388975971826}
+  - component: {fileID: 6055218333410799960}
+  m_Layer: 7
+  m_Name: Active Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1450620388975971826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114084672176135240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7894656572474115649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6055218333410799960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114084672176135240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d053891893a60449b64efaa95cc3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingWeapon: {fileID: 11400000, guid: 0e83f92c1fccec546be1f66f6caf0f6c, type: 2}
 --- !u!1 &5722687265407260290
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,7 +80,8 @@ Transform:
   m_LocalPosition: {x: -2, y: -1.05, z: 0.030812616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1450620388975971826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2699010052641876285
@@ -171,7 +217,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &7037026497122320357
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -206,8 +252,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.033938527, y: 0.019797504}
-  m_Size: {x: 0.4208095, y: 1.2319144}
+  m_Offset: {x: 0.056958795, y: 0.019797504}
+  m_Size: {x: 0.60260415, y: 1.2319144}
   m_Direction: 0
 --- !u!61 &181837017327015378
 BoxCollider2D:
@@ -243,7 +289,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.019797534, y: -0.5571599}
+  m_Offset: {x: -0.036840737, y: -0.5571599}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -253,7 +299,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.67959505, y: 0.12961912}
+  m_Size: {x: 0.64550865, y: 0.12961912}
   m_EdgeRadius: 0
 --- !u!114 &7860184952376751425
 MonoBehaviour:
@@ -268,5 +314,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpSpeed: 5
-  deathKick: {x: 10, y: 10}
+  jumpSpeed: 10

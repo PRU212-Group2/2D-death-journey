@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,15 +9,12 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isRifleRunning = Animator.StringToHash("isRifleRunning");
     static readonly int isPistolCrouching = Animator.StringToHash("isPistolCrouching");
     static readonly int isRifleCrouching = Animator.StringToHash("isRifleCrouching");
-    static readonly int isPistolShooting = Animator.StringToHash("isPistolShooting");
-    static readonly int isRifleShooting = Animator.StringToHash("isRifleShooting");
     static readonly int isPistolJumping = Animator.StringToHash("isPistolJumping");
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
     static readonly int triggerDying = Animator.StringToHash("triggerDying");
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
-    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
 
     bool isAlive = true;
     private bool isUsingRifle;
@@ -26,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnimator;
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
+    ActiveWeapon myActiveWeapon;
     
     void Start()
     {
@@ -33,10 +32,8 @@ public class PlayerMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
-        
-        // Set weapon mode for testing
-        isUsingRifle = false;
-        SetMode(isUsingRifle);
+        myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
+        SetAnimationMode();
     }
     
     void Update()
@@ -49,16 +46,23 @@ public class PlayerMovement : MonoBehaviour
         Die();
     }
 
-    void SetMode(bool isRifle)
+    void SetAnimationMode()
     {
-        if (!isRifle) myAnimator.SetBool(isRifleEquipped, false);
+        if (!isUsingRifle) myAnimator.SetBool(isRifleEquipped, false);
         else myAnimator.SetBool(isRifleEquipped, true);
+    }
+    
+    public void SetRifleMode(bool isRifle)
+    {
+        isUsingRifle = isRifle;
     }
     
     void OnShoot(InputValue value)
     {
         if (!isAlive) return;
-        myAnimator.SetBool(isUsingRifle ? isRifleShooting : isPistolShooting, value.isPressed);
+        
+        // Handle Shooting
+        myActiveWeapon.HandleShootInput(value.isPressed);
     }
 
     void OnCrouch(InputValue value)
@@ -118,9 +122,11 @@ public class PlayerMovement : MonoBehaviour
     // Control character movement
     void Run()
     {
+        // Move the player using values from player input
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, myRigidBody.linearVelocity.y);
         myRigidBody.linearVelocity = playerVelocity;
         
+        // Make sure the animations is not played when player is standing still
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
         myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
     }
@@ -128,11 +134,10 @@ public class PlayerMovement : MonoBehaviour
     private void Die()
     {
         // if player collides with player then dies
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
             isAlive = false;
             myAnimator.SetTrigger(triggerDying);
-            myRigidBody.linearVelocity = deathKick;
         };
     }
 }

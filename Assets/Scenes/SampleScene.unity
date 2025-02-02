@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 972672706}
   m_Layer: 8
   m_Name: Evil Square
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,26 +616,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 704268804817776974, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5722687265407260290, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7860184952376751425, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
-      propertyPath: jumpSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7860184952376751425, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
-      propertyPath: deathKick.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7860184952376751425, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
-      propertyPath: deathKick.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 6055218333410799960, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
+      propertyPath: startingWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e83f92c1fccec546be1f66f6caf0f6c, type: 2}
     - target: {fileID: 7894656572474115649, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.67
