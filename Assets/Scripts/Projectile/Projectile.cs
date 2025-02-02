@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     Rigidbody2D myRigidBody;
     PlayerMovement player;
     float xSpeed;
+    int damage;
     
     void Start()
     {
@@ -24,12 +25,16 @@ public class Projectile : MonoBehaviour
         Fly();
     }
 
-    private void Fly()
+    void Fly()
     {
         // Projectile travels forward
         myRigidBody.linearVelocity = new Vector2(xSpeed, 0f);
     }
-
+    public void SetDamage(int projectileDamage)
+    {
+        this.damage = projectileDamage;
+    }
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         HitEnemy(other);
@@ -40,7 +45,9 @@ public class Projectile : MonoBehaviour
         // Destroy enemy and destroy itself
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
+            EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(damage);
+            
         }
 
         Destroy(gameObject);

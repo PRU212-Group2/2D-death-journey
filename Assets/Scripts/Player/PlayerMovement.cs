@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -15,11 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
-    [SerializeField] float crouchHeight = 0.955f;
-    [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.118f);
+    [SerializeField] float crouchHeight = 0.86f;
+    [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.16f);
 
     float originalBodyHeight;
     Vector2 originalBodyCenter;
+    Vector2 originalPistolPosition;
+    Vector2 originalRiflePosition;
     bool isAlive = true;
     bool isUsingRifle;
     bool allowRunning = true;
@@ -30,6 +33,24 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     ActiveWeapon myActiveWeapon;
+    PlayerHealth myPlayerHealth;
+    Weapon myWeapon;
+    
+    // Offsets for the rifle sprite for each animation state
+    Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
+    {
+        {"Running", new Vector2(0.355f, 0.38f)},
+        {"Crouching", new Vector2(0.211f, 0.007f)},
+        {"Jumping", new Vector2(0.262f, 0.337f)}
+    };
+
+    // Offsets for the pistol sprite for each animation state
+    Dictionary<string, Vector2> pistolOffsets = new Dictionary<string, Vector2>()
+    {
+        {"Running", new Vector2(0.456f, 0.441f)},
+        {"Crouching", new Vector2(0.32f, 0.195f)},
+        {"Jumping", new Vector2(0.26f, 0.42f)}
+    };
     
     void Start()
     {
@@ -38,10 +59,16 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
+        myPlayerHealth = GetComponent<PlayerHealth>();
+        myWeapon = GetComponentInChildren<Weapon>();
         
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
         originalBodyCenter = myBodyCollider.offset;
+        
+        // Get weapon original position
+        originalPistolPosition = myWeapon.transform.localPosition;
+        originalRiflePosition = myWeapon.transform.localPosition;
         
         // Set pistol or animation mode based on the weapon
         SetAnimationMode();
@@ -54,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
         Standing();
         if (allowRunning) Run();
         FlipSprite();
-        Die();
+        Damage();
+        AdjustWeaponPosition();
     }
 
     void SetAnimationMode()
@@ -155,13 +183,71 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
     }
     
-    private void Die()
+    void Damage()
     {
         // if player collides with player then dies
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
-            isAlive = false;
-            myAnimator.SetTrigger(triggerDying);
+            myPlayerHealth.TakeDamage(100);
         };
+    }
+
+    public void SetAlive(bool aliveState)
+    {
+        isAlive = aliveState;
+    }
+    
+    // Helper function to apply the offset to the weapon's position
+    void SetWeaponPosition(Vector2 offset)
+    {
+        myWeapon.transform.localPosition = new Vector2(offset.x, offset.y);
+    }
+    
+    void AdjustWeaponPosition()
+    {
+        // Check which weapon is equipped using the myAnimator
+        bool isRifle = myAnimator.GetBool(isRifleEquipped);
+
+        // Determine the current state of the weapon (running, crouching, jumping)
+        if (isRifle)
+        {
+            // Adjust for Rifle states
+            if (myAnimator.GetBool(isRifleRunning))
+            {
+                SetWeaponPosition(rifleOffsets["Running"]);
+            }
+            else if (myAnimator.GetBool(isRifleCrouching))
+            {
+                SetWeaponPosition(rifleOffsets["Crouching"]);
+            }
+            else if (myAnimator.GetBool(isRifleJumping))
+            {
+                SetWeaponPosition(rifleOffsets["Jumping"]);
+            }
+            else if (!myAnimator.GetBool(isRifleCrouching))
+            {
+                SetWeaponPosition(originalRiflePosition);
+            }
+        }
+        else
+        {
+            // Adjust for Pistol states
+            if (myAnimator.GetBool(isPistolRunning))
+            {
+                SetWeaponPosition(pistolOffsets["Running"]);
+            }
+            else if (myAnimator.GetBool(isPistolCrouching))
+            {
+                SetWeaponPosition(pistolOffsets["Crouching"]);
+            }
+            else if (myAnimator.GetBool(isPistolJumping))
+            {
+                SetWeaponPosition(pistolOffsets["Jumping"]);
+            }
+            else if (!myAnimator.GetBool(isPistolCrouching))
+            {
+                SetWeaponPosition(originalPistolPosition);
+            }
+        }
     }
 }

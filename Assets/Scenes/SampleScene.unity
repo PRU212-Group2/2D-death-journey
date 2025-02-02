@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 972672708}
   - component: {fileID: 972672707}
   - component: {fileID: 972672706}
+  - component: {fileID: 972672709}
   m_Layer: 8
   m_Name: Evil Square
   m_TagString: Enemy
@@ -602,12 +603,25 @@ Transform:
   m_GameObject: {fileID: 972672705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.84, y: -1.16, z: 0}
+  m_LocalPosition: {x: 2.84, y: -0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &972672709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972672705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ff10984c256f146a8c64db151ba6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
 --- !u!1001 &6564905595282072265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,11 +637,7 @@ PrefabInstance:
     - target: {fileID: 6055218333410799960, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: startingWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: cf5271e09469bde4e85d159246b0e880, type: 2}
-    - target: {fileID: 7860184952376751425, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
-      propertyPath: crouchHeight
-      value: 0.955
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 0e83f92c1fccec546be1f66f6caf0f6c, type: 2}
     - target: {fileID: 7894656572474115649, guid: c3c4ac35e9f1c8f40a712eaf9ace43d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.67
