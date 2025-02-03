@@ -3,6 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 1f;
+    [SerializeField] ParticleSystem hitVFX;
     
     Rigidbody2D myRigidBody;
     PlayerMovement player;
@@ -48,7 +49,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(weaponSO.Damage);
+            enemyHealth.TakeDamage(damage);
         }
         Destroy(gameObject);
     }
@@ -65,14 +66,12 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SetWeaponSO(WeaponSO weaponSO)
-    {
-        this.weaponSO = weaponSO;
-    }
-
     void PlayHitVFX()
     {
-        GameObject hitVFX = Instantiate(weaponSO.HitVFXPrefab, transform.position, Quaternion.identity);
-        Destroy(hitVFX, hitVFX.GetComponent<ParticleSystem>().main.duration);
+        if (hitVFX != null)
+        {
+            ParticleSystem vfxInstance = Instantiate(hitVFX, transform.position, transform.rotation);
+            Destroy(vfxInstance.gameObject, vfxInstance.main.duration); // Destroy after the effect finishes
+        }
     }
 }
