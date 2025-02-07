@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     // Offsets for the pistol sprite for each animation state
     Dictionary<string, Vector2> pistolOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.456f, 0.441f)},
+        {"Running", new Vector2(0.42f, 0.43f)},
         {"Crouching", new Vector2(0.32f, 0.195f)},
         {"Jumping", new Vector2(0.26f, 0.42f)}
     };
