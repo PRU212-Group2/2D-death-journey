@@ -186,10 +186,10 @@ public class PlayerMovement : MonoBehaviour
     void Damage()
     {
         // if player collides with player then dies
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
-        {
-            myPlayerHealth.TakeDamage(100);
-        };
+        //if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        //{
+        //    myPlayerHealth.TakeDamage(100);
+        //};
     }
 
     public void SetAlive(bool aliveState)
