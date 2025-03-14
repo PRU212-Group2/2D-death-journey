@@ -16,9 +16,9 @@ TagManager:
   - Player
   - Enemy
   - Projectile
-  - Platform
-  - Wall
-  - Hazard
+  - Background
+  - Interactacle
+  - Hazards
   - 
   - 
   - 
@@ -42,6 +42,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Ground
     uniqueID: 984582449
     locked: 0
@@ -59,6 +60,22 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 559167121
+=======
+  - name: Backgound
+    uniqueID: 542725929
+    locked: 0
+  - name: Weapon
+    uniqueID: 2537994723
+    locked: 0
+  - name: Platform
+    uniqueID: 837410189
+    locked: 0
+  - name: Player
+    uniqueID: 1171036435
+    locked: 0
+  - name: Projectile
+    uniqueID: 2419364197
+>>>>>>> dev
     locked: 0
   m_RenderingLayers:
   - Default
