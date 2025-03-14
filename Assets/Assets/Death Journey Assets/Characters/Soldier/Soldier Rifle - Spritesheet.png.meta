@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 0e9f36ebc8f237a43ad684b2cca6b8b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -938845314851776184
+    second: Soldier Rifle - Spritesheet_0
+  - first:
+      213: 3832584442628941959
+    second: Soldier Rifle - Spritesheet_1
+  - first:
+      213: 3611895135748467075
+    second: Soldier Rifle - Spritesheet_2
+  - first:
+      213: -8924600733209199504
+    second: Soldier Rifle - Spritesheet_3
+  - first:
+      213: 2062211257444333064
+    second: Soldier Rifle - Spritesheet_4
+  - first:
+      213: -1963594072722834624
+    second: Soldier Rifle - Spritesheet_5
+  - first:
+      213: -6425738145375857946
+    second: Soldier Rifle - Spritesheet_6
+  - first:
+      213: -8698964869282291407
+    second: Soldier Rifle - Spritesheet_7
+  - first:
+      213: 4647002606367985995
+    second: Soldier Rifle - Spritesheet_8
+  - first:
+      213: 1813420326666453368
+    second: Soldier Rifle - Spritesheet_9
+  - first:
+      213: 3091066919758496338
+    second: Soldier Rifle - Spritesheet_10
+  - first:
+      213: -2961957710299499491
+    second: Soldier Rifle - Spritesheet_11
+  - first:
+      213: 1887294178319082785
+    second: Soldier Rifle - Spritesheet_12
+  - first:
+      213: -6314325343651949058
+    second: Soldier Rifle - Spritesheet_13
+  - first:
+      213: 5128324931060311435
+    second: Soldier Rifle - Spritesheet_14
+  - first:
+      213: -4562316746285433290
+    second: Soldier Rifle - Spritesheet_15
+  - first:
+      213: -718058809616591177
+    second: Soldier Rifle - Spritesheet_16
+  - first:
+      213: 4293428437897924341
+    second: Soldier Rifle - Spritesheet_17
+  - first:
+      213: -3089944246598022505
+    second: Soldier Rifle - Spritesheet_18
+  - first:
+      213: 1530788082976315302
+    second: Soldier Rifle - Spritesheet_19
+  - first:
+      213: 4318973719968318672
+    second: Soldier Rifle - Spritesheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 835
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849583d092d88f2f0800000000000000
+      internalID: -938845314851776184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 835
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7882692ae33103530800000000000000
+      internalID: 3832584442628941959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 835
+        width: 72
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389af344d77002230800000000000000
+      internalID: 3611895135748467075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 835
+        width: 79
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cffdeeae2752480800000000000000
+      internalID: -8924600733209199504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 835
+        width: 79
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806f7cb66327e9c10800000000000000
+      internalID: 2062211257444333064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 638
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bfa4c2899efb4e0800000000000000
+      internalID: -1963594072722834624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 449
+        width: 68
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2d139a33133d6a0800000000000000
+      internalID: -6425738145375857946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 460
+        width: 66
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131a3dc5a81174780800000000000000
+      internalID: -8698964869282291407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 441
+        width: 66
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41d0e6ef387d7040800000000000000
+      internalID: 4647002606367985995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 242
+        width: 94
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8714d6fdd209a2910800000000000000
+      internalID: 1813420326666453368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 242
+        width: 78
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2528a218cfca5ea20800000000000000
+      internalID: 3091066919758496338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 242
+        width: 97
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d147ed5d72305e6d0800000000000000
+      internalID: -2961957710299499491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 242
+        width: 105
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1252f5d4e04013a10800000000000000
+      internalID: 1887294178319082785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 242
+        width: 78
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5116ffd820f58a0800000000000000
+      internalID: -6314325343651949058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 242
+        width: 93
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8521a09a587b2740800000000000000
+      internalID: 5128324931060311435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 44
+        width: 55
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e37d867156fa0c0800000000000000
+      internalID: -4562316746285433290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 46
+        width: 59
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b696fc2151f806f0800000000000000
+      internalID: -718058809616591177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 46
+        width: 66
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe477daa62559b30800000000000000
+      internalID: 4293428437897924341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 44
+        width: 66
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a43c534105e15d0800000000000000
+      internalID: -3089944246598022505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 44
+        width: 67
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a75438a6a37e3510800000000000000
+      internalID: 1530788082976315302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Rifle - Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 44
+        width: 71
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d485f427b310fb30800000000000000
+      internalID: 4318973719968318672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Soldier Rifle - Spritesheet_0: -938845314851776184
+      Soldier Rifle - Spritesheet_1: 3832584442628941959
+      Soldier Rifle - Spritesheet_10: 3091066919758496338
+      Soldier Rifle - Spritesheet_11: -2961957710299499491
+      Soldier Rifle - Spritesheet_12: 1887294178319082785
+      Soldier Rifle - Spritesheet_13: -6314325343651949058
+      Soldier Rifle - Spritesheet_14: 5128324931060311435
+      Soldier Rifle - Spritesheet_15: -4562316746285433290
+      Soldier Rifle - Spritesheet_16: -718058809616591177
+      Soldier Rifle - Spritesheet_17: 4293428437897924341
+      Soldier Rifle - Spritesheet_18: -3089944246598022505
+      Soldier Rifle - Spritesheet_19: 1530788082976315302
+      Soldier Rifle - Spritesheet_2: 3611895135748467075
+      Soldier Rifle - Spritesheet_20: 4318973719968318672
+      Soldier Rifle - Spritesheet_3: -8924600733209199504
+      Soldier Rifle - Spritesheet_4: 2062211257444333064
+      Soldier Rifle - Spritesheet_5: -1963594072722834624
+      Soldier Rifle - Spritesheet_6: -6425738145375857946
+      Soldier Rifle - Spritesheet_7: -8698964869282291407
+      Soldier Rifle - Spritesheet_8: 4647002606367985995
+      Soldier Rifle - Spritesheet_9: 1813420326666453368
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

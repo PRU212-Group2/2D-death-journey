@@ -4,6 +4,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 1f;
     [SerializeField] ParticleSystem hitVFX;
+    [SerializeField] ParticleSystem bloodVFX;
     
     Rigidbody2D myRigidBody;
     PlayerMovement player;
@@ -39,8 +40,14 @@ public class Projectile : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayHitVFX();
-        HitEnemy(other);
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            HitEnemy(other);
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) // Check for Ground layer
+        {
+            HitWall();
+        }
     }
 
     void HitEnemy(Collider2D other)
@@ -48,21 +55,17 @@ public class Projectile : MonoBehaviour
         // Destroy enemy and destroy itself
         if (other.gameObject.CompareTag("Enemy"))
         {
+            PlayBloodVFX();
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
             enemyHealth.TakeDamage(damage);
         }
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        PlayHitVFX();
-        HitWall();
-    }
-
     void HitWall()
     {
         // Destroy the projectile
+        PlayHitVFX();
         Destroy(gameObject);
     }
 
@@ -71,6 +74,15 @@ public class Projectile : MonoBehaviour
         if (hitVFX != null)
         {
             ParticleSystem vfxInstance = Instantiate(hitVFX, transform.position, transform.rotation);
+            Destroy(vfxInstance.gameObject, vfxInstance.main.duration); // Destroy after the effect finishes
+        }
+    }
+    
+    void PlayBloodVFX()
+    {
+        if (bloodVFX != null)
+        {
+            ParticleSystem vfxInstance = Instantiate(bloodVFX, transform.position, transform.rotation);
             Destroy(vfxInstance.gameObject, vfxInstance.main.duration); // Destroy after the effect finishes
         }
     }

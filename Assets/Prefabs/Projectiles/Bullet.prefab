@@ -167,3 +167,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   hitVFX: {fileID: 7953034977910176179, guid: 73f956dc0b272a24c9912df84734d0da, type: 3}
+  bloodVFX: {fileID: 7953034977910176179, guid: 7bff703dcd833d44ca7a57bfeb276918, type: 3}
