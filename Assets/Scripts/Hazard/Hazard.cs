@@ -9,8 +9,10 @@ public abstract class Hazard : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+        BoxCollider2D feetCollider = other.GetComponent<BoxCollider2D>();
         
-        if (other.gameObject.CompareTag(playerString))
+        if (other.gameObject.CompareTag(playerString) 
+            && feetCollider.IsTouchingLayers(LayerMask.GetMask("Hazards")))
         {
             playerHealth.TakeDamage(damage);
         }
