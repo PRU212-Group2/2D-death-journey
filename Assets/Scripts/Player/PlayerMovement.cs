@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     ActiveWeapon myActiveWeapon;
-    PlayerHealth myPlayerHealth;
     Weapon myWeapon;
     
     // Offsets for the rifle sprite for each animation state
@@ -58,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
-        myPlayerHealth = GetComponent<PlayerHealth>();
         myWeapon = GetComponentInChildren<Weapon>();
         
         // Store the original height and center values
