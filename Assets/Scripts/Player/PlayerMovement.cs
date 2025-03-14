@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isRifleCrouching = Animator.StringToHash("isRifleCrouching");
     static readonly int isPistolJumping = Animator.StringToHash("isPistolJumping");
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
-    static readonly int triggerDying = Animator.StringToHash("triggerDying");
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
@@ -81,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
         Standing();
         if (allowRunning) Run();
         FlipSprite();
-        Damage();
         AdjustWeaponPosition();
     }
 
@@ -181,15 +179,6 @@ public class PlayerMovement : MonoBehaviour
         // Make sure the animations is not played when player is standing still
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
         myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
-    }
-    
-    void Damage()
-    {
-        // if player collides with player then dies
-        //if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
-        //{
-        //    myPlayerHealth.TakeDamage(100);
-        //};
     }
 
     public void SetAlive(bool aliveState)

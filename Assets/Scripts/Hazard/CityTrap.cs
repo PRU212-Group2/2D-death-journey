@@ -1,15 +1,9 @@
 using UnityEngine;
 
-public class CityTrap : MonoBehaviour
+public class CityTrap : Hazard
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override void OnContact()
     {
-        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-
-        if (other.tag == "Player")
-        {
-            // Trigger game over function
-            playerHealth.TakeDamage(50);
-        }
+        // TODO: Play zap effects
     }
 }

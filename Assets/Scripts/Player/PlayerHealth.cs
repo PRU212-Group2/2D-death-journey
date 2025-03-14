@@ -11,12 +11,16 @@ public class PlayerHealth : MonoBehaviour
     int currentHealth;
     Animator animator;
     PlayerMovement playerMovement;
+    AudioPlayer audioPlayer;
+    ActiveWeapon activeWeapon;
 
     void Awake()
     {
         currentHealth = startingHealth;
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        activeWeapon = GetComponentInChildren<ActiveWeapon>();
     }
 
     public void TakeDamage(int amount)
@@ -33,7 +37,9 @@ public class PlayerHealth : MonoBehaviour
 
     void PlayerGameOver()
     {
-        // Play death animation and deactivate input
+        // Play death animation, sfx and deactivate input
+        audioPlayer.PlayDeathClip();
+        activeWeapon.gameObject.SetActive(false);
         playerMovement.SetAlive(false);
         animator.SetTrigger(triggerDying);
     }

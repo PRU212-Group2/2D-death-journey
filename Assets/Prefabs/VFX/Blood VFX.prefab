@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7953034977910176179}
   - component: {fileID: 7329887543362815997}
   m_Layer: 7
-  m_Name: Hit VFX
+  m_Name: Blood VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1366,7 +1366,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.92926645, b: 0, a: 1}
+        key0: {r: 1, g: 0.072913244, b: 0, a: 1}
         key1: {r: 0.98039216, g: 0.6498456, b: 0, a: 0.5529412}
         key2: {r: 1, g: 0.16016221, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 0}
