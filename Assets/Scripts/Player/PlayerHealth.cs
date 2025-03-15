@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 public class PlayerHealth : MonoBehaviour
 {
     static readonly int triggerDying = Animator.StringToHash("triggerDying");
-    
+
     [Range(1, 100)]
     [SerializeField] int startingHealth = 100;
-    
+
     int currentHealth;
     Animator animator;
     PlayerMovement playerMovement;
@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // Decrease health based on damage taken
         currentHealth -= amount;
-        
+
         // If the player dies then play death animation
         if (currentHealth <= 0)
         {
