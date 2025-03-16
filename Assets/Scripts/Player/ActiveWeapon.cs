@@ -26,6 +26,11 @@ public class ActiveWeapon : MonoBehaviour
         AdjustAmmo(currentWeaponSO.MagazineSize);
     }
 
+    public int GetAmmo()
+    {
+        return currentAmmo;
+    }
+    
     public bool IsRifle()
     {
         return currentWeaponSO.isRifle;

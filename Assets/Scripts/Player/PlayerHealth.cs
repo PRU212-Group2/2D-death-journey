@@ -23,6 +23,11 @@ public class PlayerHealth : MonoBehaviour
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
     }
 
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
+    
     public void TakeDamage(int amount)
     {
         // Decrease health based on damage taken
