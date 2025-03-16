@@ -53,9 +53,24 @@ MonoBehaviour:
   deathVolume: 1
   pickupClip: {fileID: 8300000, guid: e7220188ce5d2be42947cf519331b27a, type: 3}
   pickupVolume: 1
+  runningClip: {fileID: 8300000, guid: 38c8b6a7a56a67a48ace94be74b11cf5, type: 3}
+  runningVolume: 1
+  hurtClip: {fileID: 8300000, guid: c097b61f65f3da7458c8bfb523be07b6, type: 3}
+  hurtVolume: 1
+  buttonHoverClip: {fileID: 0}
+  buttonHoverVolume: 1
+  buttonClickClip: {fileID: 0}
+  buttonClickVolume: 1
+  buttonStartGameClip: {fileID: 0}
+  buttonStartGameVolume: 1
+  buttonBackClip: {fileID: 0}
+  buttonBackVolume: 1
   songs:
   - {fileID: 8300000, guid: 412bf9728e0c01146ad34591ea54b160, type: 3}
   songVolume: 1
+  mainMenuSceneName: MainMenu
+  instructionsSceneName: Instructions
+  gameOverSceneName: GameOver
 --- !u!82 &2873519763487298550
 AudioSource:
   m_ObjectHideFlags: 0

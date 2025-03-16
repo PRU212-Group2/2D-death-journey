@@ -20,6 +20,14 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip pickupClip;
     [SerializeField] [Range(0f, 1f)] float pickupVolume = 1f;
     
+    [Header("Running")]
+    [SerializeField] AudioClip runningClip;
+    [SerializeField] [Range(0f, 1f)] float runningVolume = 1f;
+    
+    [Header("Hurt")]
+    [SerializeField] AudioClip hurtClip;
+    [SerializeField] [Range(0f, 1f)] float hurtVolume = 1f;
+    
     [Header("UI")]
     [SerializeField] AudioClip buttonHoverClip;
     [SerializeField] [Range(0f, 1f)] float buttonHoverVolume = 1f;
@@ -40,7 +48,9 @@ public class AudioPlayer : MonoBehaviour
     int currentSongIndex = 0;
     AudioSource audioSource;
     private AudioSource rifleSource;
+    private AudioSource runningSource;
     private bool isRifleShootingPlaying = false;
+    private bool isRunningPlaying = false;
     
     private float soundEffectVolume = 1f;
     private float musicVolume = 1f;
@@ -51,6 +61,7 @@ public class AudioPlayer : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         
+        CreateRunningAudioSource();
         CreateRifleAudioSource();
 
         // Only play songs if we're not in the MainMenu scene
@@ -60,6 +71,10 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// SOUND SETTINGS
+    /// </summary>
+    /// <returns></returns>
     public float GetSoundEffectVolume()
     {
         return soundEffectVolume;
@@ -92,6 +107,7 @@ public class AudioPlayer : MonoBehaviour
         buttonClickVolume = soundEffectVolume;
         buttonStartGameVolume = soundEffectVolume;
         buttonBackVolume = soundEffectVolume;
+        runningVolume = soundEffectVolume;
     }
 
     private void AdjustSongVolumes()
@@ -108,6 +124,9 @@ public class AudioPlayer : MonoBehaviour
             || SceneManager.GetActiveScene().name == gameOverSceneName;
     }
 
+    /// <summary>
+    /// CREATE AUDIO SOURCE FOR RUNNING AND SHOOTING AS THEY ARE CONTINUOUS
+    /// </summary>
     private void CreateRifleAudioSource()
     {
         // Create a dedicated audio source for pistol sound
@@ -117,6 +136,15 @@ public class AudioPlayer : MonoBehaviour
         rifleSource.loop = true;
     }
 
+    private void CreateRunningAudioSource()
+    {
+        // Create a dedicated audio source for pistol sound
+        runningSource = gameObject.AddComponent<AudioSource>();
+        runningSource.clip = runningClip;
+        runningSource.volume = runningVolume;
+        runningSource.loop = true;
+    }
+    
     void Awake()
     {
         ManageSingleton();
@@ -136,6 +164,24 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
+    // Applying singleton pattern
+    void ManageSingleton()
+    {
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    /// <summary>
+    /// PLAY SONGS AND ROTATE
+    /// </summary>
     void PlayCurrentSong()
     {
         // Set the current song and play it
@@ -155,21 +201,7 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
-    // Applying singleton pattern
-    void ManageSingleton()
-    {
-        if (_instance)
-        {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-        }
-        else
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
+    
     // Since we're using DontDestroyOnLoad, add a scene change listener
     void OnEnable()
     {
@@ -181,6 +213,11 @@ public class AudioPlayer : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    /// <summary>
+    /// PLAY SONGS ONLY IN GAMEPLAY LEVELS
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Check if we should start or stop music based on new scene
@@ -194,6 +231,9 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// PLAY AUDIO CLIPS SECTION
+    /// </summary>
     public void PlayPistolClip()
     {
         PlayClip(pistolClip, pistolVolume);
@@ -216,6 +256,24 @@ public class AudioPlayer : MonoBehaviour
             isRifleShootingPlaying = false;
         }
     }
+    
+    public void StartRunningSound()
+    {
+        if (!isRunningPlaying && runningSource != null)
+        {
+            runningSource.Play();
+            isRunningPlaying = true;
+        }
+    }
+    
+    public void StopRunningSound()
+    {
+        if (isRunningPlaying && runningSource != null)
+        {
+            runningSource.Stop();
+            isRunningPlaying = false;
+        }
+    }
 
     public void PlayDeathClip()
     {
@@ -225,6 +283,11 @@ public class AudioPlayer : MonoBehaviour
     public void PlayPickupClip()
     {
         PlayClip(pickupClip, pickupVolume);
+    }
+
+    public void PlayHurtClip()
+    {
+        PlayClip(hurtClip, hurtVolume);
     }
 
     public void PlayButtonHoverClip()

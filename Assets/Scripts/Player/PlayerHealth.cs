@@ -38,12 +38,17 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerGameOver();
         }
+        else
+        {
+            audioPlayer.PlayHurtClip();
+        }
     }
 
     void PlayerGameOver()
     {
         // Play death animation, sfx and deactivate input
         audioPlayer.PlayDeathClip();
+        audioPlayer.StopRunningSound();
         activeWeapon.gameObject.SetActive(false);
         playerMovement.SetAlive(false);
         animator.SetTrigger(triggerDying);

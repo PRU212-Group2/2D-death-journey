@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider;
     ActiveWeapon myActiveWeapon;
     Weapon myWeapon;
+    AudioPlayer audioPlayer;
     
     // Offsets for the rifle sprite for each animation state
     Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
         myWeapon = GetComponentInChildren<Weapon>();
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
         
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
@@ -174,9 +176,20 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, myRigidBody.linearVelocity.y);
         myRigidBody.linearVelocity = playerVelocity;
         
-        // Make sure the animations is not played when player is standing still
+        // Make sure the animations and is not played when player is standing still
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
+
+        if (playerHasHorizontalSpeed)
+        {
+            audioPlayer.StartRunningSound();
+            myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, true);
+        }
+        else
+        {
+            audioPlayer.StopRunningSound();
+            myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, false);
+        }
+        
     }
 
     public void SetAlive(bool aliveState)
