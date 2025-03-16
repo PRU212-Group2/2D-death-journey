@@ -40,6 +40,12 @@ public class GameManager : MonoBehaviour
     }
     
     // Reset game session to the first level
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene("CityZombie");
+    }
+    
+    // Reset game session to the first level
     public void ResetGame()
     {
         scoreManager.ResetScore();
