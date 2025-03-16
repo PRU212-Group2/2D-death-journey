@@ -2,15 +2,31 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] GameObject InventoryMenu;
+    
+    bool menuActivated;
+    AudioPlayer audioPlayer;
+
     void Start()
     {
-        
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Tab) && menuActivated)
+        {
+            Time.timeScale = 1;
+            audioPlayer.PlayButtonBackClip();
+            InventoryMenu.SetActive(false);
+            menuActivated = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && !menuActivated)
+        {
+            audioPlayer.PlayInventoryClip();
+            Time.timeScale = 0;
+            InventoryMenu.SetActive(true);
+            menuActivated = true;
+        }
     }
 }

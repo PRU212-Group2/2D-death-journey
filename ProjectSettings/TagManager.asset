@@ -45,11 +45,11 @@ TagManager:
   - name: Backgound
     uniqueID: 542725929
     locked: 0
-  - name: Weapon
-    uniqueID: 2537994723
-    locked: 0
   - name: Fog
     uniqueID: 1156748559
+    locked: 0
+  - name: Weapon
+    uniqueID: 2537994723
     locked: 0
   - name: Platform
     uniqueID: 837410189

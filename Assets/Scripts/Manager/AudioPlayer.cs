@@ -37,6 +37,8 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] float buttonStartGameVolume = 1f;
     [SerializeField] AudioClip buttonBackClip;
     [SerializeField] [Range(0f, 1f)] float buttonBackVolume = 1f;
+    [SerializeField] AudioClip inventoryClip;
+    [SerializeField] [Range(0f, 1f)] float inventoryVolume = 1f;
     
     [Header("Songs")]
     [SerializeField] AudioClip[] songs; 
@@ -108,6 +110,8 @@ public class AudioPlayer : MonoBehaviour
         buttonStartGameVolume = soundEffectVolume;
         buttonBackVolume = soundEffectVolume;
         runningVolume = soundEffectVolume;
+        hurtVolume = soundEffectVolume;
+        inventoryVolume = soundEffectVolume;
     }
 
     private void AdjustSongVolumes()
@@ -310,6 +314,11 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(buttonBackClip, buttonBackVolume);
     }
     
+    public void PlayInventoryClip()
+    {
+        PlayClip(inventoryClip, inventoryVolume);
+    }
+
     void PlayClip(AudioClip clip, float volume)
     {
         if (clip)
