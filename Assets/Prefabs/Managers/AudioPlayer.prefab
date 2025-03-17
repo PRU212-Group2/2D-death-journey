@@ -57,14 +57,22 @@ MonoBehaviour:
   runningVolume: 1
   hurtClip: {fileID: 8300000, guid: c097b61f65f3da7458c8bfb523be07b6, type: 3}
   hurtVolume: 1
-  buttonHoverClip: {fileID: 0}
+  enemyAttackClip: {fileID: 8300000, guid: 18e93ef6e22fd6845a74497bdd7d1438, type: 3}
+  enemyAttackVolume: 1
+  enemyHurtClip: {fileID: 8300000, guid: 23c122783f7815746a9afd1e3210903b, type: 3}
+  enemyHurtVolume: 1
+  buttonHoverClip: {fileID: 8300000, guid: a9800e6c989b5fa459076ca3a38ffc9d, type: 3}
   buttonHoverVolume: 1
-  buttonClickClip: {fileID: 0}
+  buttonClickClip: {fileID: 8300000, guid: 98607c6ed0d561742a8dd3181d4d46dd, type: 3}
   buttonClickVolume: 1
-  buttonStartGameClip: {fileID: 0}
+  buttonStartGameClip: {fileID: 8300000, guid: a1b25c2c29f1faf4ea74a3b24a5cc9d5, type: 3}
   buttonStartGameVolume: 1
-  buttonBackClip: {fileID: 0}
+  buttonBackClip: {fileID: 8300000, guid: b9f8596be301cad4f85746a2e6c414fe, type: 3}
   buttonBackVolume: 1
+  inventoryClip: {fileID: 8300000, guid: ce737288fe5f03540b4213fa7ffdde66, type: 3}
+  inventoryVolume: 1
+  useItemClip: {fileID: 8300000, guid: 41c3030d13817ad45b82874e8ca461d5, type: 3}
+  useItemVolume: 1
   songs:
   - {fileID: 8300000, guid: 412bf9728e0c01146ad34591ea54b160, type: 3}
   songVolume: 1

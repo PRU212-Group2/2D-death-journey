@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float speedBoostMultiplier = 1.5f;
     [SerializeField] float crouchHeight = 0.86f;
     [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.16f);
 
@@ -25,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     bool isAlive = true;
     bool isUsingRifle;
     bool allowRunning = true;
+    
+    //========= Speed Boost ==========//
+    private float originalMoveSpeed;
+    private float speedBoostDuration;
+    private float speedBoostTimer;
+    private bool isSpeedBoosted = false;
     
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
@@ -38,17 +45,17 @@ public class PlayerMovement : MonoBehaviour
     // Offsets for the rifle sprite for each animation state
     Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.355f, 0.38f)},
-        {"Crouching", new Vector2(0.211f, 0.007f)},
+        {"Running", new Vector2(0.4f, 0.32f)},
+        {"Crouching", new Vector2(0.211f, -0.1f)},
         {"Jumping", new Vector2(0.262f, 0.337f)}
     };
 
     // Offsets for the pistol sprite for each animation state
     Dictionary<string, Vector2> pistolOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.42f, 0.43f)},
+        {"Running", new Vector2(0.48f, 0.40f)},
         {"Crouching", new Vector2(0.32f, 0.195f)},
-        {"Jumping", new Vector2(0.26f, 0.42f)}
+        {"Jumping", new Vector2(0.30f, 0.44f)}
     };
     
     void Start()
@@ -81,6 +88,19 @@ public class PlayerMovement : MonoBehaviour
         if (allowRunning) Run();
         FlipSprite();
         AdjustWeaponPosition();
+        
+        // Handle speed boost timer
+        if (isSpeedBoosted)
+        {
+            speedBoostTimer -= Time.deltaTime;
+        
+            // When timer expires, return to normal speed
+            if (speedBoostTimer <= 0)
+            {
+                moveSpeed = originalMoveSpeed;
+                isSpeedBoosted = false;
+            }
+        }
     }
 
     void SetAnimationMode()
@@ -248,6 +268,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 SetWeaponPosition(originalPistolPosition);
             }
+        }
+    }
+    
+    public void ApplySpeedBoost()
+    {
+        // Only apply if not already boosted or apply new duration if it's longer
+        if (!isSpeedBoosted || speedBoostDuration > speedBoostTimer)
+        {
+            if (!isSpeedBoosted)
+            {
+                // Store original speed for reference
+                originalMoveSpeed = moveSpeed;
+                // Apply the boost
+                moveSpeed *= speedBoostMultiplier;
+            }
+        
+            // Set the boost duration
+            speedBoostDuration = speedBoostDuration;
+            speedBoostTimer = speedBoostDuration;
+            isSpeedBoosted = true;
         }
     }
 }

@@ -1418,26 +1418,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 598348149384371909, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
-      propertyPath: buttonBackClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b9f8596be301cad4f85746a2e6c414fe, type: 3}
-    - target: {fileID: 598348149384371909, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
-      propertyPath: buttonClickClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 98607c6ed0d561742a8dd3181d4d46dd, type: 3}
-    - target: {fileID: 598348149384371909, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
-      propertyPath: buttonHoverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a9800e6c989b5fa459076ca3a38ffc9d, type: 3}
-    - target: {fileID: 598348149384371909, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
-      propertyPath: mainMenuSceneName
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 598348149384371909, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
-      propertyPath: buttonStartGameClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a1b25c2c29f1faf4ea74a3b24a5cc9d5, type: 3}
     - target: {fileID: 1570293726881582735, guid: f024f4cd302b33c4da65f30cb41d286b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.776467

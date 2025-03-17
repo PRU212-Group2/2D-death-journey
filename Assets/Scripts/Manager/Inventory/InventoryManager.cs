@@ -4,6 +4,7 @@ public class InventoryManager : MonoBehaviour
 {
     [SerializeField] GameObject inventoryMenu;
     [SerializeField] ItemSlot[] itemSlots;
+    [SerializeField] ItemSO[] itemSOs;
     
     public bool menuActivated;
     AudioPlayer audioPlayer;
@@ -62,7 +63,6 @@ public class InventoryManager : MonoBehaviour
                 || itemSlots[i].quantity == 0)
             {
                 int leftOverItems = itemSlots[i].AddItem(itemName, quantity, itemSprite, itemDescription);
-                Debug.Log("Left Overs: " + leftOverItems);
                 if (leftOverItems > 0)
                     leftOverItems = AddItem(itemName, leftOverItems, itemSprite, itemDescription);
                     
@@ -73,11 +73,31 @@ public class InventoryManager : MonoBehaviour
         return quantity;
     }
 
+    public bool UseItem(string itemName)
+    {
+        for (int i = 0; i < itemSOs.Length; i++)
+        {
+            if (itemSOs[i].itemName == itemName)
+            {
+                bool usable = itemSOs[i].UseItem();
+                return usable;
+            }
+
+        }
+        return false;
+    }
+
     public void DeselectAllSlots()
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
             itemSlots[i].selectedShader.SetActive(false);
+            itemSlots[i].itemSelected = false;
         }
+    }
+
+    public void PlayItemSound()
+    {
+        audioPlayer.PlayUseItemClip();
     }
 }

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupName: Syringe
   itemDescription: Old and rusty, it gives you health for the time, but beware of
-    the diseases.
+    diseases.
   pickupQuantity: 1
   pickupSprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
   bobSpeed: 1

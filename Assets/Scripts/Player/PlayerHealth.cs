@@ -51,6 +51,22 @@ public class PlayerHealth : MonoBehaviour
     {
         return currentHealth;
     }
+
+    public int GetMaxHealth()
+    {
+        return startingHealth;
+    }
+    
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+        
+        // If the player dies then play death animation
+        if (currentHealth > startingHealth)
+        {
+            currentHealth = startingHealth;
+        }
+    }
     
     public void TakeDamage(int amount)
     {

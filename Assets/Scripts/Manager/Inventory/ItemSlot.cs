@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -25,6 +26,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     [SerializeField] TextMeshProUGUI itemDescriptionText;
     
     public GameObject selectedShader;
+    public bool itemSelected;
     
     private InventoryManager inventoryManager;
 
@@ -81,19 +83,58 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    //======== DROP ITEM ==========//
     private void OnRightClick()
     {
-        throw new System.NotImplementedException();
+        quantity -= 1;
+        quantityText.text = quantity.ToString("00");
+        inventoryManager.PlayItemSound();
+        if (quantity <= 0) EmptySlot();
     }
 
+    
+    //======== ITEM SLOT SELECTED ==========//
     private void OnLeftClick()
     {
-        inventoryManager.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        itemDescriptionNameText.text = itemName;
-        itemDescriptionImage.sprite = itemSprite;
-        itemDescriptionText.text = itemDescription;
-        if (itemDescriptionImage.sprite == null) 
-            itemDescriptionImage.sprite = emptySprite;
+        if (itemSelected)
+        {
+            bool usable = inventoryManager.UseItem(itemName);
+            
+            // Check if the item is usable
+            if (usable)
+            {
+                quantity -= 1;
+                quantityText.text = quantity.ToString("00");
+                inventoryManager.PlayItemSound();
+                
+                if (quantity <= 0)
+                {
+                    EmptySlot();
+                }
+            }
+        }
+        else
+        {
+            inventoryManager.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            itemSelected = true;
+            itemDescriptionNameText.text = itemName;
+            itemDescriptionImage.sprite = itemSprite;
+            itemDescriptionText.text = itemDescription;
+            if (itemDescriptionImage.sprite == null) 
+                itemDescriptionImage.sprite = emptySprite;
+        }
+    }
+
+    //======== EMPTY SLOT IF USED ALL ITEMS ==========//
+    private void EmptySlot()
+    {
+        quantityText.gameObject.SetActive(false);
+        itemImage.sprite = emptySprite;
+        itemSprite = emptySprite;
+        
+        itemDescriptionNameText.text = "";
+        itemDescriptionImage.sprite = emptySprite;
+        itemDescriptionText.text = "";
     }
 }

@@ -28,6 +28,12 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip hurtClip;
     [SerializeField] [Range(0f, 1f)] float hurtVolume = 1f;
     
+    [Header("Enemy")]
+    [SerializeField] AudioClip enemyAttackClip;
+    [SerializeField] [Range(0f, 1f)] float enemyAttackVolume = 1f;
+    [SerializeField] AudioClip enemyHurtClip;
+    [SerializeField] [Range(0f, 1f)] float enemyHurtVolume = 1f;
+    
     [Header("UI")]
     [SerializeField] AudioClip buttonHoverClip;
     [SerializeField] [Range(0f, 1f)] float buttonHoverVolume = 1f;
@@ -39,6 +45,8 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] float buttonBackVolume = 1f;
     [SerializeField] AudioClip inventoryClip;
     [SerializeField] [Range(0f, 1f)] float inventoryVolume = 1f;
+    [SerializeField] AudioClip useItemClip;
+    [SerializeField] [Range(0f, 1f)] float useItemVolume = 1f;
     
     [Header("Songs")]
     [SerializeField] AudioClip[] songs; 
@@ -112,6 +120,8 @@ public class AudioPlayer : MonoBehaviour
         runningVolume = soundEffectVolume;
         hurtVolume = soundEffectVolume;
         inventoryVolume = soundEffectVolume;
+        enemyHurtVolume = soundEffectVolume;
+        enemyAttackVolume = soundEffectVolume;
     }
 
     private void AdjustSongVolumes()
@@ -243,6 +253,7 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(pistolClip, pistolVolume);
     }
     
+    //====== SEPARATE AUDIO SOURCE FOR CONTINUOUS AUDIO =======//
     public void StartRifleShootingSound()
     {
         if (!isRifleShootingPlaying && rifleSource != null)
@@ -279,6 +290,7 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
+    //====== PLAYER AND ENEMY SOUND EFFECTS =======//
     public void PlayDeathClip()
     {
         PlayClip(deathClip, deathVolume);
@@ -294,6 +306,17 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(hurtClip, hurtVolume);
     }
 
+    public void PlayEnemyAttackClip()
+    {
+        PlayClip(enemyAttackClip, enemyAttackVolume);
+    }
+    
+    public void PlayEnemyHurtClip()
+    {
+        PlayClip(enemyHurtClip, enemyHurtVolume);
+    }
+    
+    //====== UI SOUND EFFECTS =======//
     public void PlayButtonHoverClip()
     {
         PlayClip(buttonHoverClip, buttonHoverVolume);
@@ -317,6 +340,11 @@ public class AudioPlayer : MonoBehaviour
     public void PlayInventoryClip()
     {
         PlayClip(inventoryClip, inventoryVolume);
+    }
+    
+    public void PlayUseItemClip()
+    {
+        PlayClip(useItemClip, useItemVolume);
     }
 
     void PlayClip(AudioClip clip, float volume)
