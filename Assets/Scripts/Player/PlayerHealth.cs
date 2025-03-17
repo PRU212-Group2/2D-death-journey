@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;  // Add this for UI elements
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -7,13 +9,15 @@ public class PlayerHealth : MonoBehaviour
     
     [Range(1, 100)]
     [SerializeField] int startingHealth = 100;
+    [SerializeField] int lowHealthThreshold = 30;  // New threshold variable
+    [SerializeField] Image lowHealthEffectImage;   // Reference to your UI image
     
     int currentHealth;
     Animator animator;
     PlayerMovement playerMovement;
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
-
+    
     void Awake()
     {
         currentHealth = startingHealth;
@@ -22,7 +26,27 @@ public class PlayerHealth : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
     }
-
+    
+    void Update()
+    {
+        UpdateLowHealthEffect();
+    }
+    
+    void UpdateLowHealthEffect()
+    {
+        if (lowHealthEffectImage == null) return;
+        
+        if (currentHealth <= lowHealthThreshold && currentHealth > 0)
+        {
+            lowHealthEffectImage.GameObject().SetActive(true);
+        }
+        else
+        {
+            // Hide the effect when health is above threshold or player is dead
+            lowHealthEffectImage.GameObject().SetActive(false);
+        }
+    }
+    
     public int GetHealth()
     {
         return currentHealth;
@@ -43,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
             audioPlayer.PlayHurtClip();
         }
     }
-
+    
     void PlayerGameOver()
     {
         // Play death animation, sfx and deactivate input

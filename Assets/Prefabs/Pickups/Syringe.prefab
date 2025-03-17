@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 7071999623194385675}
   - component: {fileID: 1520530731949611174}
   - component: {fileID: 5177705404110794900}
-  - component: {fileID: 2769372301523487724}
-  - component: {fileID: 3516468753644305401}
+  - component: {fileID: -2861369047617027928}
   m_Layer: 11
-  m_Name: Money
+  m_Name: Syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.9, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15762196, y: 0.15762196, z: 0.15762196}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1875603099
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5670732621190257608, guid: c9ad1859568b226478191919599e36a2, type: 3}
+  m_Sprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,41 +123,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.044605315, y: -0.13381654}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.5}
+    oldSize: {x: 3.74, y: 3.63}
     newSize: {x: 0.17, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.53125, y: 0.5}
+  m_Size: {x: 3.8677416, y: 1.9095346}
   m_EdgeRadius: 0
---- !u!95 &2769372301523487724
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092573083065894815}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a37d0a3b4398f94cb819306c880e99a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3516468753644305401
+--- !u!114 &-2861369047617027928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,13 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5092573083065894815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 234919beda6d5d54f90a7ab106e9d0b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 219f9d1a9b312424e834bc53fe0ffbac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupName: Cash
-  itemDescription: It can not buy happiness, who gives a shit it makes me happy.
-  pickupQuantity: 200
-  pickupSprite: {fileID: -3827101018466894660, guid: c9ad1859568b226478191919599e36a2, type: 3}
+  pickupName: Syringe
+  itemDescription: Old and rusty syringe, gives you health... and additional diseases.
+  pickupQuantity: 1
+  pickupSprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
   bobSpeed: 1
   bobHeight: 0.2
-  cash: 200

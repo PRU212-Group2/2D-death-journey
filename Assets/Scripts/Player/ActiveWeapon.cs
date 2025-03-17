@@ -11,15 +11,19 @@ public class ActiveWeapon : MonoBehaviour
     int currentAmmo;
     bool shootState;
     AudioPlayer audioPlayer;
+    InventoryManager inventoryManager;
 
     void Update()
     {
+        if (inventoryManager.menuActivated) return;
+        
         HandleShoot();
     }
     
     void Start()
     {
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        inventoryManager = FindFirstObjectByType<InventoryManager>();
         
         // Equip starting weapon and starting ammo at the beginning of the game
         SwitchWeapon(startingWeapon);

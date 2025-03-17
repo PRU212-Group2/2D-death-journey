@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Money : Pickup
+public class Money : MonoBehaviour
 {
+    const string playerString = "Player";
+    
     [SerializeField] int cash = 200;
     
     AudioPlayer audioPlayer;
@@ -13,7 +15,16 @@ public class Money : Pickup
         currencyManager = FindFirstObjectByType<CurrencyManager>();
     }
 
-    protected override void OnPickup()
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(playerString))
+        {
+            Destroy(gameObject);
+            OnPickup();
+        }
+    }
+    
+    void OnPickup()
     {
         currencyManager.AddCash(cash);
         audioPlayer.PlayPickupClip();
