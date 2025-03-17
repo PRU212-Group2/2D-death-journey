@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class Pickup : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
     const string playerString = "Player";
     
@@ -16,8 +16,9 @@ public abstract class Pickup : MonoBehaviour
     [SerializeField] float bobHeight = 0.2f;
     
     // To store the initial position
-    private Vector3 startPosition;
-    private bool positionInitialized = false;
+    Vector3 startPosition;
+    bool positionInitialized = false;
+    AudioPlayer audioPlayer;
     
     // Reference to the inventory manager
     InventoryManager inventoryManager;
@@ -26,6 +27,9 @@ public abstract class Pickup : MonoBehaviour
     {
         // Get the inventory manager reference
         inventoryManager = FindFirstObjectByType<InventoryManager>();
+        
+        // Get audio player reference
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
     }
     
     void Start()
@@ -53,27 +57,30 @@ public abstract class Pickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag(playerString))
         {
-            if (inventoryManager != null)
-            {
-                int leftOverItems = inventoryManager.AddItem(pickupName, pickupQuantity, pickupSprite, itemDescription);
-
-                if (leftOverItems <= 0)
-                {
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    pickupQuantity = leftOverItems;
-                }
-            }
-            else
-            {
-                Debug.LogWarning("InventoryManager not found!");
-            }
-            
             OnPickup();
         }
     }
-    
-    protected abstract void OnPickup();
+
+    void OnPickup()
+    {
+        audioPlayer.PlayInventoryClip();
+
+        if (inventoryManager != null)
+        {
+            int leftOverItems = inventoryManager.AddItem(pickupName, pickupQuantity, pickupSprite, itemDescription);
+
+            if (leftOverItems <= 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                pickupQuantity = leftOverItems;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("InventoryManager not found!");
+        }
+    }
 }
