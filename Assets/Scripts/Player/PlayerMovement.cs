@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -13,8 +14,7 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isPistolJumping = Animator.StringToHash("isPistolJumping");
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
 
-    [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] PlayerSO startingPlayer;
     [SerializeField] float speedBoostMultiplier = 1.5f;
     [SerializeField] float crouchHeight = 0.86f;
     [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.16f);
@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     bool isAlive = true;
     bool isUsingRifle;
     bool allowRunning = true;
+    
+    //========= Movement Speed ========//
+    float moveSpeed;
+    float jumpSpeed;
     
     //========= Speed Boost ==========//
     private float originalMoveSpeed;
@@ -68,6 +72,9 @@ public class PlayerMovement : MonoBehaviour
         myWeapon = GetComponentInChildren<Weapon>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         
+        // Set starting player stats
+        SwitchPlayer(startingPlayer);
+        
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
         originalBodyCenter = myBodyCollider.offset;
@@ -103,6 +110,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void SwitchPlayer(PlayerSO player)
+    {
+        // Set the player movement and animation here
+        myAnimator.runtimeAnimatorController = player.animator;
+        moveSpeed = player.moveSpeed;
+        jumpSpeed = player.jumpSpeed;
+    }
+    
     void SetAnimationMode()
     {
         isUsingRifle = myActiveWeapon.IsRifle();

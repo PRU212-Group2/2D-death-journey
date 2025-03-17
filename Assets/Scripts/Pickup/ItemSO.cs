@@ -25,24 +25,21 @@ public class ItemSO : ScriptableObject
         else if (statToChange == StatToChange.speed)
         {
             PlayerMovement playerMovement = FindFirstObjectByType<PlayerMovement>();
-            
             playerMovement.ApplySpeedBoost();
+            return true;
         }
-        else if (statToChange == StatToChange.pistolAmmo)
+        else if (statToChange == StatToChange.ammo)
         {
             ActiveWeapon activeWeapon = FindFirstObjectByType<ActiveWeapon>();
+
+            // If the magazine is full then do not add ammo
+            if (activeWeapon.GetAmmo() >= activeWeapon.GetMagazineSize())
+            {
+                return false;
+            }
             
-            // Prevent adding pistol ammo if the player currently does not equip pistol
-            if (activeWeapon.IsRifle()) return false;
             activeWeapon.AdjustAmmo(amountToChange);
-        }
-        else if (statToChange == StatToChange.rifleAmmo)
-        {
-            ActiveWeapon activeWeapon = FindFirstObjectByType<ActiveWeapon>();
-            
-            // Prevent adding rifle ammo if the player currently does not equip rifle
-            if (!activeWeapon.IsRifle()) return false;
-            activeWeapon.AdjustAmmo(amountToChange);
+            return true;
         }
 
         return false;
@@ -53,7 +50,6 @@ public class ItemSO : ScriptableObject
         none,
         health,
         speed,
-        pistolAmmo,
-        rifleAmmo
+        ammo
     }
 }

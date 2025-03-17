@@ -1,17 +1,18 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UI;  // Add this for UI elements
 
 public class PlayerHealth : MonoBehaviour
 {
     static readonly int triggerDying = Animator.StringToHash("triggerDying");
     
-    [Range(1, 100)]
-    [SerializeField] int startingHealth = 100;
-    [SerializeField] int lowHealthThreshold = 30;  // New threshold variable
-    [SerializeField] Image lowHealthEffectImage;   // Reference to your UI image
+    [SerializeField] PlayerSO startingPlayer;
+    [SerializeField] Image lowHealthEffectImage;
     
+    int startingHealth;
+    int lowHealthThreshold;
     int currentHealth;
     Animator animator;
     PlayerMovement playerMovement;
@@ -20,11 +21,19 @@ public class PlayerHealth : MonoBehaviour
     
     void Awake()
     {
+        SwitchPlayer(startingPlayer);
+        
         currentHealth = startingHealth;
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
+    }
+    
+    public void SwitchPlayer(PlayerSO player)
+    {
+        startingHealth = player.playerHealth;
+        lowHealthThreshold = player.lowHealthThreshold;
     }
     
     void Update()

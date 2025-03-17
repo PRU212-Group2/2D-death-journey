@@ -34,6 +34,11 @@ public class ActiveWeapon : MonoBehaviour
     {
         return currentAmmo;
     }
+
+    public int GetMagazineSize()
+    {
+        return currentWeaponSO.MagazineSize;
+    }
     
     public bool IsRifle()
     {

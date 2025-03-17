@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 7860184952376751425}
   - component: {fileID: 2504398027025814311}
   m_Layer: 7
-  m_Name: Player
+  m_Name: Super Soldier
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 5722687265407260290}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc7e9f7bb4ebf0a4c8308f1dc97c700a, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb39eeb5c18e84e40a9e2298d61dd3b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_SortingLayerID: 837410189
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1890775160002818438, guid: 2bc20b909222538499c3849c176e0b98, type: 3}
+  m_Sprite: {fileID: 3713655549682010144, guid: 837fba7c0c599f24aa6f1c83551d8f60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -294,7 +294,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.21}
+    oldSize: {x: 0.7, y: 1.28}
     newSize: {x: 0.64, y: 1.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -316,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpSpeed: 10
+  speedBoostMultiplier: 1.5
   crouchHeight: 0.86
   crouchCenter: {x: 0, y: -0.18}
 --- !u!114 &2504398027025814311
