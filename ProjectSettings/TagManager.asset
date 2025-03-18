@@ -45,6 +45,9 @@ TagManager:
   - name: Backgound
     uniqueID: 542725929
     locked: 0
+  - name: ForeGround
+    uniqueID: 1533496141
+    locked: 0
   - name: Weapon
     uniqueID: 2537994723
     locked: 0
