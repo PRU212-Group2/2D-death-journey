@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2717696361
+    locked: 0
+  - name: Castle
+    uniqueID: 3992432917
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
