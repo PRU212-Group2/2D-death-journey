@@ -9,7 +9,11 @@ public class ItemSO : ScriptableObject
     
     public bool UseItem()
     {
-        if (statToChange == StatToChange.health)
+        if (statToChange == StatToChange.none)
+        {
+            return false;
+        }
+        else if (statToChange == StatToChange.health)
         {
             PlayerHealth playerHealth = FindFirstObjectByType<PlayerHealth>();
             
@@ -28,8 +32,13 @@ public class ItemSO : ScriptableObject
             playerMovement.ApplySpeedBoost();
             return true;
         }
+        else if (statToChange == StatToChange.strength)
+        {
+            return true;
+        }
         else if (statToChange == StatToChange.ammo)
         {
+            Debug.Log("ok");
             ActiveWeapon activeWeapon = FindFirstObjectByType<ActiveWeapon>();
 
             // If the magazine is full then do not add ammo
@@ -50,6 +59,7 @@ public class ItemSO : ScriptableObject
         none,
         health,
         speed,
-        ammo
+        ammo,
+        strength
     }
 }

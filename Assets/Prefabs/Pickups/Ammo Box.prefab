@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5177705404110794900}
   - component: {fileID: 2694077274914316093}
   m_Layer: 11
-  m_Name: Syringe
+  m_Name: Ammo Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1875603099
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
+  m_Sprite: {fileID: 8964709887711389588, guid: 675c958d687b96b46bcd36f7728f62a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.74, y: 3.63}
+    oldSize: {x: 4.39, y: 3.78}
     newSize: {x: 0.17, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,13 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404182fe4ef6d2144a3921345bad5809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Syringe
-  itemDescription: 'Old and rusty, it gives you health for the time, but beware of
-    diseases.
+  itemName: Ammo Box
+  itemDescription: 'Remember to reload your gun if empty, we have monsters to kill.
 
 
-    Heal: 50 Health'
+    Ammo:
+    20 rounds'
   itemQuantity: 1
-  itemSprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
+  itemSprite: {fileID: 8964709887711389588, guid: 675c958d687b96b46bcd36f7728f62a4, type: 3}
   bobSpeed: 1
   bobHeight: 0.2

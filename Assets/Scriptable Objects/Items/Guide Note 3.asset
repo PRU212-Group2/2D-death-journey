@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec64648c0d93b334880ce039b1e3e914, type: 3}
-  m_Name: PistolAmmo
+  m_Name: Guide Note 3
   m_EditorClassIdentifier: 
-  itemName: Pistol Ammo
-  statToChange: 3
+  itemName: Guide Note 3
+  statToChange: 0
+  amountToChange: 0

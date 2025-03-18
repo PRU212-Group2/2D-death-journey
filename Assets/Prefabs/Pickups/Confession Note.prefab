@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5177705404110794900}
   - component: {fileID: 2694077274914316093}
   m_Layer: 11
-  m_Name: Syringe
+  m_Name: Confession Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1875603099
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
+  m_Sprite: {fileID: -4841720520028814253, guid: b756bba4a090f8546b42b6df1bc16063, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.74, y: 3.63}
+    oldSize: {x: 3.34, y: 3.82}
     newSize: {x: 0.17, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,13 +147,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404182fe4ef6d2144a3921345bad5809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Syringe
-  itemDescription: 'Old and rusty, it gives you health for the time, but beware of
-    diseases.
-
-
-    Heal: 50 Health'
+  itemName: Confession Note
+  itemDescription: "Adam, my love,\n\nIf you\u2019re reading this, it\u2019s too
+    late. I never wanted to be your burden, but I couldn\u2019t escape what I was.
+    I pretended for so long, but I wasn\u2019t the woman you needed. I couldn\u2019t
+    fix anything. I was tired, and part of me was relieved when I left.\n\nI\u2019m
+    sorry for everything. I wanted to be more, but I couldn\u2019t. You deserve to
+    move on.\n\nMaria"
   itemQuantity: 1
-  itemSprite: {fileID: 3485184536122157715, guid: 618995e4ae3739d4f89c1bd0c15d39bb, type: 3}
+  itemSprite: {fileID: -4841720520028814253, guid: b756bba4a090f8546b42b6df1bc16063, type: 3}
   bobSpeed: 1
   bobHeight: 0.2
