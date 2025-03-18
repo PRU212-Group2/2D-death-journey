@@ -61,6 +61,8 @@ MonoBehaviour:
   enemyAttackVolume: 1
   enemyHurtClip: {fileID: 8300000, guid: 23c122783f7815746a9afd1e3210903b, type: 3}
   enemyHurtVolume: 1
+  unlockClip: {fileID: 8300000, guid: df034e6fbf7d1464381684a8e59dfe55, type: 3}
+  unlockVolume: 1
   buttonHoverClip: {fileID: 8300000, guid: a9800e6c989b5fa459076ca3a38ffc9d, type: 3}
   buttonHoverVolume: 1
   buttonClickClip: {fileID: 8300000, guid: 98607c6ed0d561742a8dd3181d4d46dd, type: 3}

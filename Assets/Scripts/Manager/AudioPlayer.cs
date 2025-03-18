@@ -34,6 +34,10 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip enemyHurtClip;
     [SerializeField] [Range(0f, 1f)] float enemyHurtVolume = 1f;
     
+    [Header("Unlock")]
+    [SerializeField] AudioClip unlockClip;
+    [SerializeField] [Range(0f, 1f)] float unlockVolume = 1f;
+    
     [Header("UI")]
     [SerializeField] AudioClip buttonHoverClip;
     [SerializeField] [Range(0f, 1f)] float buttonHoverVolume = 1f;
@@ -314,6 +318,11 @@ public class AudioPlayer : MonoBehaviour
     public void PlayEnemyHurtClip()
     {
         PlayClip(enemyHurtClip, enemyHurtVolume);
+    }
+    
+    public void PlayDoorUnlockClip()
+    {
+        PlayClip(unlockClip, unlockVolume);
     }
     
     //====== UI SOUND EFFECTS =======//

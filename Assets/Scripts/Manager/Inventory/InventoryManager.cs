@@ -87,6 +87,19 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public bool HasItem(string itemName)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].itemName == itemName)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     public void DeselectAllSlots()
     {
         for (int i = 0; i < itemSlots.Length; i++)
