@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
 
     [SerializeField] PlayerSO startingPlayer;
-    [SerializeField] float speedBoostMultiplier = 1.5f;
     [SerializeField] float crouchHeight = 0.86f;
     [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.16f);
 
@@ -294,8 +293,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    public void ApplySpeedBoost()
+    public void ApplySpeedBoost(float speedBoostMultiplier, float duration)
     {
+        // Set the boost duration from the parameter
+        speedBoostDuration = duration;
+    
         // Only apply if not already boosted or apply new duration if it's longer
         if (!isSpeedBoosted || speedBoostDuration > speedBoostTimer)
         {
@@ -306,9 +308,8 @@ public class PlayerMovement : MonoBehaviour
                 // Apply the boost
                 moveSpeed *= speedBoostMultiplier;
             }
-        
+    
             // Set the boost duration
-            speedBoostDuration = speedBoostDuration;
             speedBoostTimer = speedBoostDuration;
             isSpeedBoosted = true;
         }

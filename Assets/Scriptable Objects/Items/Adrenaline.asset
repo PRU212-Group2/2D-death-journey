@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Adrenaline
   statToChange: 2
+  amountToChange: 10
+  multiplier: 1.5

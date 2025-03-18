@@ -6,6 +6,7 @@ public class ItemSO : ScriptableObject
     public string itemName;
     public StatToChange statToChange = new StatToChange();
     public int amountToChange;
+    public float multiplier = 1f;
     
     public bool UseItem()
     {
@@ -29,16 +30,17 @@ public class ItemSO : ScriptableObject
         else if (statToChange == StatToChange.speed)
         {
             PlayerMovement playerMovement = FindFirstObjectByType<PlayerMovement>();
-            playerMovement.ApplySpeedBoost();
+            playerMovement.ApplySpeedBoost(multiplier, amountToChange);
             return true;
         }
         else if (statToChange == StatToChange.strength)
         {
+            PlayerHealth playerHealth = FindFirstObjectByType<PlayerHealth>();
+            playerHealth.ApplyImmortal(amountToChange);
             return true;
         }
         else if (statToChange == StatToChange.ammo)
         {
-            Debug.Log("ok");
             ActiveWeapon activeWeapon = FindFirstObjectByType<ActiveWeapon>();
 
             // If the magazine is full then do not add ammo

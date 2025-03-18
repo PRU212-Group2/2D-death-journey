@@ -19,6 +19,12 @@ public class PlayerHealth : MonoBehaviour
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
     
+    
+    // Immortality variables
+    private bool isImmortal = false;
+    private float immortalityTimer = 0f;
+    private float immortalityDuration = 0f;
+    
     void Awake()
     {
         SwitchPlayer(startingPlayer);
@@ -39,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         UpdateLowHealthEffect();
+        UpdateImmortality();
     }
     
     void UpdateLowHealthEffect()
@@ -53,6 +60,33 @@ public class PlayerHealth : MonoBehaviour
         {
             // Hide the effect when health is above threshold or player is dead
             lowHealthEffectImage.GameObject().SetActive(false);
+        }
+    }
+    
+    void UpdateImmortality()
+    {
+        if (isImmortal)
+        {
+            immortalityTimer -= Time.deltaTime;
+            
+            // When timer expires, return to normal
+            if (immortalityTimer <= 0)
+            {
+                isImmortal = false;
+            }
+        }
+    }
+    
+    public void ApplyImmortal(float duration)
+    {
+        // Set the immortality duration
+        immortalityDuration = duration;
+        
+        // Only apply if not already immortal or apply new duration if it's longer
+        if (!isImmortal || immortalityDuration > immortalityTimer)
+        {
+            immortalityTimer = immortalityDuration;
+            isImmortal = true;
         }
     }
     
@@ -79,6 +113,9 @@ public class PlayerHealth : MonoBehaviour
     
     public void TakeDamage(int amount)
     {
+        // If player is immortal, ignore damage
+        if (isImmortal) return;
+        
         // Decrease health based on damage taken
         currentHealth -= amount;
         

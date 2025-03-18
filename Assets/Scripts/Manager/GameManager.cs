@@ -7,7 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float loadDelay = 0.5f;
-    [SerializeField] float startTime = 60f;
 
     static GameManager _instance;
     

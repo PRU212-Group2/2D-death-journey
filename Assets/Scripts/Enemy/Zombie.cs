@@ -7,7 +7,6 @@ public class Zombie : MonoBehaviour
     private EnemyHealth enemyHealth;
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float moveRange = 0.8f;
-    private int damage = 20;
     Animator animator;
     AudioPlayer audioPlayer;
     

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Pills
   statToChange: 4
-  amountToChange: 0
+  amountToChange: 5
+  multiplier: 1
