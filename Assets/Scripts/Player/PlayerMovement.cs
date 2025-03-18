@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isRifleCrouching = Animator.StringToHash("isRifleCrouching");
     static readonly int isPistolJumping = Animator.StringToHash("isPistolJumping");
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
-    static readonly int triggerDying = Animator.StringToHash("triggerDying");
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     ActiveWeapon myActiveWeapon;
-    PlayerHealth myPlayerHealth;
     Weapon myWeapon;
     
     // Offsets for the rifle sprite for each animation state
@@ -47,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Offsets for the pistol sprite for each animation state
     Dictionary<string, Vector2> pistolOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.456f, 0.441f)},
+        {"Running", new Vector2(0.42f, 0.43f)},
         {"Crouching", new Vector2(0.32f, 0.195f)},
         {"Jumping", new Vector2(0.26f, 0.42f)}
     };
@@ -59,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
-        myPlayerHealth = GetComponent<PlayerHealth>();
         myWeapon = GetComponentInChildren<Weapon>();
         
         // Store the original height and center values
@@ -81,7 +78,6 @@ public class PlayerMovement : MonoBehaviour
         Standing();
         if (allowRunning) Run();
         FlipSprite();
-        Damage();
         AdjustWeaponPosition();
     }
 
@@ -181,15 +177,6 @@ public class PlayerMovement : MonoBehaviour
         // Make sure the animations is not played when player is standing still
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
         myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
-    }
-    
-    void Damage()
-    {
-        // if player collides with player then dies
-        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
-        {
-            myPlayerHealth.TakeDamage(100);
-        };
     }
 
     public void SetAlive(bool aliveState)

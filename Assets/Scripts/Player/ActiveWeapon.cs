@@ -10,6 +10,7 @@ public class ActiveWeapon : MonoBehaviour
     float timeSinceLastShot = 0f;
     int currentAmmo;
     bool shootState;
+    AudioPlayer audioPlayer;
 
     void Update()
     {
@@ -18,6 +19,8 @@ public class ActiveWeapon : MonoBehaviour
     
     void Start()
     {
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        
         // Equip starting weapon and starting ammo at the beginning of the game
         SwitchWeapon(startingWeapon);
         AdjustAmmo(currentWeaponSO.MagazineSize);
@@ -59,14 +62,29 @@ public class ActiveWeapon : MonoBehaviour
     public void HandleShootInput(bool isPressed)
     {
         shootState = isPressed;
+        
+        // Stop rifle sound immediately when button is released
+        if (!isPressed && currentWeaponSO.isRifle)
+        {
+            audioPlayer.StopRifleShootingSound();
+        }
     }
     
     void HandleShoot()
     {
         timeSinceLastShot += Time.deltaTime;
-        
-        if (!shootState) return;
-        
+
+        if (!shootState)
+        {
+            return;
+        }
+
+        // Start the rifle sound as soon as shoot is pressed for rifles
+        if (shootState && currentWeaponSO.isRifle && currentAmmo > 0)
+        {
+            audioPlayer.StartRifleShootingSound();
+        }
+
         // Rate of fire (can not shoot until time since last shot is greater than fire rate)
         if (timeSinceLastShot >= currentWeaponSO.FireRate && currentAmmo > 0)
         {
@@ -75,13 +93,19 @@ public class ActiveWeapon : MonoBehaviour
             
             timeSinceLastShot = 0f;
             AdjustAmmo(-1);
+            
+            // Play pistol shooting audio only for non-rifles
+            if (!currentWeaponSO.isRifle)
+            {
+                audioPlayer.PlayPistolClip();
+                shootState = false;
+            }
         }
-
-        // Determine if the weapon is rifle/automatic or not (mouse hold or mouse press)
-        if (!currentWeaponSO.isRifle)
+        
+        // Stop rifle sound if we're out of ammo
+        if (currentWeaponSO.isRifle && currentAmmo <= 0)
         {
-            shootState = false;
+            audioPlayer.StopRifleShootingSound();
         }
     }
-
 }
