@@ -1,15 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Item : MonoBehaviour
 {
     const string playerString = "Player";
     
-    [SerializeField] string pickupName;
+    [SerializeField] string itemName;
     [TextArea]
     [SerializeField] string itemDescription;
-    [SerializeField] int pickupQuantity;
-    [SerializeField] Sprite pickupSprite;
+    [SerializeField] int itemQuantity;
+    [SerializeField] Sprite itemSprite;
     
     // Movement parameters
     [SerializeField] float bobSpeed = 1.0f;
@@ -67,7 +68,7 @@ public class Item : MonoBehaviour
 
         if (inventoryManager != null)
         {
-            int leftOverItems = inventoryManager.AddItem(pickupName, pickupQuantity, pickupSprite, itemDescription);
+            int leftOverItems = inventoryManager.AddItem(itemName, itemQuantity, itemSprite, itemDescription);
 
             if (leftOverItems <= 0)
             {
@@ -75,7 +76,7 @@ public class Item : MonoBehaviour
             }
             else
             {
-                pickupQuantity = leftOverItems;
+                itemQuantity = leftOverItems;
             }
         }
         else
