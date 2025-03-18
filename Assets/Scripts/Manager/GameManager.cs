@@ -7,15 +7,12 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float loadDelay = 0.5f;
-    [SerializeField] float startTime = 60f;
-    
-    ScoreManager scoreManager;
+
     static GameManager _instance;
     
     void Awake()
     {
         ManageSingleton();
-        scoreManager = FindFirstObjectByType<ScoreManager>();
     }
     
     // Applying singleton pattern
@@ -40,23 +37,26 @@ public class GameManager : MonoBehaviour
     }
     
     // Reset game session to the first level
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene("CityZombie");
+    }
+    
+    // Reset game session to the first level
     public void ResetGame()
     {
-        scoreManager.ResetScore();
         SceneManager.LoadScene("Chapter1");
     }
     
     // Load help menu scene
     public void HelpMenu()
     {
-        scoreManager.ResetScore();
         SceneManager.LoadScene("HelpMenu");
     }
 
     // Load Main menu scene
     public void MainMenu()
     {
-        scoreManager.ResetScore();
         SceneManager.LoadScene("MainMenu");
     }
     

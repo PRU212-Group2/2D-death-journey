@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 791665135803659488}
   - component: {fileID: 8670593024319151299}
   - component: {fileID: 6408121284962632658}
-  - component: {fileID: 1828098056276059111}
+  - component: {fileID: 8337875118861882066}
   m_Layer: 8
   m_Name: Zombie
   m_TagString: Enemy
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1171036435
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 978d3435a39eb2046889151fcdcbf4f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -236,7 +236,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1828098056276059111
+--- !u!114 &8337875118861882066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,5 +248,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ff10984c256f146a8c64db151ba6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
+  startingHealth: 5
   currentHealth: 0

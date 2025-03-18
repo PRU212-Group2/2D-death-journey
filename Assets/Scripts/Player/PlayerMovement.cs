@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -13,18 +14,25 @@ public class PlayerMovement : MonoBehaviour
     static readonly int isPistolJumping = Animator.StringToHash("isPistolJumping");
     static readonly int isRifleJumping = Animator.StringToHash("isRifleJumping");
 
-    [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] PlayerSO startingPlayer;
     [SerializeField] float crouchHeight = 0.86f;
     [SerializeField] Vector2 crouchCenter = new Vector2(0f, -0.16f);
 
     float originalBodyHeight;
     Vector2 originalBodyCenter;
-    Vector2 originalPistolPosition;
-    Vector2 originalRiflePosition;
     bool isAlive = true;
     bool isUsingRifle;
     bool allowRunning = true;
+    
+    //========= Movement Speed ========//
+    float moveSpeed;
+    float jumpSpeed;
+    
+    //========= Speed Boost ==========//
+    private float originalMoveSpeed;
+    private float speedBoostDuration;
+    private float speedBoostTimer;
+    private bool isSpeedBoosted = false;
     
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
@@ -33,21 +41,24 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider;
     ActiveWeapon myActiveWeapon;
     Weapon myWeapon;
+    AudioPlayer audioPlayer;
     
     // Offsets for the rifle sprite for each animation state
     Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.355f, 0.38f)},
-        {"Crouching", new Vector2(0.211f, 0.007f)},
+        {"Idling", new Vector2(0.23f, 0.35f)},
+        {"Running", new Vector2(0.4f, 0.32f)},
+        {"Crouching", new Vector2(0.211f, -0.1f)},
         {"Jumping", new Vector2(0.262f, 0.337f)}
     };
 
     // Offsets for the pistol sprite for each animation state
     Dictionary<string, Vector2> pistolOffsets = new Dictionary<string, Vector2>()
     {
-        {"Running", new Vector2(0.42f, 0.43f)},
+        {"Idling", new Vector2(0.364f, 0.442f)},
+        {"Running", new Vector2(0.48f, 0.40f)},
         {"Crouching", new Vector2(0.32f, 0.195f)},
-        {"Jumping", new Vector2(0.26f, 0.42f)}
+        {"Jumping", new Vector2(0.30f, 0.44f)}
     };
     
     void Start()
@@ -58,14 +69,14 @@ public class PlayerMovement : MonoBehaviour
         myFeetCollider = GetComponent<BoxCollider2D>();
         myActiveWeapon = GetComponentInChildren<ActiveWeapon>();
         myWeapon = GetComponentInChildren<Weapon>();
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        
+        // Set starting player stats
+        SwitchPlayer(startingPlayer);
         
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
         originalBodyCenter = myBodyCollider.offset;
-        
-        // Get weapon original position
-        originalPistolPosition = myWeapon.transform.localPosition;
-        originalRiflePosition = myWeapon.transform.localPosition;
         
         // Set pistol or animation mode based on the weapon
         SetAnimationMode();
@@ -79,9 +90,45 @@ public class PlayerMovement : MonoBehaviour
         if (allowRunning) Run();
         FlipSprite();
         AdjustWeaponPosition();
+        
+        // Handle speed boost timer
+        if (isSpeedBoosted)
+        {
+            speedBoostTimer -= Time.deltaTime;
+        
+            // When timer expires, return to normal speed
+            if (speedBoostTimer <= 0)
+            {
+                moveSpeed = originalMoveSpeed;
+                isSpeedBoosted = false;
+            }
+        }
     }
 
-    void SetAnimationMode()
+    public void SwitchPlayer(PlayerSO player)
+    {
+        // Set the player movement and animation here
+        myAnimator.runtimeAnimatorController = player.animator;
+        moveSpeed = player.moveSpeed;
+        jumpSpeed = player.jumpSpeed;
+    }
+
+    public void SetNewWeapon()
+    {
+        myWeapon = FindFirstObjectByType<Weapon>();
+        isUsingRifle = myActiveWeapon.IsRifle();
+        
+        if (isUsingRifle)
+        {
+            SetWeaponPosition(rifleOffsets["Idling"]);
+        }
+        else
+        {
+            SetWeaponPosition(pistolOffsets["Idling"]);
+        }
+    }
+    
+    public void SetAnimationMode()
     {
         isUsingRifle = myActiveWeapon.IsRifle();
         
@@ -174,9 +221,20 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, myRigidBody.linearVelocity.y);
         myRigidBody.linearVelocity = playerVelocity;
         
-        // Make sure the animations is not played when player is standing still
+        // Make sure the animations and is not played when player is standing still
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, playerHasHorizontalSpeed);
+
+        if (playerHasHorizontalSpeed)
+        {
+            audioPlayer.StartRunningSound();
+            myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, true);
+        }
+        else
+        {
+            audioPlayer.StopRunningSound();
+            myAnimator.SetBool(isUsingRifle ? isRifleRunning : isPistolRunning, false);
+        }
+        
     }
 
     public void SetAlive(bool aliveState)
@@ -192,11 +250,8 @@ public class PlayerMovement : MonoBehaviour
     
     void AdjustWeaponPosition()
     {
-        // Check which weapon is equipped using the myAnimator
-        bool isRifle = myAnimator.GetBool(isRifleEquipped);
-
         // Determine the current state of the weapon (running, crouching, jumping)
-        if (isRifle)
+        if (isUsingRifle)
         {
             // Adjust for Rifle states
             if (myAnimator.GetBool(isRifleRunning))
@@ -211,9 +266,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 SetWeaponPosition(rifleOffsets["Jumping"]);
             }
-            else if (!myAnimator.GetBool(isRifleCrouching))
+            else
             {
-                SetWeaponPosition(originalRiflePosition);
+                SetWeaponPosition(rifleOffsets["Idling"]);
             }
         }
         else
@@ -231,10 +286,32 @@ public class PlayerMovement : MonoBehaviour
             {
                 SetWeaponPosition(pistolOffsets["Jumping"]);
             }
-            else if (!myAnimator.GetBool(isPistolCrouching))
+            else
             {
-                SetWeaponPosition(originalPistolPosition);
+                SetWeaponPosition(pistolOffsets["Idling"]);
             }
+        }
+    }
+    
+    public void ApplySpeedBoost(float speedBoostMultiplier, float duration)
+    {
+        // Set the boost duration from the parameter
+        speedBoostDuration = duration;
+    
+        // Only apply if not already boosted or apply new duration if it's longer
+        if (!isSpeedBoosted || speedBoostDuration > speedBoostTimer)
+        {
+            if (!isSpeedBoosted)
+            {
+                // Store original speed for reference
+                originalMoveSpeed = moveSpeed;
+                // Apply the boost
+                moveSpeed *= speedBoostMultiplier;
+            }
+    
+            // Set the boost duration
+            speedBoostTimer = speedBoostDuration;
+            isSpeedBoosted = true;
         }
     }
 }
