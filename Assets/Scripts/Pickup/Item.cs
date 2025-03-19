@@ -6,11 +6,11 @@ public class Item : MonoBehaviour
 {
     const string playerString = "Player";
     
-    [SerializeField] string itemName;
+    [SerializeField] public string itemName;
     [TextArea]
-    [SerializeField] string itemDescription;
-    [SerializeField] int itemQuantity;
-    [SerializeField] Sprite itemSprite;
+    [SerializeField] public string itemDescription;
+    [SerializeField] public int itemQuantity;
+    [SerializeField] public Sprite itemSprite;
     
     // Movement parameters
     [SerializeField] float bobSpeed = 1.0f;

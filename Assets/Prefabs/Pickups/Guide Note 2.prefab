@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404182fe4ef6d2144a3921345bad5809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Guide Note 2
+  itemName: Note
   itemDescription: The key is in the forest somewhere.
   itemQuantity: 1
   itemSprite: {fileID: -4841720520028814253, guid: b756bba4a090f8546b42b6df1bc16063, type: 3}

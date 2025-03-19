@@ -2,69 +2,52 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class InteractablePortal : MonoBehaviour
+public class InteractablePortal : Interactable
 {
-    [SerializeField] GameObject interactablePrompt;
     [SerializeField] TextMeshProUGUI keyPrompt;
     [SerializeField] float keyPromptDuration = 3f;
     [SerializeField] ItemSO key;
     [SerializeField] float fadeDuration = 3.5f;
     
-    InventoryManager inventoryManager;
-    AudioPlayer audioPlayer;
-    GameManager gameManager;
-    bool doorActivated = false;
-    FadeTransition screenTransition;
+    private InventoryManager inventoryManager;
+    private GameManager gameManager;
+    private FadeTransition screenTransition;
     
-    void Awake()
+    protected override void Start()
     {
-        audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        base.Start();
         inventoryManager = FindFirstObjectByType<InventoryManager>();
         gameManager = FindFirstObjectByType<GameManager>();
         screenTransition = gameObject.AddComponent<FadeTransition>();
     }
     
-    void Update()
+    protected override void OnInteract()
     {
-        if (Input.GetKeyDown(KeyCode.E) && doorActivated)
+        HidePrompt();
+        var hasKey = inventoryManager.HasItem(key.itemName);
+        if (hasKey)
         {
-            interactablePrompt.gameObject.SetActive(false);
-            var hasKey = inventoryManager.HasItem(key.itemName);
-            if (hasKey)
-            {
-                audioPlayer.PlayDoorUnlockClip();
-                StartCoroutine(LoadNextScene());
-            }
-            else
-            {
-                StartCoroutine(ShowKeyPrompt());
-            }
+            audioPlayer.PlayDoorUnlockClip();
+            StartCoroutine(LoadNextScene());
+        }
+        else
+        {
+            StartCoroutine(ShowKeyPrompt());
+            isInteracting = false;
         }
     }
+    
+    protected override void OnInteractEnd()
+    {
+        
+    }
 
-    IEnumerator ShowKeyPrompt()
+    private IEnumerator ShowKeyPrompt()
     {
         keyPrompt.gameObject.SetActive(true);
         yield return new WaitForSeconds(keyPromptDuration);
         keyPrompt.gameObject.SetActive(false);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            doorActivated = true;
-            interactablePrompt.gameObject.SetActive(true);
-        }
-    }
-    
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            doorActivated = false;
-            interactablePrompt.gameObject.SetActive(false);
-        }
+        ShowPrompt();
     }
     
     private IEnumerator LoadNextScene()

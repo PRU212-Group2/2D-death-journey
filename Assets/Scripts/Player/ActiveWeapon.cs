@@ -17,7 +17,7 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         if (inventoryManager.menuActivated) return;
-        if (store.storeMenuOpened) return;
+        if (store.isInteracting) return;
         
         HandleShoot();
     }

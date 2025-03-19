@@ -152,7 +152,7 @@ MonoBehaviour:
 
 
     Speed
-    Multiplier: 1.5x
+    Boost: 1.5x
 
     Cooldown: 5s'
   itemQuantity: 1

@@ -1,8 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
-using UnityEngine.UI;  // Add this for UI elements
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
-    
     
     // Immortality variables
     private bool isImmortal = false;
@@ -54,12 +52,12 @@ public class PlayerHealth : MonoBehaviour
         
         if (currentHealth <= lowHealthThreshold && currentHealth > 0)
         {
-            lowHealthEffectImage.GameObject().SetActive(true);
+            lowHealthEffectImage.gameObject.SetActive(true);
         }
         else
         {
             // Hide the effect when health is above threshold or player is dead
-            lowHealthEffectImage.GameObject().SetActive(false);
+            lowHealthEffectImage.gameObject.SetActive(false);
         }
     }
     
@@ -118,7 +116,7 @@ public class PlayerHealth : MonoBehaviour
         
         // Decrease health based on damage taken
         currentHealth -= amount;
-        
+
         // If the player dies then play death animation
         if (currentHealth <= 0)
         {
