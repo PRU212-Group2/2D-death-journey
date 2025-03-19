@@ -13,11 +13,13 @@ public class ActiveWeapon : MonoBehaviour
     AudioPlayer audioPlayer;
     InventoryManager inventoryManager;
     InteractableStore store;
+    UIGameplay UIGameplay;
 
     void Update()
     {
         if (inventoryManager.menuActivated) return;
         if (store.isInteracting) return;
+        if (UIGameplay.isPaused) return;
         
         HandleShoot();
     }
@@ -27,6 +29,7 @@ public class ActiveWeapon : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         inventoryManager = FindFirstObjectByType<InventoryManager>();
         store = FindFirstObjectByType<InteractableStore>();
+        UIGameplay = FindFirstObjectByType<UIGameplay>();
         
         // Equip starting weapon and starting ammo at the beginning of the game
         SwitchWeapon(startingWeapon);

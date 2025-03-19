@@ -1575,22 +1575,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 369061524}
     m_Modifications:
-    - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_text
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_fontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
     - target: {fileID: 1063747231635780716, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1672,18 +1656,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 369061523}
@@ -1691,57 +1663,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1868802765}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayBackSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6680289178455567858, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.29999924
-      objectReference: {fileID: 0}
     - target: {fileID: 7760700540991660134, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_Name
       value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 8761842683860462295, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-      propertyPath: m_Name
-      value: Back Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4765,8 +4689,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1482486375}
-  - {fileID: 1873488921}
   - {fileID: 1751097094}
+  - {fileID: 1873488921}
   m_Father: {fileID: 1172202659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7515,6 +7439,10 @@ PrefabInstance:
     - target: {fileID: 196972152416225998, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
+      propertyPath: m_text
+      value: New Game
       objectReference: {fileID: 0}
     - target: {fileID: 581815837403885542, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_fontSize

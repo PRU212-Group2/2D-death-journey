@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    GameManager gameManager;
     [SerializeField] float fadeDuration = 3.5f;
-    private FadeTransition screenTransition;
+    
+    GameManager gameManager;
+    FadeTransition screenTransition;
 
     void Start()
     {
