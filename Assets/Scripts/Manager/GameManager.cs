@@ -33,12 +33,6 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    // Switch to game over scene
-    public void ProcessPlayerCrash()
-    {
-        Invoke("GameOver", loadDelay);
-    }
-    
     // Reset game session to the first level
     public void StartNewGame()
     {
@@ -50,8 +44,7 @@ public class GameManager : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
-        string nextSceneName = SceneUtility.GetScenePathByBuildIndex(nextSceneIndex);
-        nextSceneName = Path.GetFileNameWithoutExtension(nextSceneName);
+        string nextSceneName = GetSceneName(nextSceneIndex);
     
         // Register for scene loaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -60,8 +53,7 @@ public class GameManager : MonoBehaviour
         // This stores the name for use in the callback
         _pendingTeleportSceneName = nextSceneName;
     }
-
-
+    
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Unregister to prevent multiple calls
@@ -78,6 +70,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ProcessPlayerDeath()
+    {
+        ResetGame();
+    }
+    
+    void ResetGame()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        string currentSceneName = GetSceneName(currentSceneIndex);
+        
+        // Register for scene loaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(currentSceneIndex);
+        
+        // This stores the name for use in the callback
+        _pendingTeleportSceneName = currentSceneName;
+    }
+
+    string GetSceneName(int sceneIndex)
+    {
+        string sceneName = SceneUtility.GetScenePathByBuildIndex(sceneIndex);
+        sceneName = Path.GetFileNameWithoutExtension(sceneName);
+        return sceneName;
+    }
+    
     // Load Main menu scene
     public void MainMenu()
     {

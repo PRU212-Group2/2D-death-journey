@@ -47,6 +47,8 @@ TagManager:
     locked: 0
   - name: Fog
     uniqueID: 1156748559
+  - name: ForeGround
+    uniqueID: 1533496141
     locked: 0
   - name: Platform
     uniqueID: 837410189

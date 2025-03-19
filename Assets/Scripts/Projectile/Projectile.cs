@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
     }
     public void SetDamage(int projectileDamage)
     {
-        this.damage = projectileDamage;
+        damage = projectileDamage;
     }
     
     void OnTriggerEnter2D(Collider2D other)

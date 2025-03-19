@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8299908067413365255}
   - component: {fileID: 4789509597704017704}
   - component: {fileID: 7011572820979394768}
-  - component: {fileID: 5209796454638823731}
   - component: {fileID: 4844154745365578245}
   - component: {fileID: 2753527984622647065}
   - component: {fileID: 1099559394087934064}
+  - component: {fileID: -7256086916270313489}
   m_Layer: 8
   m_Name: Werewolf
   m_TagString: Enemy
@@ -102,7 +102,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1171036435
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 1
   m_Sprite: {fileID: 4035959289877228764, guid: 0083e0819752bed44a559cb67f6aab45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -142,21 +142,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5209796454638823731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6413234357343314529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2027353605f95424dbc79de1d99c9d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  moveRange: 2
-  damage: 20
 --- !u!61 &4844154745365578245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,8 +222,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13850293, y: 0}
-  m_Size: {x: 0.5795931, y: 0.8416817}
+  m_Offset: {x: 0.12909979, y: 0}
+  m_Size: {x: 0.5983994, y: 0.8416817}
   m_Direction: 0
 --- !u!114 &1099559394087934064
 MonoBehaviour:
@@ -253,4 +238,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 7
-  currentHealth: 0
+--- !u!114 &-7256086916270313489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413234357343314529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ebeef056270e1419dd744794088e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  moveRange: 1.5
+  damage: 30

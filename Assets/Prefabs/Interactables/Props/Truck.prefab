@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104097683098542953}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.09693447, w: 0.99529076}
+  m_LocalRotation: {x: 0, y: 0, z: -0.09693159, w: 0.99529105}
   m_LocalPosition: {x: 7.91, y: -7.04, z: 0.28397134}
-  m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
+  m_LocalScale: {x: 0.5669001, y: 0.5669001, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 837410189
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2422664062727937601, guid: de920b45a6047a240b4455f311600d82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,7 +104,7 @@ MonoBehaviour:
   interactablePrompt: {fileID: 0}
   isInteracting: 0
   propAcquiredText: {fileID: 0}
-  propAcquiredDuration: 3
+  propAcquiredDuration: 1
   prop: {fileID: 2694077274914316093, guid: 6a3ae4d54ec6f7b4dbaebe5a95ec363c, type: 3}
 --- !u!61 &4711247657650450285
 BoxCollider2D:

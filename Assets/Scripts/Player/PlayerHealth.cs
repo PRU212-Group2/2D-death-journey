@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
+    GameManager gameManager;
     PlayerHealth _instance;
     
     // Immortality variables
@@ -33,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        gameManager = FindFirstObjectByType<GameManager>();
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
     }
     
@@ -137,7 +140,7 @@ public class PlayerHealth : MonoBehaviour
         // If the player dies then play death animation
         if (currentHealth <= 0)
         {
-            PlayerGameOver();
+            PlayerDeath();
         }
         else
         {
@@ -145,7 +148,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     
-    void PlayerGameOver()
+    void PlayerDeath()
     {
         // Play death animation, sfx and deactivate input
         audioPlayer.PlayDeathClip();
@@ -153,5 +156,20 @@ public class PlayerHealth : MonoBehaviour
         activeWeapon.gameObject.SetActive(false);
         playerMovement.SetAlive(false);
         animator.SetTrigger(triggerDying);
+    
+        // Add delay before processing death
+        StartCoroutine(ProcessDeathAfterDelay());
+    }
+
+    IEnumerator ProcessDeathAfterDelay()
+    {
+        // Wait for animation to play or desired delay time
+        yield return new WaitForSeconds(2.0f); // Adjust time as needed
+    
+        // Reset to the latest save
+        gameManager.ProcessPlayerDeath();
+        activeWeapon.gameObject.SetActive(true);
+        playerMovement.SetAlive(true);
+        currentHealth = startingHealth;
     }
 }

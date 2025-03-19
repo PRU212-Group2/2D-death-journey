@@ -65,7 +65,9 @@ public class PlayerMovement : MonoBehaviour
     // Level spawn points
     Dictionary<string, Vector2> spawnPoints = new Dictionary<string, Vector2>()
     {
+        {"City", new Vector2(-8f, -0.4f)},
         {"Moonlight", new Vector2(19f, -5f)},
+        {"Hell", new Vector2(-4f, 2.7f)}
     };
     
     void Awake()
@@ -267,6 +269,13 @@ public class PlayerMovement : MonoBehaviour
     public void SetAlive(bool aliveState)
     {
         isAlive = aliveState;
+        if (aliveState)
+        {
+            // Reset animation state to default entry
+            myAnimator.Rebind();
+            myAnimator.Update(0f);
+            SetAnimationMode();
+        }
     }
     
     // Helper function to apply the offset to the weapon's position

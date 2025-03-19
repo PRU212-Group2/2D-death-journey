@@ -148,8 +148,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 837410189
-  m_SortingLayer: 4
+  m_SortingLayerID: 1171036435
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1890775160002818438, guid: 2bc20b909222538499c3849c176e0b98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -217,7 +217,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &7037026497122320357
 CapsuleCollider2D:
@@ -314,9 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc18d17479bb9b049ba13f49776b53b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpSpeed: 10
-  speedBoostMultiplier: 1.5
+  startingPlayer: {fileID: 11400000, guid: 41cb121a3310d224a85f8ef3dd1f548c, type: 2}
   crouchHeight: 0.86
   crouchCenter: {x: 0, y: -0.18}
 --- !u!114 &2504398027025814311
@@ -331,6 +329,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ce61844d0413554fae8442d32cd78df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  lowHealthThreshold: 30
+  startingPlayer: {fileID: 11400000, guid: 41cb121a3310d224a85f8ef3dd1f548c, type: 2}
   lowHealthEffectImage: {fileID: 0}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   WeaponPrefab: {fileID: 1019903900262491733, guid: fb33e458abf35784b8a69a27287dc919, type: 3}
+  Name: AK-47
   Damage: 1
   FireRate: 0.2
   isRifle: 1

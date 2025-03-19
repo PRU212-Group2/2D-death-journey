@@ -1263,7 +1263,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 837410189
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4485,6 +4485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1507990601}
     m_Modifications:
+    - target: {fileID: 1099559394087934064, guid: d381f7db6f835254cad48ade1d4f186b, type: 3}
+      propertyPath: startingHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6413234357343314529, guid: d381f7db6f835254cad48ade1d4f186b, type: 3}
       propertyPath: m_Name
       value: Werewolf (3)
@@ -5251,7 +5255,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 837410189
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7385,7 +7389,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 837410189
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -10757,7 +10761,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 837410189
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8438816702666823694, guid: 0b2bdcd814c3765428758ec776c30417, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10838,14 +10842,6 @@ PrefabInstance:
     - target: {fileID: 1104097683098542953, guid: 8bb123cc3e726d54abd9ab36ab764a6c, type: 3}
       propertyPath: m_Name
       value: Truck
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134203357409646755, guid: 8bb123cc3e726d54abd9ab36ab764a6c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5669001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1134203357409646755, guid: 8bb123cc3e726d54abd9ab36ab764a6c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5669001
       objectReference: {fileID: 0}
     - target: {fileID: 1134203357409646755, guid: 8bb123cc3e726d54abd9ab36ab764a6c, type: 3}
       propertyPath: m_LocalPosition.x
