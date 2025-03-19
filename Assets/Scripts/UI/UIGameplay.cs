@@ -19,6 +19,7 @@ public class UIGameplay : MonoBehaviour
     ActiveWeapon activeWeapon;
     CurrencyManager currencyManager;
     PlayerHealth playerHealth;
+    GameManager gameManager;
     UIGameplay _instance;
 
     public bool isPaused = false;
@@ -30,6 +31,7 @@ public class UIGameplay : MonoBehaviour
         currencyManager = FindFirstObjectByType<CurrencyManager>();
         activeWeapon = FindFirstObjectByType<ActiveWeapon>();
         playerHealth = FindFirstObjectByType<PlayerHealth>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     // Applying singleton pattern
@@ -80,6 +82,11 @@ public class UIGameplay : MonoBehaviour
         }
     }
 
+    public void MainMenu()
+    {
+        gameManager.MainMenu();
+    }
+    
     public void UnPause()
     {
         isPaused = false;

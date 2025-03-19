@@ -6,8 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] float loadDelay = 0.5f;
-
     static GameManager _instance;
     PlayerMovement playerMovement;
     string _pendingTeleportSceneName = null;
@@ -99,12 +97,6 @@ public class GameManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-    
-    // Load Game over scene
-    public void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
     }
     
     // Load Game over scene

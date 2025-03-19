@@ -3307,6 +3307,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239433767515360873, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ExitGame
       objectReference: {fileID: 0}
@@ -4363,7 +4367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1424386943}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1297254875
@@ -4752,11 +4756,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411237430}
   m_CullTransparentMesh: 1
---- !u!1 &1424386943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7760700540991660134, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
-  m_PrefabInstance: {fileID: 5962384298106358976}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1427746843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,7 +5652,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6099201445423696989, guid: 8cb03a06abe657e469005666956d1a36, type: 3}
   m_PrefabInstance: {fileID: 5962384298106358976}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424386943}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f6a13b5204bcc41abc323569f2bdd0, type: 3}

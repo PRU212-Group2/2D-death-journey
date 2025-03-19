@@ -56,8 +56,6 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip[] songs; 
     [SerializeField] [Range(0f, 1f)] float songVolume = 1f;
     [SerializeField] string mainMenuSceneName = "MainMenu";
-    [SerializeField] string instructionsSceneName = "Instructions";
-    [SerializeField] string gameOverSceneName = "GameOver";
 
     int currentSongIndex = 0;
     AudioSource audioSource;
@@ -137,9 +135,7 @@ public class AudioPlayer : MonoBehaviour
     // New method to check if current scene is MainMenu
     private bool IsMenusScene()
     {
-        return SceneManager.GetActiveScene().name == mainMenuSceneName
-            || SceneManager.GetActiveScene().name == instructionsSceneName
-            || SceneManager.GetActiveScene().name == gameOverSceneName;
+        return SceneManager.GetActiveScene().name == mainMenuSceneName;
     }
 
     /// <summary>

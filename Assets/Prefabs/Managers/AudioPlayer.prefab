@@ -76,7 +76,12 @@ MonoBehaviour:
   useItemClip: {fileID: 8300000, guid: 41c3030d13817ad45b82874e8ca461d5, type: 3}
   useItemVolume: 1
   songs:
+  - {fileID: 8300000, guid: 2a6d411765f5b0b4eba01f7a3fe0122f, type: 3}
   - {fileID: 8300000, guid: 412bf9728e0c01146ad34591ea54b160, type: 3}
+  - {fileID: 8300000, guid: 66bd876dfa69ab74791318bc223767a0, type: 3}
+  - {fileID: 8300000, guid: 7edc9c4544688cf488ad47e5f2eb27e9, type: 3}
+  - {fileID: 8300000, guid: 1a87c50a6d9c5134d86da7a5fc1ec1e1, type: 3}
+  - {fileID: 8300000, guid: 2bd1fb7abf33de741a480b98baf19473, type: 3}
   songVolume: 1
   mainMenuSceneName: MainMenu
   instructionsSceneName: Instructions
