@@ -11,21 +11,38 @@ public class ActiveWeapon : MonoBehaviour
     int currentAmmo;
     bool shootState;
     AudioPlayer audioPlayer;
+    InventoryManager inventoryManager;
+    InteractableStore store;
 
     void Update()
     {
+        if (inventoryManager.menuActivated) return;
+        if (store.storeMenuOpened) return;
+        
         HandleShoot();
     }
     
     void Start()
     {
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        inventoryManager = FindFirstObjectByType<InventoryManager>();
+        store = FindFirstObjectByType<InteractableStore>();
         
         // Equip starting weapon and starting ammo at the beginning of the game
         SwitchWeapon(startingWeapon);
         AdjustAmmo(currentWeaponSO.MagazineSize);
     }
 
+    public int GetAmmo()
+    {
+        return currentAmmo;
+    }
+
+    public int GetMagazineSize()
+    {
+        return currentWeaponSO.MagazineSize;
+    }
+    
     public bool IsRifle()
     {
         return currentWeaponSO.isRifle;

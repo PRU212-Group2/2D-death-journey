@@ -7,9 +7,9 @@ public class Zombie : MonoBehaviour
     private EnemyHealth enemyHealth;
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float moveRange = 0.8f;
-    private int damage = 20;
     Animator animator;
-
+    AudioPlayer audioPlayer;
+    
     private float leftBound;
     private float rightBound;
     private bool movingRight = true;
@@ -24,6 +24,7 @@ public class Zombie : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         enemyHealth = GetComponent<EnemyHealth>();
+        audioPlayer = FindFirstObjectByType<AudioPlayer>();
         // Check if Animator is assigned before using it
         if (animator != null)
         {
@@ -58,6 +59,7 @@ public class Zombie : MonoBehaviour
                 animator.SetBool("IsWalk", false);
                 animator.SetBool("IsAttack", true);
 
+                audioPlayer.PlayEnemyAttackClip();
                 isAttacking = true;
                 myRigidbody.linearVelocity = Vector2.zero;
             }
@@ -84,6 +86,7 @@ public class Zombie : MonoBehaviour
         if (currentHealth < lastHealth) // Damage taken
         {
             animator.SetTrigger("IsHurt");
+            audioPlayer.PlayEnemyHurtClip();
             Invoke(nameof(ResumeWalking), 1f);
         }
 
