@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shack_00_l_0: -7836083219635759456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
