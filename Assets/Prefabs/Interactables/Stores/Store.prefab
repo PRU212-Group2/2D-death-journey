@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactablePrompt: {fileID: 0}
+  isInteracting: 0
   storeMenu: {fileID: 0}
-  storeMenuOpened: 0

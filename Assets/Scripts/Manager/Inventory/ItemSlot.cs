@@ -17,8 +17,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     [SerializeField] int maxNumberOfItems = 9;
     
     [Header("Item Slot")]
-    [SerializeField] TMP_Text quantityText;
-    [SerializeField] Image itemImage;
+    [SerializeField] public TMP_Text quantityText;
+    [SerializeField] public Image itemImage;
 
     [Header("Item Description Slot")]
     [SerializeField] Image itemDescriptionImage;
@@ -86,13 +86,16 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     //======== DROP ITEM ==========//
     private void OnRightClick()
     {
+        RemoveItem();
+    }
+
+    public void RemoveItem()
+    {
         quantity -= 1;
         quantityText.text = quantity.ToString("00");
-        inventoryManager.PlayItemSound();
         if (quantity <= 0) EmptySlot();
     }
 
-    
     //======== ITEM SLOT SELECTED ==========//
     private void OnLeftClick()
     {
@@ -127,7 +130,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     }
 
     //======== EMPTY SLOT IF USED ALL ITEMS ==========//
-    private void EmptySlot()
+    public void EmptySlot()
     {
         quantityText.gameObject.SetActive(false);
         itemImage.sprite = emptySprite;

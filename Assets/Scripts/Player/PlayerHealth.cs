@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
+    PlayerHealth _instance;
     
     // Immortality variables
     private bool isImmortal = false;
@@ -25,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     
     void Awake()
     {
+        ManageSingleton();
         SwitchPlayer(startingPlayer);
         
         currentHealth = startingHealth;
@@ -32,6 +34,21 @@ public class PlayerHealth : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
+    }
+    
+    // Applying singleton pattern
+    void ManageSingleton()
+    {
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     
     public void SwitchPlayer(PlayerSO player)

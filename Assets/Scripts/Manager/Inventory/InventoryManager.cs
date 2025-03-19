@@ -72,6 +72,22 @@ public class InventoryManager : MonoBehaviour
 
         return quantity;
     }
+    
+    public void RemoveItem(string itemName)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].itemName == itemName)
+            {
+                itemSlots[i].RemoveItem();
+
+                if (itemSlots[i].quantity <= 0)
+                {
+                    itemSlots[i].EmptySlot();
+                }
+            }
+        }
+    }
 
     public bool UseItem(string itemName)
     {

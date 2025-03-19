@@ -9,6 +9,8 @@ public class ParallaxCamera : MonoBehaviour
     private float oldPositionX;
     private float oldPositionY;
     
+    ParallaxCamera _instance;
+    
     void Start()
     {
         oldPositionX = transform.position.x;

@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     ActiveWeapon myActiveWeapon;
     Weapon myWeapon;
     AudioPlayer audioPlayer;
+    static PlayerMovement _instance;
     
     // Offsets for the rifle sprite for each animation state
     Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
@@ -60,6 +61,32 @@ public class PlayerMovement : MonoBehaviour
         {"Crouching", new Vector2(0.32f, 0.195f)},
         {"Jumping", new Vector2(0.30f, 0.44f)}
     };
+    
+    // Level spawn points
+    Dictionary<string, Vector2> spawnPoints = new Dictionary<string, Vector2>()
+    {
+        {"Moonlight", new Vector2(19f, -5f)},
+    };
+    
+    void Awake()
+    {
+        ManageSingleton();
+    }
+    
+    // Applying singleton pattern
+    void ManageSingleton()
+    {
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     
     void Start()
     {
@@ -312,6 +339,18 @@ public class PlayerMovement : MonoBehaviour
             // Set the boost duration
             speedBoostTimer = speedBoostDuration;
             isSpeedBoosted = true;
+        }
+    }
+
+    public void TeleportToSpawnPoint(string sceneName)
+    {
+        if (spawnPoints.ContainsKey(sceneName))
+        {
+            this.transform.position = spawnPoints[sceneName];
+        }
+        else
+        {
+            Debug.LogWarning("No spawn point defined for scene: " + sceneName);
         }
     }
 }

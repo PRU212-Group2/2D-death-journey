@@ -9,10 +9,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] float loadDelay = 0.5f;
 
     static GameManager _instance;
+    PlayerMovement playerMovement;
+    string _pendingTeleportSceneName = null;
     
     void Awake()
     {
         ManageSingleton();
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
     }
     
     // Applying singleton pattern
@@ -39,19 +42,40 @@ public class GameManager : MonoBehaviour
     // Reset game session to the first level
     public void StartNewGame()
     {
-        SceneManager.LoadScene("CityZombie");
+        SceneManager.LoadScene(1);
     }
     
-    // Reset game session to the first level
-    public void ResetGame()
+    // Load next level
+    public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Chapter1");
-    }
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        string nextSceneName = SceneUtility.GetScenePathByBuildIndex(nextSceneIndex);
+        nextSceneName = Path.GetFileNameWithoutExtension(nextSceneName);
     
-    // Load help menu scene
-    public void HelpMenu()
+        // Register for scene loaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(nextSceneIndex);
+    
+        // This stores the name for use in the callback
+        _pendingTeleportSceneName = nextSceneName;
+    }
+
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SceneManager.LoadScene("HelpMenu");
+        // Unregister to prevent multiple calls
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    
+        // Re-find the player as it might have been recreated in the new scene
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
+    
+        if (playerMovement != null && !string.IsNullOrEmpty(_pendingTeleportSceneName))
+        {
+            // Teleport player to spawn point after the scene is loaded
+            playerMovement.TeleportToSpawnPoint(_pendingTeleportSceneName);
+            _pendingTeleportSceneName = null;
+        }
     }
 
     // Load Main menu scene

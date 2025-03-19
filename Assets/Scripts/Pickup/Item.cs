@@ -26,8 +26,7 @@ public class Item : MonoBehaviour
 
     void Awake()
     {
-        // Get the inventory manager reference
-        inventoryManager = FindFirstObjectByType<InventoryManager>();
+        
         
         // Get audio player reference
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
@@ -35,6 +34,9 @@ public class Item : MonoBehaviour
     
     void Start()
     { 
+        // Get the inventory manager reference
+        inventoryManager = FindFirstObjectByType<InventoryManager>();
+        
         // Store the initial position
         startPosition = transform.position;
         positionInitialized = true;

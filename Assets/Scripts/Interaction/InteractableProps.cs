@@ -37,6 +37,5 @@ public class InteractableProps : Interactable
         propAcquiredText.gameObject.SetActive(true);
         yield return new WaitForSeconds(propAcquiredDuration);
         propAcquiredText.gameObject.SetActive(false);
-        ShowPrompt();
     }
 }

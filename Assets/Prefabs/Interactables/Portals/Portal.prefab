@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactablePrompt: {fileID: 0}
+  isInteracting: 0
   keyPrompt: {fileID: 0}
   keyPromptDuration: 3
   key: {fileID: 11400000, guid: debd100a735fcf64ca14e75d5bafaf32, type: 2}
+  fadeDuration: 3.5

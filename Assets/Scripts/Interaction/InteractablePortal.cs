@@ -28,6 +28,7 @@ public class InteractablePortal : Interactable
         if (hasKey)
         {
             audioPlayer.PlayDoorUnlockClip();
+            inventoryManager.RemoveItem(key.itemName);
             StartCoroutine(LoadNextScene());
         }
         else
@@ -39,7 +40,6 @@ public class InteractablePortal : Interactable
     
     protected override void OnInteractEnd()
     {
-        
     }
 
     private IEnumerator ShowKeyPrompt()
@@ -47,12 +47,11 @@ public class InteractablePortal : Interactable
         keyPrompt.gameObject.SetActive(true);
         yield return new WaitForSeconds(keyPromptDuration);
         keyPrompt.gameObject.SetActive(false);
-        ShowPrompt();
     }
     
     private IEnumerator LoadNextScene()
     {
         yield return StartCoroutine(screenTransition.FadeToBlack(fadeDuration));
-        gameManager.MainMenu();
+        gameManager.LoadNextLevel();
     }
 }
