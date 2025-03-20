@@ -17,4 +17,5 @@ MonoBehaviour:
   Damage: 3
   FireRate: 0.4
   isRifle: 0
+  isLaser: 1
   MagazineSize: 15

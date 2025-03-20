@@ -192,6 +192,8 @@ public class GameManager : MonoBehaviour
             }
         
             // Load inventory
+            inventoryManager.ClearInventory();
+            
             var itemsData = data.items;
             foreach (ItemData itemData in itemsData)
             {
@@ -200,6 +202,7 @@ public class GameManager : MonoBehaviour
                     if (itemData.itemName == item.itemName)
                     {
                         inventoryManager.AddItem(itemData.itemName, itemData.quantity, item.itemSprite, item.itemDescription);
+                        break;
                     }
                 }
             }

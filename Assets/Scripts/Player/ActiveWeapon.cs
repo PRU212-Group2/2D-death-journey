@@ -90,7 +90,14 @@ public class ActiveWeapon : MonoBehaviour
         // Stop rifle sound immediately when button is released
         if (!isPressed && currentWeaponSO.isRifle)
         {
-            audioPlayer.StopRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StopRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StopLaserRifleShootingSound();
+            }
         }
     }
     
@@ -106,7 +113,14 @@ public class ActiveWeapon : MonoBehaviour
         // Start the rifle sound as soon as shoot is pressed for rifles
         if (shootState && currentWeaponSO.isRifle && currentAmmo > 0)
         {
-            audioPlayer.StartRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StartRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StartLaserRifleShootingSound();
+            }
         }
 
         // Rate of fire (can not shoot until time since last shot is greater than fire rate)
@@ -121,7 +135,14 @@ public class ActiveWeapon : MonoBehaviour
             // Play pistol shooting audio only for non-rifles
             if (!currentWeaponSO.isRifle)
             {
-                audioPlayer.PlayPistolClip();
+                if (!currentWeaponSO.isLaser)
+                {
+                    audioPlayer.PlayPistolClip();
+                }
+                else
+                {
+                    audioPlayer.PlayLaserPistolClip();
+                }
                 shootState = false;
             }
         }
@@ -129,7 +150,14 @@ public class ActiveWeapon : MonoBehaviour
         // Stop rifle sound if we're out of ammo
         if (currentWeaponSO.isRifle && currentAmmo <= 0)
         {
-            audioPlayer.StopRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StopRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StopLaserRifleShootingSound();
+            }
         }
     }
 

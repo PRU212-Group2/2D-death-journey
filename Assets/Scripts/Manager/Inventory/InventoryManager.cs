@@ -58,8 +58,8 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
-            if (itemSlots[i].isFull == false 
-                && itemSlots[i].itemName == itemName 
+            if ((itemSlots[i].isFull == false 
+                && itemSlots[i].itemName == itemName)
                 || itemSlots[i].quantity == 0)
             {
                 int leftOverItems = itemSlots[i].AddItem(itemName, quantity, itemSprite, itemDescription);
@@ -86,6 +86,15 @@ public class InventoryManager : MonoBehaviour
                     itemSlots[i].EmptySlot();
                 }
             }
+        }
+    }
+
+    public void ClearInventory()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            Debug.Log(itemSlots[i].itemName);
+            itemSlots[i].EmptySlot();
         }
     }
 

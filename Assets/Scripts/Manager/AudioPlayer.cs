@@ -12,6 +12,14 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip rifleClip;
     [SerializeField] [Range(0f, 1f)] float rifleVolume = 1f;
     
+    [Header("Laser Pistol")] 
+    [SerializeField] AudioClip laserPistolClip;
+    [SerializeField] [Range(0f, 1f)] float laserPistolVolume = 1f;
+    
+    [Header("Laser Rifle")] 
+    [SerializeField] AudioClip laserRifleClip;
+    [SerializeField] [Range(0f, 1f)] float laserRifleVolume = 1f;
+    
     [Header("Death")]
     [SerializeField] AudioClip deathClip;
     [SerializeField] [Range(0f, 1f)] private float deathVolume = 1f;
@@ -62,8 +70,10 @@ public class AudioPlayer : MonoBehaviour
     int currentSongIndex = 0;
     AudioSource audioSource;
     private AudioSource rifleSource;
+    private AudioSource laserRifleSource;
     private AudioSource runningSource;
     private bool isRifleShootingPlaying = false;
+    private bool isLaserRifleShootingPlaying = false;
     private bool isRunningPlaying = false;
     
     private float soundEffectVolume = 1f;
@@ -77,6 +87,7 @@ public class AudioPlayer : MonoBehaviour
         
         CreateRunningAudioSource();
         CreateRifleAudioSource();
+        CreateLaserRifleAudioSource();
 
         // Only play songs if we're not in the MainMenu scene
         if (songs.Length > 0 && !IsMenusScene())
@@ -152,6 +163,15 @@ public class AudioPlayer : MonoBehaviour
         rifleSource.loop = true;
     }
 
+    private void CreateLaserRifleAudioSource()
+    {
+        // Create a dedicated audio source for pistol sound
+        laserRifleSource = gameObject.AddComponent<AudioSource>();
+        laserRifleSource.clip = laserRifleClip;
+        laserRifleSource.volume = laserRifleVolume;
+        laserRifleSource.loop = true;
+    }
+    
     private void CreateRunningAudioSource()
     {
         // Create a dedicated audio source for pistol sound
@@ -255,6 +275,11 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(pistolClip, pistolVolume);
     }
     
+    public void PlayLaserPistolClip()
+    {
+        PlayClip(laserPistolClip, laserPistolVolume);
+    }
+    
     //====== SEPARATE AUDIO SOURCE FOR CONTINUOUS AUDIO =======//
     public void StartRifleShootingSound()
     {
@@ -271,6 +296,24 @@ public class AudioPlayer : MonoBehaviour
         {
             rifleSource.Stop();
             isRifleShootingPlaying = false;
+        }
+    }
+    
+    public void StartLaserRifleShootingSound()
+    {
+        if (!isLaserRifleShootingPlaying && laserRifleSource != null)
+        {
+            laserRifleSource.Play();
+            isLaserRifleShootingPlaying = true;
+        }
+    }
+    
+    public void StopLaserRifleShootingSound()
+    {
+        if (isLaserRifleShootingPlaying && laserRifleSource != null)
+        {
+            laserRifleSource.Stop();
+            isLaserRifleShootingPlaying = false;
         }
     }
     

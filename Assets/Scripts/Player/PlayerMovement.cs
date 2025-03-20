@@ -102,8 +102,11 @@ public class PlayerMovement : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         
         // Set starting player stats
-        currentPlayer = startingPlayer;
-        SwitchPlayer(startingPlayer);
+        if (currentPlayer == null)
+        {
+            currentPlayer = startingPlayer;
+            SwitchPlayer(startingPlayer);
+        }
         
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
@@ -144,9 +147,6 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = player.moveSpeed;
         jumpSpeed = player.jumpSpeed;
         currentPlayer = player;
-        
-        // Set animation mode
-        SetAnimationMode();
     }
 
     public void SetNewWeapon()
