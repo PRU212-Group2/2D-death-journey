@@ -9,12 +9,15 @@ public class SaveData
     public string weaponName;
 }
 
+[System.Serializable]
 public class PlayerData
 {
     public float[] position;
     public int health;
+    public string playerName;
 }
 
+[System.Serializable]
 public class ItemData
 {
     public string itemName;

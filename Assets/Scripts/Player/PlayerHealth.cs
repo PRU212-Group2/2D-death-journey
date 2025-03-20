@@ -172,4 +172,9 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.SetAlive(true);
         currentHealth = startingHealth;
     }
+
+    public void LoadHealth(int amount)
+    {
+        currentHealth = amount;
+    }
 }

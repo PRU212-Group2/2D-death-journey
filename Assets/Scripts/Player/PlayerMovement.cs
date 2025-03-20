@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     ActiveWeapon myActiveWeapon;
     Weapon myWeapon;
     AudioPlayer audioPlayer;
+    PlayerSO currentPlayer;
     static PlayerMovement _instance;
     
     // Offsets for the rifle sprite for each animation state
@@ -101,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         
         // Set starting player stats
+        currentPlayer = startingPlayer;
         SwitchPlayer(startingPlayer);
         
         // Store the original height and center values
@@ -137,14 +139,19 @@ public class PlayerMovement : MonoBehaviour
     public void SwitchPlayer(PlayerSO player)
     {
         // Set the player movement and animation here
+        myAnimator = GetComponent<Animator>();
         myAnimator.runtimeAnimatorController = player.animator;
         moveSpeed = player.moveSpeed;
         jumpSpeed = player.jumpSpeed;
+        currentPlayer = player;
+        
+        // Set animation mode
+        SetAnimationMode();
     }
 
     public void SetNewWeapon()
     {
-        myWeapon = FindFirstObjectByType<Weapon>();
+        myWeapon = GetComponentInChildren<Weapon>();
         isUsingRifle = myActiveWeapon.IsRifle();
         
         if (isUsingRifle)
@@ -286,6 +293,8 @@ public class PlayerMovement : MonoBehaviour
     
     void AdjustWeaponPosition()
     {
+        myWeapon = GetComponentInChildren<Weapon>();
+        
         // Determine the current state of the weapon (running, crouching, jumping)
         if (isUsingRifle)
         {
@@ -355,11 +364,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (spawnPoints.ContainsKey(sceneName))
         {
-            this.transform.position = spawnPoints[sceneName];
+            transform.position = spawnPoints[sceneName];
         }
         else
         {
             Debug.LogWarning("No spawn point defined for scene: " + sceneName);
         }
+    }
+
+    public void TeleportToPosition(Vector3 position)
+    {
+        transform.position = position;
+    }
+
+    public string GetCurrentPlayer()
+    {
+        return currentPlayer.Name;
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] GameObject inventoryMenu;
-    [SerializeField] ItemSlot[] itemSlots;
+    [SerializeField] public ItemSlot[] itemSlots;
     [SerializeField] ItemSO[] itemSOs;
     
     public bool menuActivated;

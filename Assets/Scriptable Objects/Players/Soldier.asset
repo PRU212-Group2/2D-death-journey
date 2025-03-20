@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Soldier
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: 13b795d677638174abff8b0bb30f4cf1, type: 2}
+  Name: Soldier
   moveSpeed: 6.5
   jumpSpeed: 12
   playerHealth: 150

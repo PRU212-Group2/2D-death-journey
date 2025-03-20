@@ -30,9 +30,13 @@ public class ActiveWeapon : MonoBehaviour
         inventoryManager = FindFirstObjectByType<InventoryManager>();
         store = FindFirstObjectByType<InteractableStore>();
         UIGameplay = FindFirstObjectByType<UIGameplay>();
+
+        if (currentWeapon == null)
+        {
+            // Equip starting weapon and starting ammo at the beginning of the game
+            SwitchWeapon(startingWeapon);
+        }
         
-        // Equip starting weapon and starting ammo at the beginning of the game
-        SwitchWeapon(startingWeapon);
         AdjustAmmo(currentWeaponSO.MagazineSize);
     }
 
@@ -73,7 +77,7 @@ public class ActiveWeapon : MonoBehaviour
         // Create and equip new weapon
         Weapon newWeapon = Instantiate(weaponSO.WeaponPrefab, transform).GetComponent<Weapon>();
         currentWeapon = newWeapon;
-        this.currentWeaponSO = weaponSO;
+        currentWeaponSO = weaponSO;
         
         // Switch magazine size
         AdjustAmmo(currentWeaponSO.MagazineSize);
@@ -127,5 +131,15 @@ public class ActiveWeapon : MonoBehaviour
         {
             audioPlayer.StopRifleShootingSound();
         }
+    }
+
+    public void LoadAmmo(int amount)
+    {
+        currentAmmo = amount;
+    }
+
+    public string GetCurrentWeapon()
+    {
+        return currentWeaponSO.Name;
     }
 }

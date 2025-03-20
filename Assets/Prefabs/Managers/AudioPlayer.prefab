@@ -75,6 +75,8 @@ MonoBehaviour:
   inventoryVolume: 1
   useItemClip: {fileID: 8300000, guid: 41c3030d13817ad45b82874e8ca461d5, type: 3}
   useItemVolume: 1
+  saveClip: {fileID: 8300000, guid: c727ce3e913cffe40a2c651843cca044, type: 3}
+  saveVolume: 1
   songs:
   - {fileID: 8300000, guid: 2a6d411765f5b0b4eba01f7a3fe0122f, type: 3}
   - {fileID: 8300000, guid: 412bf9728e0c01146ad34591ea54b160, type: 3}
@@ -84,8 +86,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2bd1fb7abf33de741a480b98baf19473, type: 3}
   songVolume: 1
   mainMenuSceneName: MainMenu
-  instructionsSceneName: Instructions
-  gameOverSceneName: GameOver
 --- !u!82 &2873519763487298550
 AudioSource:
   m_ObjectHideFlags: 0

@@ -51,6 +51,8 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] float inventoryVolume = 1f;
     [SerializeField] AudioClip useItemClip;
     [SerializeField] [Range(0f, 1f)] float useItemVolume = 1f;
+    [SerializeField] AudioClip saveClip;
+    [SerializeField] [Range(0f, 1f)] float saveVolume = 1f;
     
     [Header("Songs")]
     [SerializeField] AudioClip[] songs; 
@@ -350,6 +352,11 @@ public class AudioPlayer : MonoBehaviour
     public void PlayUseItemClip()
     {
         PlayClip(useItemClip, useItemVolume);
+    }
+    
+    public void PlaySaveClip()
+    {
+        PlayClip(saveClip, saveVolume);
     }
 
     void PlayClip(AudioClip clip, float volume)
