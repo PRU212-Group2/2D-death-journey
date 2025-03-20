@@ -136,6 +136,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033746949486539815, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 130.5358
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033746949486539815, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 100
       objectReference: {fileID: 0}
@@ -163,6 +167,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -286.85327
       objectReference: {fileID: 0}
+    - target: {fileID: 1336337271255181493, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: price
+      value: 12000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336337271255181493, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: weaponSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 258f469b76256ea44b84a686eff6842b, type: 2}
     - target: {fileID: 1495167484416898675, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -513,6 +525,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -168.6733
       objectReference: {fileID: 0}
+    - target: {fileID: 6602990497232020420, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8058449802171694117, guid: 75585aedcba71a7499e6bf5db8028b54, type: 3}
     - target: {fileID: 6697702536902685238, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -544,6 +560,18 @@ PrefabInstance:
     - target: {fileID: 6758934352748596819, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -27.6648
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763676750931772167, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_text
+      value: Laser Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763676750931772167, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_margin.z
+      value: -6.483902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763676750931772167, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7041630267617422845, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchorMax.y
@@ -611,12 +639,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7362098785871944222, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: price
-      value: 18000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 7362098785871944222, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: playerSO
       value: 
       objectReference: {fileID: 11400000, guid: a59badb03fbef174f8fbef06602a84a9, type: 2}
+    - target: {fileID: 7868009549434407860, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_text
+      value: 'An automatic laser rifle that is efficient in killing  bigger threats.
+
+
+        Automatic:
+        True
+
+        Fire rate: 80RPM'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868009549434407860, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8025679994625513502, guid: ac3946f0f87371b4e861bfaba4c6baab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
