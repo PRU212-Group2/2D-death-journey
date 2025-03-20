@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Super Soldier
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: eb39eeb5c18e84e40a9e2298d61dd3b3, type: 2}
+  Name: Super Soldier
   moveSpeed: 8
   jumpSpeed: 15
   playerHealth: 200

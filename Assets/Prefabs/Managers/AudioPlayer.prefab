@@ -49,6 +49,10 @@ MonoBehaviour:
   pistolVolume: 1
   rifleClip: {fileID: 8300000, guid: 1caafa432c19b49438de7d46f70874dd, type: 3}
   rifleVolume: 1
+  laserPistolClip: {fileID: 8300000, guid: 4019af6784e4b7b4e94313048d15fd07, type: 3}
+  laserPistolVolume: 1
+  laserRifleClip: {fileID: 8300000, guid: 905ee37c214fd2143946630a91db17ce, type: 3}
+  laserRifleVolume: 1
   deathClip: {fileID: 8300000, guid: 93f3d8fc84d8c024b81922d500869dd9, type: 3}
   deathVolume: 1
   pickupClip: {fileID: 8300000, guid: e7220188ce5d2be42947cf519331b27a, type: 3}
@@ -75,12 +79,17 @@ MonoBehaviour:
   inventoryVolume: 1
   useItemClip: {fileID: 8300000, guid: 41c3030d13817ad45b82874e8ca461d5, type: 3}
   useItemVolume: 1
+  saveClip: {fileID: 8300000, guid: c727ce3e913cffe40a2c651843cca044, type: 3}
+  saveVolume: 1
   songs:
+  - {fileID: 8300000, guid: 2a6d411765f5b0b4eba01f7a3fe0122f, type: 3}
   - {fileID: 8300000, guid: 412bf9728e0c01146ad34591ea54b160, type: 3}
+  - {fileID: 8300000, guid: 66bd876dfa69ab74791318bc223767a0, type: 3}
+  - {fileID: 8300000, guid: 7edc9c4544688cf488ad47e5f2eb27e9, type: 3}
+  - {fileID: 8300000, guid: 1a87c50a6d9c5134d86da7a5fc1ec1e1, type: 3}
+  - {fileID: 8300000, guid: 2bd1fb7abf33de741a480b98baf19473, type: 3}
   songVolume: 1
   mainMenuSceneName: MainMenu
-  instructionsSceneName: Instructions
-  gameOverSceneName: GameOver
 --- !u!82 &2873519763487298550
 AudioSource:
   m_ObjectHideFlags: 0

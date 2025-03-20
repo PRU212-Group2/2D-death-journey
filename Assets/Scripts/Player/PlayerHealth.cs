@@ -1,8 +1,8 @@
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
-using UnityEngine.UI;  // Add this for UI elements
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,7 +18,8 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
     AudioPlayer audioPlayer;
     ActiveWeapon activeWeapon;
-    
+    GameManager gameManager;
+    PlayerHealth _instance;
     
     // Immortality variables
     private bool isImmortal = false;
@@ -27,13 +28,30 @@ public class PlayerHealth : MonoBehaviour
     
     void Awake()
     {
+        ManageSingleton();
         SwitchPlayer(startingPlayer);
         
         currentHealth = startingHealth;
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
+        gameManager = FindFirstObjectByType<GameManager>();
         activeWeapon = GetComponentInChildren<ActiveWeapon>();
+    }
+    
+    // Applying singleton pattern
+    void ManageSingleton()
+    {
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     
     public void SwitchPlayer(PlayerSO player)
@@ -54,12 +72,12 @@ public class PlayerHealth : MonoBehaviour
         
         if (currentHealth <= lowHealthThreshold && currentHealth > 0)
         {
-            lowHealthEffectImage.GameObject().SetActive(true);
+            lowHealthEffectImage.gameObject.SetActive(true);
         }
         else
         {
             // Hide the effect when health is above threshold or player is dead
-            lowHealthEffectImage.GameObject().SetActive(false);
+            lowHealthEffectImage.gameObject.SetActive(false);
         }
     }
     
@@ -118,11 +136,11 @@ public class PlayerHealth : MonoBehaviour
         
         // Decrease health based on damage taken
         currentHealth -= amount;
-        
+
         // If the player dies then play death animation
         if (currentHealth <= 0)
         {
-            PlayerGameOver();
+            PlayerDeath();
         }
         else
         {
@@ -130,7 +148,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     
-    void PlayerGameOver()
+    void PlayerDeath()
     {
         // Play death animation, sfx and deactivate input
         audioPlayer.PlayDeathClip();
@@ -138,5 +156,25 @@ public class PlayerHealth : MonoBehaviour
         activeWeapon.gameObject.SetActive(false);
         playerMovement.SetAlive(false);
         animator.SetTrigger(triggerDying);
+    
+        // Add delay before processing death
+        StartCoroutine(ProcessDeathAfterDelay());
+    }
+
+    IEnumerator ProcessDeathAfterDelay()
+    {
+        // Wait for animation to play or desired delay time
+        yield return new WaitForSeconds(2.0f); // Adjust time as needed
+    
+        // Reset to the latest save
+        gameManager.ProcessPlayerDeath();
+        activeWeapon.gameObject.SetActive(true);
+        playerMovement.SetAlive(true);
+        currentHealth = startingHealth;
+    }
+
+    public void LoadHealth(int amount)
+    {
+        currentHealth = amount;
     }
 }

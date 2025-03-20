@@ -13,11 +13,13 @@ public class ActiveWeapon : MonoBehaviour
     AudioPlayer audioPlayer;
     InventoryManager inventoryManager;
     InteractableStore store;
+    UIGameplay UIGameplay;
 
     void Update()
     {
         if (inventoryManager.menuActivated) return;
-        if (store.storeMenuOpened) return;
+        if (store.isInteracting) return;
+        if (UIGameplay.isPaused) return;
         
         HandleShoot();
     }
@@ -27,9 +29,14 @@ public class ActiveWeapon : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         inventoryManager = FindFirstObjectByType<InventoryManager>();
         store = FindFirstObjectByType<InteractableStore>();
+        UIGameplay = FindFirstObjectByType<UIGameplay>();
+
+        if (currentWeapon == null)
+        {
+            // Equip starting weapon and starting ammo at the beginning of the game
+            SwitchWeapon(startingWeapon);
+        }
         
-        // Equip starting weapon and starting ammo at the beginning of the game
-        SwitchWeapon(startingWeapon);
         AdjustAmmo(currentWeaponSO.MagazineSize);
     }
 
@@ -70,7 +77,7 @@ public class ActiveWeapon : MonoBehaviour
         // Create and equip new weapon
         Weapon newWeapon = Instantiate(weaponSO.WeaponPrefab, transform).GetComponent<Weapon>();
         currentWeapon = newWeapon;
-        this.currentWeaponSO = weaponSO;
+        currentWeaponSO = weaponSO;
         
         // Switch magazine size
         AdjustAmmo(currentWeaponSO.MagazineSize);
@@ -83,7 +90,14 @@ public class ActiveWeapon : MonoBehaviour
         // Stop rifle sound immediately when button is released
         if (!isPressed && currentWeaponSO.isRifle)
         {
-            audioPlayer.StopRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StopRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StopLaserRifleShootingSound();
+            }
         }
     }
     
@@ -99,7 +113,14 @@ public class ActiveWeapon : MonoBehaviour
         // Start the rifle sound as soon as shoot is pressed for rifles
         if (shootState && currentWeaponSO.isRifle && currentAmmo > 0)
         {
-            audioPlayer.StartRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StartRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StartLaserRifleShootingSound();
+            }
         }
 
         // Rate of fire (can not shoot until time since last shot is greater than fire rate)
@@ -114,7 +135,14 @@ public class ActiveWeapon : MonoBehaviour
             // Play pistol shooting audio only for non-rifles
             if (!currentWeaponSO.isRifle)
             {
-                audioPlayer.PlayPistolClip();
+                if (!currentWeaponSO.isLaser)
+                {
+                    audioPlayer.PlayPistolClip();
+                }
+                else
+                {
+                    audioPlayer.PlayLaserPistolClip();
+                }
                 shootState = false;
             }
         }
@@ -122,7 +150,24 @@ public class ActiveWeapon : MonoBehaviour
         // Stop rifle sound if we're out of ammo
         if (currentWeaponSO.isRifle && currentAmmo <= 0)
         {
-            audioPlayer.StopRifleShootingSound();
+            if (!currentWeaponSO.isLaser)
+            {
+                audioPlayer.StopRifleShootingSound();
+            }
+            else
+            {
+                audioPlayer.StopLaserRifleShootingSound();
+            }
         }
+    }
+
+    public void LoadAmmo(int amount)
+    {
+        currentAmmo = amount;
+    }
+
+    public string GetCurrentWeapon()
+    {
+        return currentWeaponSO.Name;
     }
 }

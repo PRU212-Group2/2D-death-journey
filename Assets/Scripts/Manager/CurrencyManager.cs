@@ -14,9 +14,6 @@ public class CurrencyManager : MonoBehaviour
     void Awake()
     {
         ManageSingleton();
-        // Set the save file path
-        saveFilePath = Path.Combine(Application.persistentDataPath, "save.json");
-        LoadCash();
     }
     
     // Applying singleton pattern
@@ -48,25 +45,9 @@ public class CurrencyManager : MonoBehaviour
         // Clamp the cash to not be less than 0
         cash = Mathf.Clamp(cash, 0, maxCashEarned);
     }
-    
-    // Load cash from saved file
-    private void LoadCash()
+
+    public void LoadCash(int amount)
     {
-        if (File.Exists(saveFilePath))
-        {
-            string jsonData = File.ReadAllText(saveFilePath);
-            SaveData data = JsonUtility.FromJson<SaveData>(jsonData);
-            cash = data.cash;
-        }
-    }
-    
-    // Save high cash to file
-    private void SaveCash()
-    {
-        SaveData data = new SaveData();
-        data.cash = cash;
-        
-        string jsonData = JsonUtility.ToJson(data, true);
-        File.WriteAllText(saveFilePath, jsonData);
+        cash = amount;
     }
 }

@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -14.868801, y: 12.040901}
+  m_AnchoredPosition: {x: -14.868801, y: 15}
   m_SizeDelta: {x: 29.737602, y: 24.0818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5997860188143259609
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
-  m_sharedMaterial: {fileID: -3961010481799576773, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
+  m_sharedMaterial: {fileID: -8123903060328789433, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -240,6 +240,7 @@ MonoBehaviour:
   itemDescriptionNameText: {fileID: 0}
   itemDescriptionText: {fileID: 0}
   selectedShader: {fileID: 9102212482425697295}
+  itemSelected: 0
 --- !u!1 &6617365201254941811
 GameObject:
   m_ObjectHideFlags: 0

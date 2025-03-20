@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerSO : ScriptableObject
 {
     public AnimatorController animator;
+    public string Name = "Adam";
     public float moveSpeed = 5f;
     public float jumpSpeed = 5f;
     public int playerHealth = 100;

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec64648c0d93b334880ce039b1e3e914, type: 3}
   m_Name: Guide Note 2
   m_EditorClassIdentifier: 
-  itemName: 2
+  itemName: Guide Note 2
   statToChange: 0
   amountToChange: 0
+  multiplier: 1

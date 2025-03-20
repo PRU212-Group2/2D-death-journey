@@ -3,7 +3,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] GameObject inventoryMenu;
-    [SerializeField] ItemSlot[] itemSlots;
+    [SerializeField] public ItemSlot[] itemSlots;
     [SerializeField] ItemSO[] itemSOs;
     
     public bool menuActivated;
@@ -58,8 +58,8 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
-            if (itemSlots[i].isFull == false 
-                && itemSlots[i].itemName == itemName 
+            if ((itemSlots[i].isFull == false 
+                && itemSlots[i].itemName == itemName)
                 || itemSlots[i].quantity == 0)
             {
                 int leftOverItems = itemSlots[i].AddItem(itemName, quantity, itemSprite, itemDescription);
@@ -71,6 +71,31 @@ public class InventoryManager : MonoBehaviour
         }
 
         return quantity;
+    }
+    
+    public void RemoveItem(string itemName)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].itemName == itemName)
+            {
+                itemSlots[i].RemoveItem();
+
+                if (itemSlots[i].quantity <= 0)
+                {
+                    itemSlots[i].EmptySlot();
+                }
+            }
+        }
+    }
+
+    public void ClearInventory()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            Debug.Log(itemSlots[i].itemName);
+            itemSlots[i].EmptySlot();
+        }
     }
 
     public bool UseItem(string itemName)

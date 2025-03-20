@@ -6,14 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ac553149ac7ec92438d997a95cb9e4ba
   - enabled: 1
-    path: Assets/Scenes/CityZombie.unity
+    path: Assets/Scenes/City.unity
     guid: 3d2f15a60a408f1419100d71805af982
+  - enabled: 1
+    path: Assets/Scenes/Moonlight.unity
+    guid: 70dc74954b2b99244b7dae7b5c687172
+  - enabled: 1
+    path: Assets/Scenes/Hell.unity
+    guid: a32bba47f268def46a9e330bfa7e1d64
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 3c7a6e8ae37a4d44ba7a7ad41aa2e362
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

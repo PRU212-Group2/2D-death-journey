@@ -666,7 +666,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 3.35
+    m_Value: 2.32
   tintColor:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0.18328868, b: 0, a: 1}

@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
     ActiveWeapon myActiveWeapon;
     Weapon myWeapon;
     AudioPlayer audioPlayer;
+    PlayerSO currentPlayer;
+    static PlayerMovement _instance;
     
     // Offsets for the rifle sprite for each animation state
     Dictionary<string, Vector2> rifleOffsets = new Dictionary<string, Vector2>()
@@ -61,6 +63,34 @@ public class PlayerMovement : MonoBehaviour
         {"Jumping", new Vector2(0.30f, 0.44f)}
     };
     
+    // Level spawn points
+    Dictionary<string, Vector2> spawnPoints = new Dictionary<string, Vector2>()
+    {
+        {"City", new Vector2(-8f, -0.4f)},
+        {"Moonlight", new Vector2(19f, -5f)},
+        {"Hell", new Vector2(-4f, 2.7f)}
+    };
+    
+    void Awake()
+    {
+        ManageSingleton();
+    }
+    
+    // Applying singleton pattern
+    void ManageSingleton()
+    {
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+    
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -72,7 +102,11 @@ public class PlayerMovement : MonoBehaviour
         audioPlayer = FindFirstObjectByType<AudioPlayer>();
         
         // Set starting player stats
-        SwitchPlayer(startingPlayer);
+        if (currentPlayer == null)
+        {
+            currentPlayer = startingPlayer;
+            SwitchPlayer(startingPlayer);
+        }
         
         // Store the original height and center values
         originalBodyHeight = myBodyCollider.size.y;
@@ -108,14 +142,16 @@ public class PlayerMovement : MonoBehaviour
     public void SwitchPlayer(PlayerSO player)
     {
         // Set the player movement and animation here
+        myAnimator = GetComponent<Animator>();
         myAnimator.runtimeAnimatorController = player.animator;
         moveSpeed = player.moveSpeed;
         jumpSpeed = player.jumpSpeed;
+        currentPlayer = player;
     }
 
     public void SetNewWeapon()
     {
-        myWeapon = FindFirstObjectByType<Weapon>();
+        myWeapon = GetComponentInChildren<Weapon>();
         isUsingRifle = myActiveWeapon.IsRifle();
         
         if (isUsingRifle)
@@ -240,6 +276,13 @@ public class PlayerMovement : MonoBehaviour
     public void SetAlive(bool aliveState)
     {
         isAlive = aliveState;
+        if (aliveState)
+        {
+            // Reset animation state to default entry
+            myAnimator.Rebind();
+            myAnimator.Update(0f);
+            SetAnimationMode();
+        }
     }
     
     // Helper function to apply the offset to the weapon's position
@@ -250,6 +293,8 @@ public class PlayerMovement : MonoBehaviour
     
     void AdjustWeaponPosition()
     {
+        myWeapon = GetComponentInChildren<Weapon>();
+        
         // Determine the current state of the weapon (running, crouching, jumping)
         if (isUsingRifle)
         {
@@ -313,5 +358,27 @@ public class PlayerMovement : MonoBehaviour
             speedBoostTimer = speedBoostDuration;
             isSpeedBoosted = true;
         }
+    }
+
+    public void TeleportToSpawnPoint(string sceneName)
+    {
+        if (spawnPoints.ContainsKey(sceneName))
+        {
+            transform.position = spawnPoints[sceneName];
+        }
+        else
+        {
+            Debug.LogWarning("No spawn point defined for scene: " + sceneName);
+        }
+    }
+
+    public void TeleportToPosition(Vector3 position)
+    {
+        transform.position = position;
+    }
+
+    public string GetCurrentPlayer()
+    {
+        return currentPlayer.Name;
     }
 }

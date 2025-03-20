@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 165.83, y: 111.6022}
+  m_SizeDelta: {x: 165.83, y: 121.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1304686597768977596
 CanvasRenderer:
@@ -73,8 +73,8 @@ MonoBehaviour:
 
     Health: 150'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
-  m_sharedMaterial: {fileID: -3961010481799576773, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
+  m_sharedMaterial: {fileID: -8123903060328789433, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -209,8 +209,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Soldier
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
-  m_sharedMaterial: {fileID: -3961010481799576773, guid: 91fca2030169e104cb2676a4c5e157ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
+  m_sharedMaterial: {fileID: -8123903060328789433, guid: 79e50b43d25f7a24ba863e6392a334f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -234,8 +234,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -605,6 +605,10 @@ PrefabInstance:
     - target: {fileID: 1836462705985752385, guid: a948ae7913f6c21409d3b0236f05cbde, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758898272132600123, guid: a948ae7913f6c21409d3b0236f05cbde, type: 3}
+      propertyPath: price
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 6055423714551142432, guid: a948ae7913f6c21409d3b0236f05cbde, type: 3}
       propertyPath: m_Pivot.x

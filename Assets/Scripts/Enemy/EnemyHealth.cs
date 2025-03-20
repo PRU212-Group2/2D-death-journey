@@ -4,11 +4,16 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int startingHealth = 3;
     
-    public int currentHealth;
+    int currentHealth;
     
     void Awake()
     {
         currentHealth = startingHealth;    
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
     }
     
     public void TakeDamage(int amount)

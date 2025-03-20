@@ -3,16 +3,25 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    GameManager gameManager;
     [SerializeField] float fadeDuration = 3.5f;
-    private FadeTransition screenTransition;
+    [SerializeField] Button ContinueButton;
+    
+    GameManager gameManager;
+    FadeTransition screenTransition;
 
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
         screenTransition = gameObject.AddComponent<FadeTransition>();
+        EnableContinueButton();
     }
 
+    public void ContinueGame()
+    {
+        StartCoroutine(ContinueGameWithFade());
+
+    }
+    
     public void StartNewGame()
     {
         StartCoroutine(StartGameWithFade());
@@ -22,10 +31,24 @@ public class MainMenu : MonoBehaviour
     {
         gameManager.QuitGame();
     }
-
+    
     private IEnumerator StartGameWithFade()
     {
         yield return StartCoroutine(screenTransition.FadeToBlack(fadeDuration));
         gameManager.StartNewGame();
+    }
+    
+    private IEnumerator ContinueGameWithFade()
+    {
+        yield return StartCoroutine(screenTransition.FadeToBlack(fadeDuration));
+        gameManager.LoadData();
+    }
+
+    private void EnableContinueButton()
+    {
+        if (gameManager.HasSave())
+        {
+            ContinueButton.gameObject.SetActive(true);
+        }
     }
 }
