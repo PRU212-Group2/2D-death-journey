@@ -89,6 +89,17 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+    
+    public void FullRemoveItem(string itemName)
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].itemName == itemName)
+            {
+                itemSlots[i].EmptySlot();
+            }
+        }
+    }
 
     public void ClearInventory()
     {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5177705404110794900}
   - component: {fileID: 2694077274914316093}
   m_Layer: 11
-  m_Name: Confession Note
+  m_Name: Truth Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404182fe4ef6d2144a3921345bad5809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Confession Note
+  itemName: Truth Note
   itemDescription: "Adam, my love,\n\nIf you\u2019re reading this, it\u2019s too
     late. I never wanted to be your burden, but I couldn\u2019t escape what I was.
     I pretended for so long, but I wasn\u2019t the woman you needed. I couldn\u2019t

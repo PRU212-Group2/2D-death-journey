@@ -135,6 +135,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         quantityText.gameObject.SetActive(false);
         itemImage.sprite = emptySprite;
         itemSprite = emptySprite;
+        itemDescription = "";
         quantity = 0;
         
         itemDescriptionNameText.text = "";

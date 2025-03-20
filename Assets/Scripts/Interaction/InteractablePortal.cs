@@ -28,7 +28,7 @@ public class InteractablePortal : Interactable
         if (hasKey)
         {
             audioPlayer.PlayDoorUnlockClip();
-            inventoryManager.RemoveItem(key.itemName);
+            inventoryManager.FullRemoveItem(key.itemName);
             StartCoroutine(LoadNextScene());
         }
         else

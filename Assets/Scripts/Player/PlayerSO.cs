@@ -1,10 +1,9 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerSO", menuName = "Scriptable Objects/PlayerSO")]
 public class PlayerSO : ScriptableObject
 {
-    public AnimatorController animator;
+    public RuntimeAnimatorController animator;
     public string Name = "Adam";
     public float moveSpeed = 5f;
     public float jumpSpeed = 5f;
