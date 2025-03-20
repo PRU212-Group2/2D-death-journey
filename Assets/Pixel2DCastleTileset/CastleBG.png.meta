@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91a69602a326d53429ff92793952d96b
+guid: afa51b6d7557e884d977bf86e635f15b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9136158225633086404
-    second: Laser Pistol_0
+      213: 7446556078223747115
+    second: CastleBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Laser Pistol_0
+      name: CastleBG_0
       rect:
         serializedVersion: 2
-        x: 150
-        y: 157
-        width: 209
-        height: 186
+        x: 0
+        y: 0
+        width: 1669
+        height: 1067
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cb8f9230872ace70800000000000000
-      internalID: 9136158225633086404
+      spriteID: b286d82bc4b775760800000000000000
+      internalID: 7446556078223747115
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Laser Pistol_0: 9136158225633086404
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
