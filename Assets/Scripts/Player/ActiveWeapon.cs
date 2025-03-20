@@ -18,7 +18,7 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         if (inventoryManager.menuActivated) return;
-        if (store.isInteracting) return;
+        if (store != null && store.isInteracting) return;
         if (UIGameplay.isPaused) return;
         
         HandleShoot();
