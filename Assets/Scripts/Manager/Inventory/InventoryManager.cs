@@ -94,7 +94,6 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < itemSlots.Length; i++)
         {
-            Debug.Log(itemSlots[i].itemName);
             itemSlots[i].EmptySlot();
         }
     }
