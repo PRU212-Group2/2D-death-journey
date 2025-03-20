@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -176,5 +177,25 @@ public class PlayerHealth : MonoBehaviour
     public void LoadHealth(int amount)
     {
         currentHealth = amount;
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        var sceneName = SceneManager.GetActiveScene().name;
+        // Check if we should start or stop music based on new scene
+        if (sceneName == "MainMenu" || sceneName == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

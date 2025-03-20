@@ -137,6 +137,10 @@ public class AudioPlayer : MonoBehaviour
         inventoryVolume = soundEffectVolume;
         enemyHurtVolume = soundEffectVolume;
         enemyAttackVolume = soundEffectVolume;
+        laserRifleVolume = soundEffectVolume;
+        laserPistolVolume = soundEffectVolume;
+        unlockVolume = soundEffectVolume;
+        saveVolume = soundEffectVolume;
     }
 
     private void AdjustSongVolumes()

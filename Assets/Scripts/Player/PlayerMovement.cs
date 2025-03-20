@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
@@ -380,5 +381,35 @@ public class PlayerMovement : MonoBehaviour
     public string GetCurrentPlayer()
     {
         return currentPlayer.Name;
+    }
+    
+    void DestroyOnMenuScreen(Scene oldScene, Scene newScene)
+    {
+        var sceneName = SceneManager.GetActiveScene().name;
+        
+        if (sceneName == "MainMenu" || sceneName == "EndingMenu")
+        {
+            Destroy(this);
+        }
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        var sceneName = SceneManager.GetActiveScene().name;
+        // Check if we should start or stop music based on new scene
+        if (sceneName == "MainMenu" || sceneName == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

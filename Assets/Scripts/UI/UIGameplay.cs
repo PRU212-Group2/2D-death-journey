@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Slider = UnityEngine.UI.Slider;
 
 public class UIGameplay : MonoBehaviour
@@ -91,5 +92,25 @@ public class UIGameplay : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = previousTimeScale;
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        var sceneName = SceneManager.GetActiveScene().name;
+        // Check if we should start or stop music based on new scene
+        if (sceneName == "MainMenu" || sceneName == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
