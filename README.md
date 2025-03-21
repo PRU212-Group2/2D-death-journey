@@ -91,6 +91,23 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - **Notes** (Story clues from Maria)
 - **Pills** (Temporary immortality)
 
+### 🛒 Interactables
+| Props | Name | Descriptions | Item Received |
+|-------|------|--------------|---------------|
+| ![Car](Assets/Assets/Sprites/Environments/Car.png) | Car | Interact to get a note from Maria | Maria's Note |
+| ![Crates](Assets/Assets/Sprites/Environments/Crates.png) | Crates | Interact to get ammo from the crates | Ammo Box |
+| ![Old Truck](Assets/Assets/Sprites/Environments/Truck.png) | Old Truck | Interact to get key to the portal | Key |
+| ![Save Point](Assets/Assets/Sprites/Environments/Save%20Point.png) | Save Point | Interact to save game |  |
+| ![Store](Assets/Assets/Sprites/Environments/shack_00_64x64/shack_00_r.png) | Store | Interact to access the store, to upgrade or buy items |  |
+| ![Portal](Assets/Assets/Sprites/Environments/shack_00_64x64/shack_00_f.png) | Portal | Interact to move to the next level, require key |  |
+
+### 📦 Inventory 
+- Add Item
+- Use Item
+- Remove Item
+- Check Item Quantity
+- Read Item Descriptions
+
 ## 🎮 Controls
 - **A / D** → Move Left / Right
 - **Space** → Jump
