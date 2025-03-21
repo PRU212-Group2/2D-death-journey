@@ -32,7 +32,7 @@ The protagonist is a young man named Adam, who is on a quest to find his girlfri
 4. **The Punishment:** The final level reveals the horrifying truth, hell on earth.
 
 ## 🎯 Objective
-Survive the journey by defeating enemies, collecting power-ups, and solving mysteries to rescue Maria.
+Survive the journey by defeating enemies, collecting power-ups, solving mysteries to find Maria and the truth.
 
 ## 🎨 Graphics & Environments
 - **Forests** with eerie full-moon settings.
@@ -85,19 +85,15 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 | ![Spikes](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Tiles/Spikes%201.png) | Spikes | A deadly trap, you don't wanna fall into a pit full of this trap | 50 damage |
 
 ### 🎒 Pickups
-- **Cash** (Buy weapons & upgrades)
-- **Ammo Boxes** (Reload weapons)
-- **Adrenaline** (Speed boost for 5 sec)
-- **Syringes** (Heal 40 HP)
-- **Keys** (Unlock new worlds)
-- **Notes** (Story clues from Maria)
-- **Pills** (Temporary immortality)
-
 | Item | Name | Descriptions | Amount |
 |------|------|--------------|--------|
-| ![Adam](Assets/Assets/Death%20Journey%20Assets/Characters/Adam_Default/Adam_Pistol_Spritesheet.png) | Adam | 5 speed | 100 health | Free |
-| ![Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Soldier/Soldier%20Pistol%20-%20Spritesheet.png) | Soldier | 6.5 speed | 150 health | 6000 Money |
-| ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
+| ![Cash](Assets/Assets/Sprites/City/Money.png) | Cash | Use to buy items and upgrades for weapons and characters | 200$ |
+| ![Ammo Box](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Ammo%20Box.png) | Ammo Box | Reload your weapons | 20 rounds |
+| ![Adrenaline](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/adrenaline.png) | Adrenaline | Give the player a speed boose for 5 seconds | 1.5x speed |
+| ![Syringe](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/syringe.png) | Syringe | Heal the player | 50 health |
+| ![Key](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Key.png) | Key | Use to unlock portal and go to the next level | |
+  | ![Note](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Note.png) | Note | Maria's confession note and guide notes, more details are in the game | |
+| ![Pills](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Pills.png) | Pills | Give player immoratlity for 5 seconds | infinite health |
 
 ### 💬 Interactables
 | Props | Name | Descriptions | Item Received |
