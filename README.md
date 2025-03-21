@@ -64,12 +64,12 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 ### 🔥 Weapons Upgrades
 | Weapon | Damage | Fire Rate | Cost |
 |--------|--------|-----------|------|
-| Pistol | 1 per shot | 20 RPM | Free |
+| ![Pistol](Assets/Assets/Death%20Journey%20Assets/Weapons/Pistol.png) Pistol | 1 per shot | 20 RPM | Free |
 | AK-47 | 1 per shot | 60 RPM | 8000 Money |
 | Laser Pistol | 2 per shot | 30 RPM | 3000 Money |
 | Laser Rifle | 1.5 per shot | 80 RPM | 12000 Money |
 
-### 🔥 Player Upgrades
+### 🛡️ Player Upgrades
 | Armor | Speed | Health | Cost |
 |-------|-------|--------|------|
 | Adam | 5 speed | 100 health | Free |
