@@ -175,3 +175,5 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 
 ## 🚀 Installation & How to Play
 1. Access our itch.io page to download the game: https://r1nzl3rrr.itch.io/death-journey
+
+# ENJOY DEATH JOURNEY!!!
