@@ -3,7 +3,7 @@
 ## 🎮 Game Design
 
 ### 📝 Introduction
-**Death Journey** is a thrilling 2D pixelated platformer where players control Adam, a determined hero on a dangerous quest to rescue his girlfriend, Maria. Battling through hordes of zombies, vampires, and werewolves, Adam must uncover dark mysteries and upgrade his weapons to survive.
+**Death Journey** is a thrilling 2D pixelated platformer where players control Adam, on his journey to explore the complex mystery of his girlfriend, Maria. Battling through hordes of zombies, vampires, and werewolves, Adam must uncover dark mysteries and upgrade his weapons to survive.
 
 ## 👥 Contributors
 
