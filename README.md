@@ -19,6 +19,8 @@
 - **Fast-paced combat** with a variety of weapons.
 - **Multiple environments**, including forests, cities, castles, and hellscapes.
 - **Upgradeable abilities** at checkpoints.
+- **Robust Inventory System** Easy to use inventory menu.
+- **Save Point System** Save player's progress, and continue game.
 - **Diverse enemies**, such as zombies, vampires, and demons.
 - **Immersive storyline** with a haunting twist.
 
