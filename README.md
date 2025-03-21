@@ -67,6 +67,7 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 
 ### 🔥 Player Upgrades
 | Armor | Speed | Health | Cost |
+|-------|-------|--------|------|
 | Adam | 5 speed | 100 health | Free |
 | Soldier | 6.5 speed | 150 health | 6000 Money |
 | Super Soldier | 8 speed | 200 health | 14000 Money |
