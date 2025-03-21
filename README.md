@@ -55,6 +55,7 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 - Collecting power-ups and weapons.
 - Upgrading abilities at checkpoints.
 
+
 ### 🔥 Weapons Upgrades
 | Weapon | Name | Damage | Fire Rate | Cost |
 |--------|------|--------|-----------|------|
@@ -63,12 +64,14 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 | ![Laser Pistol](Assets/Assets/Death%20Journey%20Assets/Weapons/Laser%20Pistol.png) | Laser Pistol | 2 per shot | 30 RPM | 3000 Money |
 | ![Laser Rifle](Assets/Assets/Death%20Journey%20Assets/Weapons/Laser%20Rifle.png) | Laser Rifle | 1.5 per shot | 80 RPM | 12000 Money |
 
+
 ### 🛡️ Player Upgrades
 | Armor | Name | Speed | Health | Cost |
 |-------|------|-------|--------|------|
 | ![Adam](Assets/Assets/Death%20Journey%20Assets/Characters/Adam_Default/Adam_Pistol_Spritesheet.png) | Adam | 5 speed | 100 health | Free |
 | ![Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Soldier/Soldier%20Pistol%20-%20Spritesheet.png) | Soldier | 6.5 speed | 150 health | 6000 Money |
 | ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
+
 
 ### 🧟 Enemy Types
 | Enemy | Name | Descriptions | Damage | Speed | Health | Range |
@@ -78,11 +81,13 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 | ![Creep](Assets/Assets/Death%20Journey%20Assets/Hell/Creep/Attack.png) | Creep | Created from hell, a jester, fast, durable and high range attack. | 20 damage | 2.5 speed | 10 health | 2 range |
 | ![Executioner](Assets/Assets/Death%20Journey%20Assets/Hell/Executioner/Attack.png) | Executioner | Born to punished, the Executioner can gives slow but fatal attack with his bladed arm, very durable and high range. | 40 damage | 1.5 speed | 15 health | 3 range |
 
+
 ### ☠️ Traps
 | Trap | Name | Descriptions | Damage |
 |------|------|--------------|--------|
 | ![Zapper](Assets/Assets/Sprites/City/Trap.png) | Zapper | Shock the player to death | 50 damage |
 | ![Spikes](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Tiles/Spikes%201.png) | Spikes | A deadly trap, you don't wanna fall into a pit full of this trap | 50 damage |
+
 
 ### 🎒 Pickups
 | Item | Name | Descriptions | Amount |
@@ -95,6 +100,7 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
   | ![Note](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Note.png) | Note | Maria's confession note and guide notes, more details are in the game | |
 | ![Pills](Assets/Assets/Death%20Journey%20Assets/Inventory%20Items/Pills.png) | Pills | Give player immoratlity for 5 seconds | infinite health |
 
+
 ### 💬 Interactables
 | Props | Name | Descriptions | Item Received |
 |-------|------|--------------|---------------|
@@ -105,6 +111,7 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 | ![Store](Assets/Assets/Sprites/Environments/shack_00_64x64/shack_00_r.png) | Store | Interact to access the store, to upgrade or buy items |  |
 | ![Portal](Assets/Assets/Sprites/Environments/shack_00_64x64/shack_00_f.png) | Portal | Interact to move to the next level, require key |  |
 
+
 ### 📦 Inventory 
 - Add Item
 - Use Item
@@ -112,10 +119,12 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 - Check Item Quantity
 - Read Item Descriptions
 
+
 ### 🛒 Store
 - Buy weapons
 - Buy armors
 - Buy items (adrenaline, pills, syringe, ammo box)
+
 
 ### 💾 Save 
 - Save current level
@@ -125,6 +134,7 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 - Save cash
 - Save ammo
 - Save inventory items
+
 
 ## 🎮 Controls
 - **A / D** → Move Left / Right
