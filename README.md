@@ -37,13 +37,13 @@ The protagonist is a young man named Adam, who is on a quest to find his girlfri
 Survive the journey by defeating enemies, collecting power-ups, solving mysteries to find Maria and the truth.
 
 ## 🎨 Graphics & Environments
-- **Forests** with eerie full-moon settings.
+- **Forests** Introduction level.
   
-  ![Forest Level](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_2.png) 
+  ![Forest Level](Assets/Pixel2DCastleTileset/CastleBG.png) 
 - **Ruined cities** filled with zombies.
   
   ![Ruined City](Assets/Assets/Sprites/City/2.png) 
-- **Dark castles** haunted by vampires.
+- **Dark castles** with eerie full-moon settings.
   
   ![Dark Castle](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_1.png) 
 - **Hellish landscapes** teeming with demons.
