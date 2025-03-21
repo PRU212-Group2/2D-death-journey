@@ -76,12 +76,12 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - **Creep** (High HP, powerful attacks)
 - **Executioner** (Slow but devastating attacks)
 
-| Enemy | Name | Descriptions | Damage | Health | Range |
-|-------|------|--------------|--------|--------|-------|
-| ![Zombie](Assets/Assets/Death%20Journey%20Assets/Zombie/Attack_1.png) | Zombie | First monster encountered, durable but weak attacks | 20 damage | 5 health | 2 range |
-| ![Werewolf](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/White_Werewolf/Attack_1.png) | Werewolf | Fast and durable, low attack range, beware of its claws | 30 damage | 10 health | 1.5 range |
-| ![Creep](Assets/Assets/Death%20Journey%20Assets/Hell/Creep/Attack.png) | Creep | Created from hell, a jester, durable and high range attack  | 20 damage | 10 health | 2 range |
-| ![Executioner](Assets/Assets/Death%20Journey%20Assets/Hell/Executioner/Attack.png) | Executioner | Born to punished, the Executioner can gives slow but fatal attack with his bladed arm, very durable and high range | 40 damage | 15 health | 3 range |
+| Enemy | Name | Descriptions | Damage | Speed | Health | Range |
+|-------|------|--------------|--------|-------|--------|-------|
+| ![Zombie](Assets/Assets/Death%20Journey%20Assets/Zombie/Attack_1.png) | Zombie | First monster encountered, durable but weak attacks. | 20 damage | 1 speed | 5 health | 2 range |
+| ![Werewolf](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/White_Werewolf/Attack_1.png) | Werewolf | Extremely fast, durable, low attack range, beware of its claws. | 30 damage | 3 speed | 10 health | 1.5 range |
+| ![Creep](Assets/Assets/Death%20Journey%20Assets/Hell/Creep/Attack.png) | Creep | Created from hell, a jester, fast, durable and high range attack. | 20 damage | 2.5 speed | 10 health | 2 range |
+| ![Executioner](Assets/Assets/Death%20Journey%20Assets/Hell/Executioner/Attack.png) | Executioner | Born to punished, the Executioner can gives slow but fatal attack with his bladed arm, very durable and high range. | 40 damage | 1.5 speed | 15 health | 3 range |
 
 ### 🎒 Pickups
 - **Cash** (Buy weapons & upgrades)
