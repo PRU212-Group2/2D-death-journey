@@ -174,8 +174,4 @@ Survive the journey by defeating enemies, collecting power-ups, solving mysterie
 5. **Week 9-10:** Final bug fixes & release.
 
 ## 🚀 Installation & How to Play
-1. Access our itch.io page: https://r1nzl3rrr.itch.io/death-journey
-3. Run the game and start your **Death Journey!**
-
-
-🔗 **GitHub Repository:** [https://github.com/PRU212-Group2/2D-death-journey]  
+1. Access our itch.io page to download the game: https://r1nzl3rrr.itch.io/death-journey
