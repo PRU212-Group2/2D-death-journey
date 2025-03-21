@@ -35,10 +35,14 @@ Adam's peaceful life is shattered when Maria is abducted by a dark force. To sav
 Survive the journey by defeating enemies, collecting power-ups, and solving mysteries to rescue Maria.
 
 ## 🎨 Graphics & Environments
-- ![Forest Level](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_2.png) **Forests** with eerie full-moon settings.
-- ![Ruined City](Assets/Assets/Sprites/City/2.png) **Ruined cities** filled with zombies.
-- ![Dark Castle](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_1.png) **Dark castles** haunted by vampires.
-- ![Hellscape](Assets/Assets/Death%20Journey%20Assets/Hell/2fjuy%2B.jpg) **Hellish landscapes** teeming with demons.
+- **Forests** with eerie full-moon settings.
+  ![Forest Level](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_2.png) 
+- **Ruined cities** filled with zombies.
+  ![Ruined City](Assets/Assets/Sprites/City/2.png) 
+- **Dark castles** haunted by vampires.
+  ![Dark Castle](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_1.png) 
+- **Hellish landscapes** teeming with demons.
+  ![Hellscape](Assets/Assets/Death%20Journey%20Assets/Hell/2fjuy%2B.jpg) 
   
 ## 🎨 Graphics & Environments
 - **Forests** with eerie full-moon settings.
