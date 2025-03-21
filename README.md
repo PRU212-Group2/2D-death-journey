@@ -26,24 +26,24 @@
 Adam's peaceful life is shattered when Maria is abducted by a dark force. To save her, he must battle monstrous creatures across different worlds, uncovering hidden truths along the way.
 
 ### 📌 Levels
-1. **Prologue:** Adam witnesses Maria's kidnapping and enters a portal.
+1. **Prologue:** Adam travels to an unknown place, reads note from Maria and enters a portal.
 2. **City of the Dead:** Zombies and deadly traps lurk in a fog-covered city.
-3. **Cursed Castle:** A dark fortress filled with vampires and werewolves.
-4. **The Punishment:** The final level reveals the horrifying truth.
+3. **Cursed Castle:** A dark fortress filled with werewolves.
+4. **The Punishment:** The final level reveals the horrifying truth, hell on earth.
 
 ## 🎯 Objective
 Survive the journey by defeating enemies, collecting power-ups, and solving mysteries to rescue Maria.
 
 ## 🎨 Graphics & Environments
 - ![Forest Level](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_2.png) **Forests** with eerie full-moon settings.
-- ![Ruined City](assets/city.png) **Ruined cities** filled with zombies.
-- ![Dark Castle](Assets/Pixel2DCastleTileset/CastleBG.png) **Dark castles** haunted by vampires.
-- ![Hellscape](assets/hellscape.png) **Hellish landscapes** teeming with demons.
+- ![Ruined City](Assets/Assets/Sprites/City/2.png) **Ruined cities** filled with zombies.
+- ![Dark Castle](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Background/layer_1.png) **Dark castles** haunted by vampires.
+- ![Hellscape](Assets/Assets/Death%20Journey%20Assets/Hell/2fjuy%2B.jpg) **Hellish landscapes** teeming with demons.
   
 ## 🎨 Graphics & Environments
 - **Forests** with eerie full-moon settings.
 - **Ruined cities** filled with zombies.
-- **Dark castles** haunted by vampires.
+- **Dark castles** haunted by the sheer amount of guilt.
 - **Hellish landscapes** teeming with demons.
 
 ## ⚔️ Gameplay Mechanics
@@ -53,14 +53,18 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - Collecting power-ups and weapons.
 - Upgrading abilities at checkpoints.
 
-### 🔥 Weapons & Upgrades
+### 🔥 Weapons Upgrades
 | Weapon | Damage | Fire Rate | Cost |
 |--------|--------|-----------|------|
 | Pistol | 1 per shot | 20 RPM | Free |
-| Soldier | 6.5 speed | 150 health | 6000 Money |
 | AK-47 | 1 per shot | 60 RPM | 8000 Money |
 | Laser Pistol | 2 per shot | 30 RPM | 3000 Money |
 | Laser Rifle | 1.5 per shot | 80 RPM | 12000 Money |
+
+### 🔥 Player Upgrades
+| Armor | Speed | Health | Cost |
+| Adam | 5 speed | 100 health | Free |
+| Soldier | 6.5 speed | 150 health | 6000 Money |
 | Super Soldier | 8 speed | 200 health | 14000 Money |
 
 ### 🧟 Enemy Types
