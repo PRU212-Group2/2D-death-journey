@@ -23,7 +23,7 @@
 - **Immersive storyline** with a haunting twist.
 
 ## 📖 Story
-Adam's peaceful life is shattered when Maria is abducted by a dark force. To save her, he must battle monstrous creatures across different worlds, uncovering hidden truths along the way.
+The protagonist is a young man named Adam, who is on a quest to find his girlfriend - Maria, as she is somewhere strange. While finding his girlfriend Adam discovered some horrible truth of what happened to her.
 
 ### 📌 Levels
 1. **Prologue:** Adam travels to an unknown place, reads note from Maria and enters a portal.
@@ -47,12 +47,6 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - **Hellish landscapes** teeming with demons.
   
   ![Hellscape](Assets/Assets/Death%20Journey%20Assets/Hell/2fjuy%2B.jpg) 
-  
-## 🎨 Graphics & Environments
-- **Forests** with eerie full-moon settings.
-- **Ruined cities** filled with zombies.
-- **Dark castles** haunted by the sheer amount of guilt.
-- **Hellish landscapes** teeming with demons.
 
 ## ⚔️ Gameplay Mechanics
 
@@ -77,10 +71,17 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 | ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
 
 ### 🧟 Enemy Types
-- **Zombies** (20 DMG, 40 HP)
-- **Werewolves** (Fast movement, high DMG)
-- **Demons** (High HP, powerful attacks)
-- **Executioners** (Slow but devastating attacks)
+- **Zombie** (20 DMG, 40 HP)
+- **Werewolve** (Fast movement, high DMG)
+- **Creep** (High HP, powerful attacks)
+- **Executioner** (Slow but devastating attacks)
+
+| Enemy | Name | Descriptions | Damage | Health | Range |
+|-------|------|--------------|--------|--------|-------|
+| ![Zombie](Assets/Assets/Death%20Journey%20Assets/Zombie/Attack_1.png) | Zombie | First monster encountered, durable but weak attacks | 20 damage | 5 health | 2 range |
+| ![Werewolf](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/White_Werewolf/Attack_1.png) | Werewolf | Fast and durable, low attack range, beware of its claws | 30 damage | 10 health | 1.5 range |
+| ![Creep](Assets/Assets/Death%20Journey%20Assets/Hell/Creep/Attack.png) | Creep | Created from hell, a jester, durable and high range attack  | 20 damage | 10 health | 2 range |
+| ![Executioner](Assets/Assets/Death%20Journey%20Assets/Hell/Executioner/Attack.png) | Executioner | Born to punished, the Executioner can gives slow but fatal attack with his bladed arm, very durable and high range | 40 damage | 15 health | 3 range |
 
 ### 🎒 Pickups
 - **Cash** (Buy weapons & upgrades)
@@ -91,7 +92,13 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - **Notes** (Story clues from Maria)
 - **Pills** (Temporary immortality)
 
-### 🛒 Interactables
+| Item | Name | Descriptions | Amount |
+|------|------|--------------|--------|
+| ![Adam](Assets/Assets/Death%20Journey%20Assets/Characters/Adam_Default/Adam_Pistol_Spritesheet.png) | Adam | 5 speed | 100 health | Free |
+| ![Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Soldier/Soldier%20Pistol%20-%20Spritesheet.png) | Soldier | 6.5 speed | 150 health | 6000 Money |
+| ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
+
+### 💬 Interactables
 | Props | Name | Descriptions | Item Received |
 |-------|------|--------------|---------------|
 | ![Car](Assets/Assets/Sprites/Environments/Car.png) | Car | Interact to get a note from Maria | Maria's Note |
@@ -107,6 +114,20 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 - Remove Item
 - Check Item Quantity
 - Read Item Descriptions
+
+### 🛒 Store
+- Buy weapons
+- Buy armors
+- Buy items (adrenaline, pills, syringe, ammo box)
+
+### 💾 Save 
+- Save current level
+- Save current weapon
+- Save current player
+- Save player position
+- Save cash
+- Save ammo
+- Save inventory items
 
 ## 🎮 Controls
 - **A / D** → Move Left / Right
