@@ -71,17 +71,18 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 | ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
 
 ### 🧟 Enemy Types
-- **Zombie** (20 DMG, 40 HP)
-- **Werewolve** (Fast movement, high DMG)
-- **Creep** (High HP, powerful attacks)
-- **Executioner** (Slow but devastating attacks)
-
 | Enemy | Name | Descriptions | Damage | Speed | Health | Range |
 |-------|------|--------------|--------|-------|--------|-------|
 | ![Zombie](Assets/Assets/Death%20Journey%20Assets/Zombie/Attack_1.png) | Zombie | First monster encountered, durable but weak attacks. | 20 damage | 1 speed | 5 health | 2 range |
 | ![Werewolf](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/White_Werewolf/Attack_1.png) | Werewolf | Extremely fast, durable, low attack range, beware of its claws. | 30 damage | 3 speed | 10 health | 1.5 range |
 | ![Creep](Assets/Assets/Death%20Journey%20Assets/Hell/Creep/Attack.png) | Creep | Created from hell, a jester, fast, durable and high range attack. | 20 damage | 2.5 speed | 10 health | 2 range |
 | ![Executioner](Assets/Assets/Death%20Journey%20Assets/Hell/Executioner/Attack.png) | Executioner | Born to punished, the Executioner can gives slow but fatal attack with his bladed arm, very durable and high range. | 40 damage | 1.5 speed | 15 health | 3 range |
+
+### ☠️ Traps
+| Trap | Name | Descriptions | Damage |
+|------|------|--------------|--------|
+| ![Zapper](Assets/Assets/Sprites/City/Trap.png) | Zapper | Shock the player to death | 50 damage |
+| ![Spikes](Assets/Assets/Death%20Journey%20Assets/Moonlight/Sprites/Medieval_Castle_Asset_Pack/Tiles/Spikes%201.png) | Spikes | A deadly trap, you don't wanna fall into a pit full of this trap | 50 damage |
 
 ### 🎒 Pickups
 - **Cash** (Buy weapons & upgrades)
