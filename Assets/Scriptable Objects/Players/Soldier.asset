@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86222dd8ae27bbe4a955b3a96cc38ca3, type: 3}
+  m_Name: Soldier
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9100000, guid: 13b795d677638174abff8b0bb30f4cf1, type: 2}
+  Name: Soldier
+  moveSpeed: 6.5
+  jumpSpeed: 12
+  playerHealth: 150
+  lowHealthThreshold: 50

@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 20ec88022f234944693476ec2d6b0854
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -505355566245936976
+    second: Soldier Pistol - Spritesheet_0
+  - first:
+      213: 2495135507133580706
+    second: Soldier Pistol - Spritesheet_1
+  - first:
+      213: -3624703226105176963
+    second: Soldier Pistol - Spritesheet_2
+  - first:
+      213: -4369708957572204622
+    second: Soldier Pistol - Spritesheet_3
+  - first:
+      213: -598346145730135114
+    second: Soldier Pistol - Spritesheet_4
+  - first:
+      213: -443291088891210190
+    second: Soldier Pistol - Spritesheet_5
+  - first:
+      213: 2301261134187905959
+    second: Soldier Pistol - Spritesheet_6
+  - first:
+      213: 3398736231275361112
+    second: Soldier Pistol - Spritesheet_7
+  - first:
+      213: 7961272343824171438
+    second: Soldier Pistol - Spritesheet_8
+  - first:
+      213: -7037741651059368630
+    second: Soldier Pistol - Spritesheet_9
+  - first:
+      213: -4697949406798340834
+    second: Soldier Pistol - Spritesheet_10
+  - first:
+      213: -6431705513026950179
+    second: Soldier Pistol - Spritesheet_11
+  - first:
+      213: -2443319606290208830
+    second: Soldier Pistol - Spritesheet_12
+  - first:
+      213: -6408013140068371096
+    second: Soldier Pistol - Spritesheet_13
+  - first:
+      213: -6505145195243893689
+    second: Soldier Pistol - Spritesheet_14
+  - first:
+      213: -4103106809492369123
+    second: Soldier Pistol - Spritesheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 835
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b005ac3acd9cf8f0800000000000000
+      internalID: -505355566245936976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 835
+        width: 74
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a54921268080a220800000000000000
+      internalID: 2495135507133580706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 835
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cd9cfce9772bdc0800000000000000
+      internalID: -3624703226105176963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 637
+        width: 73
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7f014dadcab53c0800000000000000
+      internalID: -4369708957572204622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 459
+        width: 68
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbf703c95f32b7f0800000000000000
+      internalID: -598346145730135114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 475
+        width: 74
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2361b827a1d19d9f0800000000000000
+      internalID: -443291088891210190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 447
+        width: 71
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3cea61fc8bfef10800000000000000
+      internalID: 2301261134187905959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 440
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853fa66589cba2f20800000000000000
+      internalID: 3398736231275361112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 242
+        width: 75
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea108cd140f1c7e60800000000000000
+      internalID: 7961272343824171438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 242
+        width: 76
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d92a3814be45e90800000000000000
+      internalID: -7037741651059368630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 44
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d1703c7e78dceb0800000000000000
+      internalID: -4697949406798340834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 44
+        width: 101
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb6b1c99edfdb6a0800000000000000
+      internalID: -6431705513026950179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 45
+        width: 100
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7235a63c5971ed0800000000000000
+      internalID: -2443319606290208830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 45
+        width: 96
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865703e000a2217a0800000000000000
+      internalID: -6408013140068371096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 45
+        width: 103
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c062129e419b5a0800000000000000
+      internalID: -6505145195243893689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soldier Pistol - Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 44
+        width: 104
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1198b09816de07c0800000000000000
+      internalID: -4103106809492369123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cb7ec9c1ab9e7e6459811871f7a2ae82
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Soldier Pistol - Spritesheet_0: -505355566245936976
+      Soldier Pistol - Spritesheet_1: 2495135507133580706
+      Soldier Pistol - Spritesheet_10: -4697949406798340834
+      Soldier Pistol - Spritesheet_11: -6431705513026950179
+      Soldier Pistol - Spritesheet_12: -2443319606290208830
+      Soldier Pistol - Spritesheet_13: -6408013140068371096
+      Soldier Pistol - Spritesheet_14: -6505145195243893689
+      Soldier Pistol - Spritesheet_15: -4103106809492369123
+      Soldier Pistol - Spritesheet_2: -3624703226105176963
+      Soldier Pistol - Spritesheet_3: -4369708957572204622
+      Soldier Pistol - Spritesheet_4: -598346145730135114
+      Soldier Pistol - Spritesheet_5: -443291088891210190
+      Soldier Pistol - Spritesheet_6: 2301261134187905959
+      Soldier Pistol - Spritesheet_7: 3398736231275361112
+      Soldier Pistol - Spritesheet_8: 7961272343824171438
+      Soldier Pistol - Spritesheet_9: -7037741651059368630
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: fe2d904671bca5b4f92e4ec7b2d9915b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -980556615311521707
+    second: Super Soldier Rifle - Spritesheet_0
+  - first:
+      213: 1217650732620657088
+    second: Super Soldier Rifle - Spritesheet_1
+  - first:
+      213: 2130733718459836083
+    second: Super Soldier Rifle - Spritesheet_2
+  - first:
+      213: 736952408833072967
+    second: Super Soldier Rifle - Spritesheet_3
+  - first:
+      213: -2717550464444700439
+    second: Super Soldier Rifle - Spritesheet_4
+  - first:
+      213: -540813601431418717
+    second: Super Soldier Rifle - Spritesheet_5
+  - first:
+      213: -6168124242713929706
+    second: Super Soldier Rifle - Spritesheet_6
+  - first:
+      213: -2309609143071112123
+    second: Super Soldier Rifle - Spritesheet_7
+  - first:
+      213: -8595142606110019272
+    second: Super Soldier Rifle - Spritesheet_8
+  - first:
+      213: 5749037111466507909
+    second: Super Soldier Rifle - Spritesheet_9
+  - first:
+      213: -642680696490513559
+    second: Super Soldier Rifle - Spritesheet_10
+  - first:
+      213: 2540907523276153478
+    second: Super Soldier Rifle - Spritesheet_11
+  - first:
+      213: -458842474599318269
+    second: Super Soldier Rifle - Spritesheet_12
+  - first:
+      213: 6906916221863875426
+    second: Super Soldier Rifle - Spritesheet_13
+  - first:
+      213: -278914236284806146
+    second: Super Soldier Rifle - Spritesheet_14
+  - first:
+      213: -4311055112557292567
+    second: Super Soldier Rifle - Spritesheet_15
+  - first:
+      213: -2112535346059033471
+    second: Super Soldier Rifle - Spritesheet_16
+  - first:
+      213: -4981503432856150756
+    second: Super Soldier Rifle - Spritesheet_17
+  - first:
+      213: -3862461469316288568
+    second: Super Soldier Rifle - Spritesheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 833
+        width: 73
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558823e14fc5462f0800000000000000
+      internalID: -980556615311521707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 833
+        width: 73
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c13952d3e6f5e010800000000000000
+      internalID: 1217650732620657088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 833
+        width: 78
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6eebf1703e19d10800000000000000
+      internalID: 2130733718459836083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 833
+        width: 76
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f1dd0bf4e2a3a00800000000000000
+      internalID: 736952408833072967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 636
+        width: 73
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e863933042594ad0800000000000000
+      internalID: -2717550464444700439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 433
+        width: 72
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a80bf415e4ae78f0800000000000000
+      internalID: -540813601431418717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 433
+        width: 74
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6189f8e6eab666aa0800000000000000
+      internalID: -6168124242713929706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 435
+        width: 76
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5448041a8be92ffd0800000000000000
+      internalID: -2309609143071112123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 242
+        width: 100
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831bcf8b65be7b880800000000000000
+      internalID: -8595142606110019272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 242
+        width: 107
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ebf7d0bcea8cf40800000000000000
+      internalID: 5749037111466507909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 242
+        width: 107
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96baea5cf4db417f0800000000000000
+      internalID: -642680696490513559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 242
+        width: 105
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6822efb1eed134320800000000000000
+      internalID: 2540907523276153478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 244
+        width: 107
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d75ad433dd1a9f0800000000000000
+      internalID: -458842474599318269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 242
+        width: 104
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263549995bb4adf50800000000000000
+      internalID: 6906916221863875426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 45
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbd177daf8112cf0800000000000000
+      internalID: -278914236284806146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 47
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e314e0573e0c24c0800000000000000
+      internalID: -4311055112557292567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 47
+        width: 97
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184c1b2ab44cea2e0800000000000000
+      internalID: -2112535346059033471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 45
+        width: 94
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d583d55052edab0800000000000000
+      internalID: -4981503432856150756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Super Soldier Rifle - Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 45
+        width: 90
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfe4c202c7c56ac0800000000000000
+      internalID: -3862461469316288568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b158db316648ca8488e3d84136c45617
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Super Soldier Rifle - Spritesheet_0: -980556615311521707
+      Super Soldier Rifle - Spritesheet_1: 1217650732620657088
+      Super Soldier Rifle - Spritesheet_10: -642680696490513559
+      Super Soldier Rifle - Spritesheet_11: 2540907523276153478
+      Super Soldier Rifle - Spritesheet_12: -458842474599318269
+      Super Soldier Rifle - Spritesheet_13: 6906916221863875426
+      Super Soldier Rifle - Spritesheet_14: -278914236284806146
+      Super Soldier Rifle - Spritesheet_15: -4311055112557292567
+      Super Soldier Rifle - Spritesheet_16: -2112535346059033471
+      Super Soldier Rifle - Spritesheet_17: -4981503432856150756
+      Super Soldier Rifle - Spritesheet_18: -3862461469316288568
+      Super Soldier Rifle - Spritesheet_2: 2130733718459836083
+      Super Soldier Rifle - Spritesheet_3: 736952408833072967
+      Super Soldier Rifle - Spritesheet_4: -2717550464444700439
+      Super Soldier Rifle - Spritesheet_5: -540813601431418717
+      Super Soldier Rifle - Spritesheet_6: -6168124242713929706
+      Super Soldier Rifle - Spritesheet_7: -2309609143071112123
+      Super Soldier Rifle - Spritesheet_8: -8595142606110019272
+      Super Soldier Rifle - Spritesheet_9: 5749037111466507909
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
