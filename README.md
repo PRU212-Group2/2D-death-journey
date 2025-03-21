@@ -70,11 +70,11 @@ Survive the journey by defeating enemies, collecting power-ups, and solving myst
 | ![Laser Rifle](Assets/Assets/Death%20Journey%20Assets/Weapons/Laser%20Rifle.png) | Laser Rifle | 1.5 per shot | 80 RPM | 12000 Money |
 
 ### 🛡️ Player Upgrades
-| Armor | Speed | Health | Cost |
-|-------|-------|--------|------|
-| Adam | 5 speed | 100 health | Free |
-| Soldier | 6.5 speed | 150 health | 6000 Money |
-| Super Soldier | 8 speed | 200 health | 14000 Money |
+| Armor | Name | Speed | Health | Cost |
+|-------|------|-------|--------|------|
+| ![Adam](Assets/Assets/Death%20Journey%20Assets/Characters/Adam_Default/Adam_Pistol_Spritesheet.png) | Adam | 5 speed | 100 health | Free |
+| ![Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Soldier/Soldier%20Pistol%20-%20Spritesheet.png) | Soldier | 6.5 speed | 150 health | 6000 Money |
+| ![Super Soldier](Assets/Assets/Death%20Journey%20Assets/Characters/Super%20Soldier/Super%20Soldier%20Pistol%20-%20Spritesheet.png) | Super Soldier | 8 speed | 200 health | 14000 Money |
 
 ### 🧟 Enemy Types
 - **Zombies** (20 DMG, 40 HP)
