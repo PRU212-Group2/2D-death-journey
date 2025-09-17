@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         gameManager = FindFirstObjectByType<GameManager>();
         screenTransition = gameObject.AddComponent<FadeTransition>();
         EnableContinueButton();
