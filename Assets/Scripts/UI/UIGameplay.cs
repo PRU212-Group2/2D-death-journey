@@ -85,6 +85,7 @@ public class UIGameplay : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         gameManager.MainMenu();
     }
     
