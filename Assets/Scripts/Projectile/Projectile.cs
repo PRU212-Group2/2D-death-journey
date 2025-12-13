@@ -2,49 +2,44 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float bulletSpeed = 1f;
+    [SerializeField] float bulletSpeed = 30f;
     [SerializeField] ParticleSystem hitVFX;
     [SerializeField] ParticleSystem bloodVFX;
-    
-    Rigidbody2D myRigidBody;
-    PlayerMovement player;
-    WeaponSO weaponSO;
-    float xSpeed;
-    int damage;
-    
-    void Start()
+
+    private Rigidbody2D myRigidBody;
+    private int damage;
+    private ObjectPool<Projectile> _myPool;
+
+    private void Awake()
     {
+        // Awake runs once. Good for caching references.
         myRigidBody = GetComponent<Rigidbody2D>();
-        
-        // Find the player
-        player = FindFirstObjectByType<PlayerMovement>();
-        
-        // Define the projectile speed that travels from the player
-        xSpeed = player.transform.localScale.x * bulletSpeed;
-    }
-    
-    void Update()
-    {
-        Fly();
     }
 
-    void Fly()
+    public void Init(ObjectPool<Projectile> pool, float directionX, int weaponDamage)
     {
-        // Projectile travels forward
-        myRigidBody.linearVelocity = new Vector2(xSpeed, 0f);
+        _myPool = pool;
+        damage = weaponDamage;
+
+        // Reset Physics
+        myRigidBody.linearVelocity = Vector2.zero;
+        myRigidBody.angularVelocity = 0f;
+
+        // Apply Velocity immediately
+        myRigidBody.linearVelocity = new Vector2(directionX * bulletSpeed, 0f);
+
+        // Safety: Auto-destroy after 3 seconds if it hits nothing
+        CancelInvoke(nameof(ReturnSelf));
+        Invoke(nameof(ReturnSelf), 3f);
     }
-    public void SetDamage(int projectileDamage)
-    {
-        damage = projectileDamage;
-    }
-    
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             HitEnemy(other);
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) // Check for Ground layer
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             HitWall();
         }
@@ -52,21 +47,34 @@ public class Projectile : MonoBehaviour
 
     void HitEnemy(Collider2D other)
     {
-        // Destroy enemy and destroy itself
-        if (other.gameObject.CompareTag("Enemy"))
+        PlayBloodVFX();
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
         {
-            PlayBloodVFX();
-            EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
             enemyHealth.TakeDamage(damage);
         }
-        Destroy(gameObject);
+        ReturnSelf();
     }
 
     void HitWall()
     {
-        // Destroy the projectile
         PlayHitVFX();
-        Destroy(gameObject);
+        ReturnSelf();
+    }
+
+    private void ReturnSelf()
+    {
+        // Cancel the auto-destroy timer so it doesn't fire while inside the pool
+        CancelInvoke(nameof(ReturnSelf));
+
+        if (_myPool != null)
+        {
+            _myPool.ReturnToPool(this);
+        }
+        else
+        {
+            gameObject.SetActive(false); // Fallback
+        }
     }
 
     void PlayHitVFX()
@@ -74,16 +82,16 @@ public class Projectile : MonoBehaviour
         if (hitVFX != null)
         {
             ParticleSystem vfxInstance = Instantiate(hitVFX, transform.position, transform.rotation);
-            Destroy(vfxInstance.gameObject, vfxInstance.main.duration); // Destroy after the effect finishes
+            Destroy(vfxInstance.gameObject, vfxInstance.main.duration);
         }
     }
-    
+
     void PlayBloodVFX()
     {
         if (bloodVFX != null)
         {
             ParticleSystem vfxInstance = Instantiate(bloodVFX, transform.position, transform.rotation);
-            Destroy(vfxInstance.gameObject, vfxInstance.main.duration); // Destroy after the effect finishes
+            Destroy(vfxInstance.gameObject, vfxInstance.main.duration);
         }
     }
 }

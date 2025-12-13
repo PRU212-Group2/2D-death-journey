@@ -19,7 +19,19 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 6140047231273402476
   m_OverrideGlobalSceneList: 0
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/MainMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Moonlight.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/City.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Castle.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Hell.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Ending.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -34,7 +46,7 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: DefaultCompany'
+    - line: '|   companyName: Death Journey'
     - line: '|   productName: Death Journey'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
@@ -319,7 +331,10 @@ MonoBehaviour:
     - line: '|       m_Height: 128'
     - line: '|       m_Kind: 0'
     - line: '|   m_BuildTargetPlatformIcons: []'
-    - line: '|   m_BuildTargetBatching: []'
+    - line: '|   m_BuildTargetBatching:'
+    - line: '|   - m_BuildTarget: Standalone'
+    - line: '|     m_StaticBatching: 1'
+    - line: '|     m_DynamicBatching: 0'
     - line: '|   m_BuildTargetShaderSettings: []'
     - line: '|   m_BuildTargetGraphicsJobs: []'
     - line: '|   m_BuildTargetGraphicsJobMode: []'
@@ -336,6 +351,7 @@ MonoBehaviour:
     - line: '|     iPhone: 1'
     - line: '|     tvOS: 1'
     - line: '|   m_BuildTargetGroupLightmapEncodingQuality: []'
+    - line: '|   m_BuildTargetGroupHDRCubemapEncodingQuality: []'
     - line: '|   m_BuildTargetGroupLightmapSettings: []'
     - line: '|   m_BuildTargetGroupLoadStoreDebugModeSettings: []'
     - line: '|   m_BuildTargetNormalMapEncoding: []'
@@ -599,12 +615,12 @@ MonoBehaviour:
     - line: '|   webGLMemoryLinearGrowthStep: 16'
     - line: '|   webGLMemoryGeometricGrowthStep: 0.2'
     - line: '|   webGLMemoryGeometricGrowthCap: 96'
-    - line: '|   webGLEnableWebGPU: 0'
     - line: '|   webGLPowerPreference: 2'
     - line: '|   webGLWebAssemblyTable: 0'
     - line: '|   webGLWebAssemblyBigInt: 0'
     - line: '|   webGLCloseOnQuit: 0'
     - line: '|   webWasm2023: 0'
+    - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols: {}'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
@@ -733,6 +749,7 @@ MonoBehaviour:
     - line: '|   insecureHttpOption: 0'
     - line: '|   androidVulkanDenyFilterList: []'
     - line: '|   androidVulkanAllowFilterList: []'
+    - line: '|   androidVulkanDeviceFilterListAsset: {instanceID: 0}'
     - line: '| '
   references:
     version: 2
@@ -757,3 +774,23 @@ MonoBehaviour:
         m_CopyPDBFiles: 0
         m_WindowsDevicePortalAddress: 
         m_WindowsDevicePortalUsername: 
+--- !u!114 &6601499107012311463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15012, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildAutomationSettings
+  m_EditorClassIdentifier: 
+  m_OperatingSystemValue: 
+  m_OperatingSystemFamily: 
+  m_XcodeVersion: 
+  m_AndroidSdkVersion: 
+  m_UnityArchitecture: 
+  m_MachineTypeId: 
+  m_CredentialsId: 
+  m_BuildTarget: 19
