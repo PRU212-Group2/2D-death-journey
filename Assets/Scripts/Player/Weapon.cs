@@ -15,8 +15,12 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        // Create a static container in the scene (World Space)
+        // Ensures bullets don't rotate/flip when the player does.
+        GameObject bulletContainer = new GameObject("Bullet_Pool_Container");
+
         // Initialize the Pool with 20 bullets
-        _bulletPool = new ObjectPool<Projectile>(projectilePrefab, 20, transform);
+        _bulletPool = new ObjectPool<Projectile>(projectilePrefab, 20, bulletContainer.transform);
 
         // Find player once (or get it from parent if weapon is attached to player)
         // Assuming Weapon is child of Player, otherwise keep your Find logic here
